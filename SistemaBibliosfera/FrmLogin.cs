@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Manejadores;
 
 namespace SistemaBibliosfera
 {
     public partial class FrmLogin : Form
     {
+        ManejadorLogin Ml;
         public FrmLogin()
         {
             InitializeComponent();
