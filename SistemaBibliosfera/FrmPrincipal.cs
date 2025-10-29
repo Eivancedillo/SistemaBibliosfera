@@ -35,6 +35,7 @@ namespace SistemaBibliosfera
         {
             FrmPrestamos prestamos = new FrmPrestamos();
             prestamos.MdiParent = this;
+            prestamos.Show();
         }
 
         private void BtnAdquisiciones_Click(object sender, EventArgs e)
