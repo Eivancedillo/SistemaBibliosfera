@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAdministradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdministradores.Designer.cs">
+      <DependentUpon>FrmAdministradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdquisiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdquisiciones.Designer.cs">
+      <DependentUpon>FrmAdquisiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAsistencias.Designer.cs">
+      <DependentUpon>FrmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogo.Designer.cs">
+      <DependentUpon>FrmCatalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMiembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMiembros.Designer.cs">
+      <DependentUpon>FrmMiembros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPestamos.Designer.cs">
+      <DependentUpon>FrmPestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>

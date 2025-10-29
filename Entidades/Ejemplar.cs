@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Ejemplar
+    public class Ejemplar
     {
     }
 }
