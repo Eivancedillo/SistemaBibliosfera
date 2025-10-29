@@ -70,6 +70,12 @@
     <Compile Include="FrmCatalogo.Designer.cs">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,11 @@
     <Compile Include="FrmMiembros.Designer.cs">
       <DependentUpon>FrmMiembros.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPestamos.cs">
+    <Compile Include="FrmPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPestamos.Designer.cs">
-      <DependentUpon>FrmPestamos.cs</DependentUpon>
+    <Compile Include="FrmPrestamos.Designer.cs">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>

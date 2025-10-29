@@ -70,6 +70,7 @@
             this.BtnDashboard.Name = "BtnDashboard";
             this.BtnDashboard.Size = new System.Drawing.Size(64, 64);
             this.BtnDashboard.Text = "toolStripButton1";
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // BtnCatalogo
             // 
@@ -80,6 +81,7 @@
             this.BtnCatalogo.Name = "BtnCatalogo";
             this.BtnCatalogo.Size = new System.Drawing.Size(64, 64);
             this.BtnCatalogo.Text = "toolStripButton2";
+            this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
             // 
             // BtnPrestamos
             // 
@@ -90,6 +92,7 @@
             this.BtnPrestamos.Name = "BtnPrestamos";
             this.BtnPrestamos.Size = new System.Drawing.Size(64, 64);
             this.BtnPrestamos.Text = "toolStripButton3";
+            this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
             // 
             // BtnAdquisiciones
             // 
@@ -100,6 +103,7 @@
             this.BtnAdquisiciones.Name = "BtnAdquisiciones";
             this.BtnAdquisiciones.Size = new System.Drawing.Size(64, 64);
             this.BtnAdquisiciones.Text = "toolStripButton4";
+            this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
             // 
             // BtnMiembros
             // 
@@ -110,6 +114,7 @@
             this.BtnMiembros.Name = "BtnMiembros";
             this.BtnMiembros.Size = new System.Drawing.Size(64, 64);
             this.BtnMiembros.Text = "toolStripButton6";
+            this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
             // 
             // BtnBibliotecarios
             // 
@@ -120,6 +125,7 @@
             this.BtnBibliotecarios.Name = "BtnBibliotecarios";
             this.BtnBibliotecarios.Size = new System.Drawing.Size(64, 64);
             this.BtnBibliotecarios.Text = "toolStripButton5";
+            this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
             // 
             // BtnAsistencias
             // 
@@ -130,6 +136,7 @@
             this.BtnAsistencias.Name = "BtnAsistencias";
             this.BtnAsistencias.Size = new System.Drawing.Size(64, 64);
             this.BtnAsistencias.Text = "toolStripButton7";
+            this.BtnAsistencias.Click += new System.EventHandler(this.BtnAsistencias_Click);
             // 
             // BtnSalir
             // 

@@ -1,6 +1,6 @@
 ﻿namespace SistemaBibliosfera
 {
-    partial class FrmPestamos
+    partial class FrmPrestamos
     {
         /// <summary>
         /// Required designer variable.

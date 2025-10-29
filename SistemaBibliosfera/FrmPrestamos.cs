@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaBibliosfera
 {
-    public partial class FrmPestamos : Form
+    public partial class FrmPrestamos : Form
     {
-        public FrmPestamos()
+        public FrmPrestamos()
         {
             InitializeComponent();
         }
