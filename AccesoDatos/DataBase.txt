@@ -1,0 +1,139 @@
+-- Tablas sin dependencias
+CREATE TABLE Administradores (
+    IdAdministrador INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Miembros (
+    NumeroControl INT PRIMARY KEY,
+    Nombre VARCHAR(255) NOT NULL,
+    Apellidos VARCHAR(255) NOT NULL,
+    Email VARCHAR(255),
+    Telefono VARCHAR(255),
+    Estado BOOL DEFAULT TRUE,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Editoriales (
+    IdEditorial INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(255) NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Autores (
+    IdAutor INT PRIMARY KEY AUTO_INCREMENT,
+    Autor VARCHAR(255) NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Categorias (
+    IdCategoria INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(255) NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Tablas con dependencias
+
+CREATE TABLE Libros (
+    IdLibro INT PRIMARY KEY AUTO_INCREMENT,
+    ISBN BIGINT,
+    Titulo VARCHAR(255) NOT NULL,
+    IdEditorial INT,
+    AñoPublicacion DATE,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (IdEditorial) REFERENCES Editoriales(IdEditorial)
+);
+
+CREATE TABLE Ejemplares (
+    IdEjemplar INT PRIMARY KEY AUTO_INCREMENT,
+    IdLibro INT NOT NULL,
+    Codigo VARCHAR(255) UNIQUE,
+    Estado ENUM('Disponible', 'Prestado', 'Reparacion', 'Perdido') DEFAULT 'Disponible',
+    Ubicacion VARCHAR(255),
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (IdLibro) REFERENCES Libros(IdLibro)
+);
+
+CREATE TABLE RegistroEntradas (
+    IdRegistroEntrada INT PRIMARY KEY AUTO_INCREMENT,
+    NumeroControl INT NOT NULL,
+    FechaIngreso DATETIME DEFAULT CURRENT_TIMESTAMP,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (NumeroControl) REFERENCES Miembros(NumeroControl)
+);
+
+CREATE TABLE Prestamos (
+    IdPrestamo INT PRIMARY KEY AUTO_INCREMENT,
+    NumeroControl INT NOT NULL,
+    IdEjemplar INT NOT NULL,
+    FechaPrestamo DATE NOT NULL,
+    FechaDevolucionPrevista DATETIME NOT NULL,
+    EstadoPrestamo ENUM('Activo', 'Cancelado', 'Finalizado', 'Adeudo') DEFAULT 'Activo',
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (NumeroControl) REFERENCES Miembros(NumeroControl),
+    FOREIGN KEY (IdEjemplar) REFERENCES Ejemplares(IdEjemplar)
+);
+
+CREATE TABLE Multas (
+    IdMulta INT PRIMARY KEY AUTO_INCREMENT,
+    IdPrestamo INT NOT NULL,
+    Monto DECIMAL(10, 2),
+    FechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    FechaPago DATETIME NULL,
+    EstadoMulta BOOL DEFAULT FALSE,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (IdPrestamo) REFERENCES Prestamos(IdPrestamo)
+);
+
+-- Tablas Pivot/Intermedias
+
+CREATE TABLE LibrosAutores (
+    IdLibro INT NOT NULL,
+    IdAutor INT NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    PRIMARY KEY (IdLibro, IdAutor),
+    FOREIGN KEY (IdLibro) REFERENCES Libros(IdLibro),
+    FOREIGN KEY (IdAutor) REFERENCES Autores(IdAutor)
+);
+
+CREATE TABLE LibrosCategorias (
+    IdLibro INT NOT NULL,
+    IdCategoria INT NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    PRIMARY KEY (IdLibro, IdCategoria),
+    FOREIGN KEY (IdLibro) REFERENCES Libros(IdLibro),
+    FOREIGN KEY (IdCategoria) REFERENCES Categorias(IdCategoria)
+);
