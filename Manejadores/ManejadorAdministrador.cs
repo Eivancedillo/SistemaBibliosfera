@@ -17,7 +17,7 @@ namespace Manejadores
         {
             b.Comando($"CALL p_Insertar_Administrador('{administradorr.Nombre}', '{administradorr.Password}')");
         }
-        public void Modificar(Administrador administradorr)
+        public void Editar(Administrador administradorr)
         {
             b.Comando($"CALL p_Editar_Administrador({administradorr.IdAdministrador}, '{administradorr.Nombre}', '{administradorr.Password}')");
         }
@@ -37,7 +37,7 @@ namespace Manejadores
                 b.Comando($"CALL p_Activar_Administrador({administradorr.IdAdministrador})");
             }
         }
-        public void Mostar(string consulta, DataGridView tabla, string datos)
+        public void Mostrar(string consulta, DataGridView tabla, string datos)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];

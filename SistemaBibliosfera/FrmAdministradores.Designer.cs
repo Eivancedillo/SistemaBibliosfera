@@ -32,7 +32,7 @@
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.DtgDatos = new System.Windows.Forms.DataGridView();
-            this.TxtUsuaio = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             this.BtnBuscar.TabIndex = 1;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnAgregar
             // 
@@ -63,6 +64,7 @@
             this.BtnAgregar.TabIndex = 2;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // DtgDatos
             // 
@@ -71,13 +73,14 @@
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.Size = new System.Drawing.Size(893, 150);
             this.DtgDatos.TabIndex = 3;
+            this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
             // 
-            // TxtUsuaio
+            // TxtUsuario
             // 
-            this.TxtUsuaio.Location = new System.Drawing.Point(214, 170);
-            this.TxtUsuaio.Name = "TxtUsuaio";
-            this.TxtUsuaio.Size = new System.Drawing.Size(310, 26);
-            this.TxtUsuaio.TabIndex = 4;
+            this.TxtUsuario.Location = new System.Drawing.Point(214, 170);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(310, 26);
+            this.TxtUsuario.TabIndex = 4;
             // 
             // label2
             // 
@@ -95,7 +98,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1200, 703);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtUsuaio);
+            this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.DtgDatos);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
@@ -117,7 +120,7 @@
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.DataGridView DtgDatos;
-        private System.Windows.Forms.TextBox TxtUsuaio;
+        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label2;
     }
 }
