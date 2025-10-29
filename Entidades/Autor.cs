@@ -8,14 +8,14 @@ namespace Entidades
 {
     public class Autor
     {
-        public Autor(int idAutor, string nombreAutor)
+        public Autor(int idAutor, string nombre)
         {
             IdAutor = idAutor;
-            NombreAutor = nombreAutor;
+            Nombre = nombre;
         }
 
         public int IdAutor { get; set; }
-        public string NombreAutor { get; set; }
+        public string Nombre { get; set; }
 
     }
 }
