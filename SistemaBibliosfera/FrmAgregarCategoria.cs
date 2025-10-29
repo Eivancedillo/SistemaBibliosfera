@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaBibliosfera
 {
-    public partial class FrmAdquisiciones : Form
+    public partial class FrmAgregarCategoria : Form
     {
-        public FrmAdquisiciones()
+        public FrmAgregarCategoria()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
 
