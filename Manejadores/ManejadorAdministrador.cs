@@ -15,31 +15,28 @@ namespace Manejadores
         Base b = new Base();
         public void Guardar(Administrador administradorr)
         {
-            b.Comando($"insert into Administradores values" +
-                $"(null,'{administradorr.Nombre}',SHA1('{administradorr.Password}'))");
+            b.Comando($"CALL p_InsertarAdministrador('{administradorr.Nombre}', '{administradorr.Password}')");
+        }
+        public void Modificar(Administrador administradorr)
+        {
+            b.Comando($"CALL p_EditarAdministrador({administradorr.IdAdministrador}, '{administradorr.Nombre}', '{administradorr.Password}')");
         }
         public void Borrar(Administrador administradorr)
         {
             var rs = MessageBox.Show($"Esta seguro de eliminar al administrador {administradorr.Nombre}", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                b.Comando($"delete from Administradores where IdAdministrador={administradorr.IdAdministrador}");
+                b.Comando($"CALL p_BorrarAdministrador({administradorr.IdAdministrador})");
             }
-        }
-        public void Modificar(Administrador administradorr)
-        {
-            b.Comando($"update Administradores set Nombre ='{administradorr.Nombre}', Password= SHA1('{administradorr.Password}')" +
-                $" where IdAdministrador ={administradorr.IdAdministrador}");
         }
         public void Mostar(string consulta, DataGridView tabla, string datos)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
             tabla.Columns["IdAdministrador"].Visible = false;
-            tabla.Columns["Password"].Visible = false; //preguntar si quieren que se vea o no
-            tabla.Columns.Insert(2, Boton("Modificar clave", Color.Tan));
-            tabla.Columns.Insert(3, Boton("Modificar usuario", Color.DarkGray));
-            tabla.Columns.Insert(4, Boton("Borrar", Color.Red));
+            tabla.Columns["Password"].Visible = false;
+            tabla.Columns.Insert(2, Boton("Editar", Color.Tan));
+            tabla.Columns.Insert(3, Boton("Eliminar", Color.Red));
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
 
