@@ -15,18 +15,26 @@ namespace Manejadores
         Base b = new Base();
         public void Guardar(Administrador administradorr)
         {
-            b.Comando($"CALL p_InsertarAdministrador('{administradorr.Nombre}', '{administradorr.Password}')");
+            b.Comando($"CALL p_Insertar_Administrador('{administradorr.Nombre}', '{administradorr.Password}')");
         }
         public void Modificar(Administrador administradorr)
         {
-            b.Comando($"CALL p_EditarAdministrador({administradorr.IdAdministrador}, '{administradorr.Nombre}', '{administradorr.Password}')");
+            b.Comando($"CALL p_Editar_Administrador({administradorr.IdAdministrador}, '{administradorr.Nombre}', '{administradorr.Password}')");
         }
-        public void Borrar(Administrador administradorr)
+        public void Desactivar(Administrador administradorr)
         {
-            var rs = MessageBox.Show($"Esta seguro de eliminar al administrador {administradorr.Nombre}", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var rs = MessageBox.Show($"Esta seguro de desactivar al administrador {administradorr.Nombre}", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                b.Comando($"CALL p_BorrarAdministrador({administradorr.IdAdministrador})");
+                b.Comando($"CALL p_Desactivar_Administrador({administradorr.IdAdministrador})");
+            }
+        }
+        public void Activar(Administrador administradorr)
+        {
+            var rs = MessageBox.Show($"Esta seguro de activar al administrador {administradorr.Nombre}", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                b.Comando($"CALL p_Activar_Administrador({administradorr.IdAdministrador})");
             }
         }
         public void Mostar(string consulta, DataGridView tabla, string datos)
