@@ -24,6 +24,11 @@ namespace SistemaBibliosfera
 
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TxtUsuario.Text) || string.IsNullOrWhiteSpace(TxtContrasena.Text))
+            {
+                MessageBox.Show("¡Rellene todos los campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (Ml.Validar(TxtUsuario, TxtContrasena))
             {
                 FrmPrincipal ia = new FrmPrincipal();
@@ -48,6 +53,11 @@ namespace SistemaBibliosfera
 
                 }
             }
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

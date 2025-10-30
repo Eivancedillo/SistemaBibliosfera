@@ -33,6 +33,7 @@
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.TxtContrasena = new System.Windows.Forms.TextBox();
             this.BtnIniciarSesion = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,12 +79,23 @@
             this.BtnIniciarSesion.UseVisualStyleBackColor = true;
             this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Location = new System.Drawing.Point(386, 485);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(306, 46);
+            this.BtnSalir.TabIndex = 5;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1022, 580);
+            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnIniciarSesion);
             this.Controls.Add(this.TxtContrasena);
             this.Controls.Add(this.TxtUsuario);
@@ -106,6 +118,7 @@
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.TextBox TxtContrasena;
         private System.Windows.Forms.Button BtnIniciarSesion;
+        private System.Windows.Forms.Button BtnSalir;
     }
 }
 
