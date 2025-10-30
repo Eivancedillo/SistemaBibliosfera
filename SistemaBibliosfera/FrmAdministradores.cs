@@ -43,7 +43,7 @@ namespace SistemaBibliosfera
                 case 2:
                     {
                         FrmDatosAdministrador da = new FrmDatosAdministrador();
-                        da.Controls["TxtClave"].Text = "";
+                        da.Controls["TxtContraseña"].Text = "";
                         da.ShowDialog();
                         DtgDatos.Columns.Clear();
 

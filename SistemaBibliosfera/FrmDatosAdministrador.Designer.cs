@@ -89,6 +89,7 @@
             this.BtnGuardar.TabIndex = 4;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCancelar
             // 
@@ -128,6 +129,7 @@
             this.CmbAccesos.Name = "CmbAccesos";
             this.CmbAccesos.Size = new System.Drawing.Size(221, 28);
             this.CmbAccesos.TabIndex = 8;
+            this.CmbAccesos.SelectedIndexChanged += new System.EventHandler(this.CmbAccesos_SelectedIndexChanged);
             // 
             // RbtnVer
             // 

@@ -46,7 +46,7 @@ namespace Manejadores
             tabla.Columns["created_at"].Visible = false;
             tabla.Columns["updated_at"].Visible = false;
             tabla.Columns["Activo"].Visible =false;
-            tabla.Columns.Insert(2, Boton("Modificar clave", Color.Green));
+            tabla.Columns.Insert(2, Boton("Editar", Color.Green));
             if (tabla.Rows.Count > 0)
             {
                 bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
