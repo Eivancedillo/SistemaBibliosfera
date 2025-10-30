@@ -42,6 +42,12 @@ namespace SistemaBibliosfera
                 return;
             }
 
+            if(TxtNumControl.Text.Any(x => !char.IsDigit(x)))
+            {
+                MessageBox.Show("El Número de Control debe ser un valor numérico.", "Valor no numérico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (FrmMiembros.miembro.NumeroControl == 0)
             {
                 Mm.Insertar(new Miembro(int.Parse(TxtNumControl.Text), TxtNombre.Text, TxtApellido.Text, 
