@@ -30,7 +30,10 @@ namespace SistemaBibliosfera
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            ma.Mostrar($"select * from Administradores where nombre like '%{TxtUsuario.Text}%'", DtgDatos, "Administradores");
+            if (CmbEstado.Text.Equals("Activos"))
+                ma.Mostrar($"select * from Administradores where Activo = 1", DtgDatos, "Administradores");
+            else
+                ma.Mostrar($"select * from Administradores where Activo = 0", DtgDatos, "Administradores");
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,6 +85,11 @@ namespace SistemaBibliosfera
         {
             fila = e.RowIndex;
             columna = e.ColumnIndex;
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         public FrmAdministradores()
