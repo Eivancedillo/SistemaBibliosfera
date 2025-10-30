@@ -31,10 +31,9 @@ namespace AccesoDatos
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 if (con.State == ConnectionState.Open)
                     con.Close();
-
-                throw;
             }
         }
 
@@ -54,10 +53,9 @@ namespace AccesoDatos
             }
             catch (Exception ex)
             {
-                if (con.State == ConnectionState.Open)
+                MessageBox.Show("Error al consultar: " + ex.Message);
+                if (!mantenerConexion)
                     con.Close();
-
-                throw;
             }
 
             return ds;
