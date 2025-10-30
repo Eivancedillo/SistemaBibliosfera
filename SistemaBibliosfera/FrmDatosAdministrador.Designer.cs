@@ -28,193 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.CbActivar = new System.Windows.Forms.CheckBox();
+            this.CbEditar = new System.Windows.Forms.CheckBox();
+            this.CbCrear = new System.Windows.Forms.CheckBox();
+            this.CbVer = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.CmbAccesos = new System.Windows.Forms.ComboBox();
-            this.RbtnVer = new System.Windows.Forms.RadioButton();
-            this.RbtnCrear = new System.Windows.Forms.RadioButton();
-            this.RbtnEditar = new System.Windows.Forms.RadioButton();
-            this.RbtnEliminar = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LsbAccesos = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.TxtContraseña = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // BtnEditar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            this.BtnEditar.Location = new System.Drawing.Point(408, 132);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(92, 33);
+            this.BtnEditar.TabIndex = 65;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
-            // label2
+            // CbActivar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(350, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña";
+            this.CbActivar.AutoSize = true;
+            this.CbActivar.Enabled = false;
+            this.CbActivar.Location = new System.Drawing.Point(368, 189);
+            this.CbActivar.Name = "CbActivar";
+            this.CbActivar.Size = new System.Drawing.Size(192, 29);
+            this.CbActivar.TabIndex = 64;
+            this.CbActivar.Text = "Activar/Desactivar";
+            this.CbActivar.UseVisualStyleBackColor = true;
+            this.CbActivar.CheckedChanged += new System.EventHandler(this.CbActivar_CheckedChanged);
             // 
-            // label3
+            // CbEditar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Accesos";
+            this.CbEditar.AutoSize = true;
+            this.CbEditar.Enabled = false;
+            this.CbEditar.Location = new System.Drawing.Point(278, 189);
+            this.CbEditar.Name = "CbEditar";
+            this.CbEditar.Size = new System.Drawing.Size(84, 29);
+            this.CbEditar.TabIndex = 63;
+            this.CbEditar.Text = "Editar";
+            this.CbEditar.UseVisualStyleBackColor = true;
+            this.CbEditar.CheckedChanged += new System.EventHandler(this.CbEditar_CheckedChanged);
+            // 
+            // CbCrear
+            // 
+            this.CbCrear.AutoSize = true;
+            this.CbCrear.Enabled = false;
+            this.CbCrear.Location = new System.Drawing.Point(189, 189);
+            this.CbCrear.Name = "CbCrear";
+            this.CbCrear.Size = new System.Drawing.Size(83, 29);
+            this.CbCrear.TabIndex = 62;
+            this.CbCrear.Text = "Crear";
+            this.CbCrear.UseVisualStyleBackColor = true;
+            this.CbCrear.CheckedChanged += new System.EventHandler(this.CbCrear_CheckedChanged);
+            // 
+            // CbVer
+            // 
+            this.CbVer.AutoSize = true;
+            this.CbVer.Enabled = false;
+            this.CbVer.Location = new System.Drawing.Point(118, 189);
+            this.CbVer.Name = "CbVer";
+            this.CbVer.Size = new System.Drawing.Size(65, 29);
+            this.CbVer.TabIndex = 61;
+            this.CbVer.Text = "Ver";
+            this.CbVer.UseVisualStyleBackColor = true;
+            this.CbVer.CheckedChanged += new System.EventHandler(this.CbVer_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(362, 196);
+            this.label4.Location = new System.Drawing.Point(12, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 3;
+            this.label4.Size = new System.Drawing.Size(93, 25);
+            this.label4.TabIndex = 60;
             this.label4.Text = "Permisos";
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.Location = new System.Drawing.Point(366, 405);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(99, 39);
-            this.BtnGuardar.TabIndex = 4;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Location = new System.Drawing.Point(501, 405);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(105, 39);
-            this.BtnCancelar.TabIndex = 5;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(53, 146);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(224, 26);
-            this.TxtNombre.TabIndex = 6;
-            // 
-            // TxtContraseña
-            // 
-            this.TxtContraseña.Location = new System.Drawing.Point(354, 146);
-            this.TxtContraseña.Name = "TxtContraseña";
-            this.TxtContraseña.PasswordChar = '*';
-            this.TxtContraseña.Size = new System.Drawing.Size(222, 26);
-            this.TxtContraseña.TabIndex = 7;
             // 
             // CmbAccesos
             // 
             this.CmbAccesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbAccesos.Enabled = false;
             this.CmbAccesos.FormattingEnabled = true;
-            this.CmbAccesos.Items.AddRange(new object[] {
-            "Dashboard",
-            "Catalogo",
-            "Prestamos",
-            "Adquisisiones",
-            "Bibliotecarios",
-            "Miembros"});
-            this.CmbAccesos.Location = new System.Drawing.Point(56, 243);
+            this.CmbAccesos.Location = new System.Drawing.Point(118, 133);
             this.CmbAccesos.Name = "CmbAccesos";
-            this.CmbAccesos.Size = new System.Drawing.Size(221, 28);
-            this.CmbAccesos.TabIndex = 8;
+            this.CmbAccesos.Size = new System.Drawing.Size(199, 33);
+            this.CmbAccesos.TabIndex = 59;
             this.CmbAccesos.SelectedIndexChanged += new System.EventHandler(this.CmbAccesos_SelectedIndexChanged);
             // 
-            // RbtnVer
+            // label2
             // 
-            this.RbtnVer.AutoSize = true;
-            this.RbtnVer.Location = new System.Drawing.Point(355, 244);
-            this.RbtnVer.Name = "RbtnVer";
-            this.RbtnVer.Size = new System.Drawing.Size(52, 24);
-            this.RbtnVer.TabIndex = 9;
-            this.RbtnVer.TabStop = true;
-            this.RbtnVer.Text = "Ver";
-            this.RbtnVer.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 136);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 25);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Accesos";
             // 
-            // RbtnCrear
+            // BtnCancelar
             // 
-            this.RbtnCrear.AutoSize = true;
-            this.RbtnCrear.Location = new System.Drawing.Point(433, 244);
-            this.RbtnCrear.Name = "RbtnCrear";
-            this.RbtnCrear.Size = new System.Drawing.Size(66, 24);
-            this.RbtnCrear.TabIndex = 10;
-            this.RbtnCrear.TabStop = true;
-            this.RbtnCrear.Text = "Crear";
-            this.RbtnCrear.UseVisualStyleBackColor = true;
+            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(288, 244);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(166, 49);
+            this.BtnCancelar.TabIndex = 57;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // RbtnEditar
+            // BtnGuardar
             // 
-            this.RbtnEditar.AutoSize = true;
-            this.RbtnEditar.Location = new System.Drawing.Point(525, 244);
-            this.RbtnEditar.Name = "RbtnEditar";
-            this.RbtnEditar.Size = new System.Drawing.Size(69, 24);
-            this.RbtnEditar.TabIndex = 11;
-            this.RbtnEditar.TabStop = true;
-            this.RbtnEditar.Text = "Editar";
-            this.RbtnEditar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.BackColor = System.Drawing.Color.Lime;
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(82, 244);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(166, 49);
+            this.BtnGuardar.TabIndex = 56;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // RbtnEliminar
+            // TxtContraseña
             // 
-            this.RbtnEliminar.AutoSize = true;
-            this.RbtnEliminar.Location = new System.Drawing.Point(613, 244);
-            this.RbtnEliminar.Name = "RbtnEliminar";
-            this.RbtnEliminar.Size = new System.Drawing.Size(83, 24);
-            this.RbtnEliminar.TabIndex = 12;
-            this.RbtnEliminar.TabStop = true;
-            this.RbtnEliminar.Text = "Eliminar";
-            this.RbtnEliminar.UseVisualStyleBackColor = true;
+            this.TxtContraseña.Location = new System.Drawing.Point(132, 80);
+            this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.Size = new System.Drawing.Size(441, 30);
+            this.TxtContraseña.TabIndex = 55;
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Datos del bibliotecario";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Contraseña";
             // 
-            // LsbAccesos
+            // TxtNombre
             // 
-            this.LsbAccesos.FormattingEnabled = true;
-            this.LsbAccesos.ItemHeight = 20;
-            this.LsbAccesos.Location = new System.Drawing.Point(59, 308);
-            this.LsbAccesos.Name = "LsbAccesos";
-            this.LsbAccesos.Size = new System.Drawing.Size(217, 224);
-            this.LsbAccesos.TabIndex = 14;
+            this.TxtNombre.Location = new System.Drawing.Point(132, 26);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(441, 30);
+            this.TxtNombre.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Nombre";
             // 
             // FrmDatosAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(745, 563);
-            this.Controls.Add(this.LsbAccesos);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.RbtnEliminar);
-            this.Controls.Add(this.RbtnEditar);
-            this.Controls.Add(this.RbtnCrear);
-            this.Controls.Add(this.RbtnVer);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(585, 303);
+            this.Controls.Add(this.BtnEditar);
+            this.Controls.Add(this.CbActivar);
+            this.Controls.Add(this.CbEditar);
+            this.Controls.Add(this.CbCrear);
+            this.Controls.Add(this.CbVer);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.CmbAccesos);
-            this.Controls.Add(this.TxtContraseña);
-            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtContraseña);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -228,20 +219,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.CheckBox CbActivar;
+        private System.Windows.Forms.CheckBox CbEditar;
+        private System.Windows.Forms.CheckBox CbCrear;
+        private System.Windows.Forms.CheckBox CbVer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtContraseña;
         private System.Windows.Forms.ComboBox CmbAccesos;
-        private System.Windows.Forms.RadioButton RbtnVer;
-        private System.Windows.Forms.RadioButton RbtnCrear;
-        private System.Windows.Forms.RadioButton RbtnEditar;
-        private System.Windows.Forms.RadioButton RbtnEliminar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox LsbAccesos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.TextBox TxtContraseña;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.Label label1;
     }
 }

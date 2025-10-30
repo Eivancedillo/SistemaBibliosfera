@@ -35,7 +35,6 @@
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(79, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 20);
+            this.label1.Size = new System.Drawing.Size(246, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Busqueda de bibliotecarios";
             // 
@@ -74,6 +73,7 @@
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(30, 181);
             this.DtgDatos.Name = "DtgDatos";
+            this.DtgDatos.RowHeadersWidth = 51;
             this.DtgDatos.Size = new System.Drawing.Size(893, 150);
             this.DtgDatos.TabIndex = 3;
             this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
@@ -83,7 +83,7 @@
             // 
             this.TxtUsuario.Location = new System.Drawing.Point(30, 137);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(310, 26);
+            this.TxtUsuario.Size = new System.Drawing.Size(310, 30);
             this.TxtUsuario.TabIndex = 4;
             // 
             // label2
@@ -91,7 +91,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(26, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nombre de Usuario";
             // 
@@ -101,27 +101,15 @@
             this.CmbEstado.FormattingEnabled = true;
             this.CmbEstado.Location = new System.Drawing.Point(355, 137);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(227, 28);
+            this.CmbEstado.Size = new System.Drawing.Size(227, 33);
             this.CmbEstado.TabIndex = 6;
-            this.CmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Location = new System.Drawing.Point(778, 347);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(109, 29);
-            this.BtnCancelar.TabIndex = 7;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // FrmAdministradores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1014, 423);
-            this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtUsuario);
@@ -149,6 +137,5 @@
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CmbEstado;
-        private System.Windows.Forms.Button BtnCancelar;
     }
 }

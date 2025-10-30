@@ -99,6 +99,7 @@
     <Compile Include="ManejadorDashboard.cs" />
     <Compile Include="ManejadorLogin.cs" />
     <Compile Include="ManejadorMiembros.cs" />
+    <Compile Include="ManejadorPermisos.cs" />
     <Compile Include="ManejadorPrestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
