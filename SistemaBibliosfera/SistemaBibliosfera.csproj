@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -76,11 +76,11 @@
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDatosAdministrador.cs">
+    <Compile Include="FrmDatosMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDatosAdministrador.Designer.cs">
-      <DependentUpon>FrmDatosAdministrador.cs</DependentUpon>
+    <Compile Include="FrmDatosMiembro.Designer.cs">
+      <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -123,8 +123,8 @@
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDatosAdministrador.resx">
-      <DependentUpon>FrmDatosAdministrador.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDatosMiembro.resx">
+      <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
