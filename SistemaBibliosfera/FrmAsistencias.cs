@@ -72,6 +72,8 @@ namespace SistemaBibliosfera
                 BtnRegistrar.Enabled = false;
             if (!TxtNumControl.Enabled)
                 TxtNumControl.Enabled = true;
+
+            MessageBox.Show("Asistencia registrada correctamente.", "Asistencia registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
