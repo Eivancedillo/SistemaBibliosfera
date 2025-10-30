@@ -64,6 +64,7 @@
             // 
             this.TxtContrasena.Location = new System.Drawing.Point(284, 329);
             this.TxtContrasena.Name = "TxtContrasena";
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.Size = new System.Drawing.Size(441, 35);
             this.TxtContrasena.TabIndex = 3;
             // 
@@ -75,6 +76,7 @@
             this.BtnIniciarSesion.TabIndex = 4;
             this.BtnIniciarSesion.Text = "INICIAR SESION";
             this.BtnIniciarSesion.UseVisualStyleBackColor = true;
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // FrmLogin
             // 
