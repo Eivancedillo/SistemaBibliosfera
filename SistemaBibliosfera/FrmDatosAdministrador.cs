@@ -51,10 +51,5 @@ namespace SistemaBibliosfera
                 }
             }
         }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

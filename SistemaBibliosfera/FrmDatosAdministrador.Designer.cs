@@ -99,7 +99,6 @@
             this.BtnCancelar.TabIndex = 5;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // TxtNombre
             // 
@@ -118,7 +117,6 @@
             // 
             // CmbAccesos
             // 
-            this.CmbAccesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbAccesos.FormattingEnabled = true;
             this.CmbAccesos.Items.AddRange(new object[] {
             "Dashboard",
@@ -199,7 +197,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(745, 563);
             this.Controls.Add(this.LsbAccesos);
             this.Controls.Add(this.label5);
@@ -219,7 +216,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDatosAdministrador";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDatosAdministrador";
             this.ResumeLayout(false);
             this.PerformLayout();
