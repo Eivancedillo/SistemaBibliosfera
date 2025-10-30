@@ -37,7 +37,7 @@ namespace SistemaBibliosfera
         {
             administradorr.IdAdministrador = int.Parse(DtgDatos.Rows[fila].Cells["IdAdministrador"].Value.ToString());
             administradorr.Nombre = DtgDatos.Rows[fila].Cells["Nombre"].Value.ToString();
-            administradorr.Password = DtgDatos.Rows[fila].Cells["clave"].Value.ToString();
+            administradorr.Password = DtgDatos.Rows[fila].Cells["Password"].Value.ToString();
             switch (columna)
             {
                 case 2:
@@ -51,7 +51,18 @@ namespace SistemaBibliosfera
                     break;
                 case 3:
                     {
-                        ma.Desactivar(administradorr);
+                        bool estado = Convert.ToBoolean(DtgDatos.Rows[0].Cells["Activo"].Value);
+                        if (estado)
+                        {
+                            ma.Desactivar(administradorr);
+                            var rs = MessageBox.Show($"Se desactivo al administrador correctamente", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            ma.Activar(administradorr);
+                            var rs = MessageBox.Show($"Se activo al administrador correctamente", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+
                         DtgDatos.Columns.Clear();
 
                     }
@@ -59,10 +70,27 @@ namespace SistemaBibliosfera
             }
         }
 
+        private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(CmbEstado.Text.Equals("Activos"))
+                ma.Mostrar($"select * from Administradores where Activo = 1", DtgDatos, "Administradores");
+            else
+                ma.Mostrar($"select * from Administradores where Activo = 0", DtgDatos, "Administradores");
+        }
+
+        private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            fila = e.RowIndex;
+            columna = e.ColumnIndex;
+        }
+
         public FrmAdministradores()
         {
             InitializeComponent();
             ma = new ManejadorAdministrador();
+            CmbEstado.Items.Clear();
+            CmbEstado.Items.Add("Activos");
+            CmbEstado.Items.Add("Inactivos");
         }
     }
 }

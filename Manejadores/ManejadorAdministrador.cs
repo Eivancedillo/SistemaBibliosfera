@@ -43,8 +43,22 @@ namespace Manejadores
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
             tabla.Columns["IdAdministrador"].Visible = false;
             tabla.Columns["Password"].Visible = false;
-            tabla.Columns.Insert(2, Boton("Editar", Color.Tan));
-            tabla.Columns.Insert(3, Boton("Eliminar", Color.Red));
+            tabla.Columns["created_at"].Visible = false;
+            tabla.Columns["updated_at"].Visible = false;
+            tabla.Columns["Activo"].Visible =false;
+            tabla.Columns.Insert(2, Boton("Modificar clave", Color.Green));
+            if (tabla.Rows.Count > 0)
+            {
+                bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
+                if (estado)
+                {
+                    tabla.Columns.Insert(3, Boton("Desasctivar", Color.Red));
+                }
+                else
+                {
+                    tabla.Columns.Insert(3, Boton("Activar", Color.Blue));
+                }
+            }
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
 

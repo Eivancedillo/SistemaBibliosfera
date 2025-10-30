@@ -124,7 +124,7 @@
             this.BtnBibliotecarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnBibliotecarios.Name = "BtnBibliotecarios";
             this.BtnBibliotecarios.Size = new System.Drawing.Size(64, 64);
-            this.BtnBibliotecarios.Text = "toolStripButton5";
+            this.BtnBibliotecarios.Text = "Bibliotecarios";
             this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
             // 
             // BtnAsistencias
@@ -151,7 +151,7 @@
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(976, 590);
