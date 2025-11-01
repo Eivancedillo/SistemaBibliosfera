@@ -1,6 +1,6 @@
 ﻿namespace SistemaBibliosfera
 {
-    partial class FrmVerCategorias
+    partial class FrmCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
+            this.CmbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(276, 35);
+            this.BtnBuscar.Location = new System.Drawing.Point(403, 32);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
             this.BtnBuscar.TabIndex = 2;
@@ -55,7 +56,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(357, 35);
+            this.BtnAgregar.Location = new System.Drawing.Point(484, 32);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
             this.BtnAgregar.TabIndex = 3;
@@ -67,12 +68,12 @@
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(22, 70);
             this.DtgDatos.Name = "DtgDatos";
-            this.DtgDatos.Size = new System.Drawing.Size(410, 150);
+            this.DtgDatos.Size = new System.Drawing.Size(537, 150);
             this.DtgDatos.TabIndex = 4;
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(276, 244);
+            this.BtnGuardar.Location = new System.Drawing.Point(403, 235);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
             this.BtnGuardar.TabIndex = 5;
@@ -81,26 +82,35 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(357, 244);
+            this.BtnCancelar.Location = new System.Drawing.Point(484, 235);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 6;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // FrmVerCategorias
+            // CmbEstado
+            // 
+            this.CmbEstado.FormattingEnabled = true;
+            this.CmbEstado.Location = new System.Drawing.Point(276, 34);
+            this.CmbEstado.Name = "CmbEstado";
+            this.CmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.CmbEstado.TabIndex = 7;
+            // 
+            // FrmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 283);
+            this.ClientSize = new System.Drawing.Size(587, 283);
+            this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.DtgDatos);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscar);
-            this.Name = "FrmVerCategorias";
-            this.Text = "FrmVerCategorias";
+            this.Name = "FrmCategorias";
+            this.Text = "FrmCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,5 +125,6 @@
         private System.Windows.Forms.DataGridView DtgDatos;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.ComboBox CmbEstado;
     }
 }

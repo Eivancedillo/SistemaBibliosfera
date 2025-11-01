@@ -104,23 +104,23 @@
     <Compile Include="FrmAdquisiciones.Designer.cs">
       <DependentUpon>FrmAdquisiciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregarAutor.cs">
+    <Compile Include="FrmDatosAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregarAutor.Designer.cs">
-      <DependentUpon>FrmAgregarAutor.cs</DependentUpon>
+    <Compile Include="FrmDatosAutor.Designer.cs">
+      <DependentUpon>FrmDatosAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregarCategoria.cs">
+    <Compile Include="FrmDatosCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregarCategoria.Designer.cs">
-      <DependentUpon>FrmAgregarCategoria.cs</DependentUpon>
+    <Compile Include="FrmDatosCategoria.Designer.cs">
+      <DependentUpon>FrmDatosCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregarEditorial.cs">
+    <Compile Include="FrmDatosEditorial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregarEditorial.Designer.cs">
-      <DependentUpon>FrmAgregarEditorial.cs</DependentUpon>
+    <Compile Include="FrmDatosEditorial.Designer.cs">
+      <DependentUpon>FrmDatosEditorial.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAsistencias.cs">
       <SubType>Form</SubType>
@@ -164,23 +164,23 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVerAutores.cs">
+    <Compile Include="FrmAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVerAutores.Designer.cs">
-      <DependentUpon>FrmVerAutores.cs</DependentUpon>
+    <Compile Include="FrmAutores.Designer.cs">
+      <DependentUpon>FrmAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVerCategorias.cs">
+    <Compile Include="FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVerCategorias.Designer.cs">
-      <DependentUpon>FrmVerCategorias.cs</DependentUpon>
+    <Compile Include="FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVerEditoriales.cs">
+    <Compile Include="FrmEditoriales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVerEditoriales.Designer.cs">
-      <DependentUpon>FrmVerEditoriales.cs</DependentUpon>
+    <Compile Include="FrmEditoriales.Designer.cs">
+      <DependentUpon>FrmEditoriales.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -190,14 +190,14 @@
     <EmbeddedResource Include="FrmAdquisiciones.resx">
       <DependentUpon>FrmAdquisiciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarAutor.resx">
-      <DependentUpon>FrmAgregarAutor.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDatosAutor.resx">
+      <DependentUpon>FrmDatosAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarCategoria.resx">
-      <DependentUpon>FrmAgregarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDatosCategoria.resx">
+      <DependentUpon>FrmDatosCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarEditorial.resx">
-      <DependentUpon>FrmAgregarEditorial.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDatosEditorial.resx">
+      <DependentUpon>FrmDatosEditorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAsistencias.resx">
       <DependentUpon>FrmAsistencias.cs</DependentUpon>
@@ -220,14 +220,14 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVerAutores.resx">
-      <DependentUpon>FrmVerAutores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAutores.resx">
+      <DependentUpon>FrmAutores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVerCategorias.resx">
-      <DependentUpon>FrmVerCategorias.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVerEditoriales.resx">
-      <DependentUpon>FrmVerEditoriales.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditoriales.resx">
+      <DependentUpon>FrmEditoriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

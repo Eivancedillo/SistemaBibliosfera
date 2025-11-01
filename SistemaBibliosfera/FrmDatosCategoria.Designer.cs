@@ -1,6 +1,6 @@
 ﻿namespace SistemaBibliosfera
 {
-    partial class FrmAgregarCategoria
+    partial class FrmDatosCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@
             this.BtnCancelar.TabIndex = 9;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnGuardar
             // 
@@ -79,7 +80,7 @@
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
             // 
-            // FrmAgregarCategoria
+            // FrmDatosCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,8 +90,8 @@
             this.Controls.Add(this.TxtNombreCategoria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAgregarCategoria";
-            this.Text = "FrmAgregarCategoria";
+            this.Name = "FrmDatosCategoria";
+            this.Text = "FrmDatosCategoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 

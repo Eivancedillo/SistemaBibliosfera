@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaBibliosfera
 {
-    public partial class FrmAgregarEditorial : Form
+    public partial class FrmCategorias : Form
     {
-        public FrmAgregarEditorial()
+        public FrmCategorias()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace SistemaBibliosfera
 {
-    partial class FrmVerEditoriales
+    partial class FrmEditoriales
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,7 @@
             this.TxtBuscar.Size = new System.Drawing.Size(248, 20);
             this.TxtBuscar.TabIndex = 7;
             // 
-            // FrmVerEditoriales
+            // FrmEditoriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,8 @@
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscar);
-            this.Name = "FrmVerEditoriales";
-            this.Text = "FrmVerEditoriales";
+            this.Name = "FrmEditoriales";
+            this.Text = "FrmEditoriales";
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaBibliosfera
 {
-    public partial class FrmVerEditoriales : Form
+    public partial class FrmDatosCategoria : Form
     {
-        public FrmVerEditoriales()
+        public FrmDatosCategoria()
         {
             InitializeComponent();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

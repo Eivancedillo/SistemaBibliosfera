@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaBibliosfera
 {
-    public partial class FrmVerCategorias : Form
+    public partial class FrmDatosEditorial : Form
     {
-        public FrmVerCategorias()
+        public FrmDatosEditorial()
         {
             InitializeComponent();
         }

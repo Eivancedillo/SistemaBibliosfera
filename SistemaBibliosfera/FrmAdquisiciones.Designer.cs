@@ -90,6 +90,7 @@
             this.BtnVerCategorias.TabIndex = 3;
             this.BtnVerCategorias.Text = "Ver categorías";
             this.BtnVerCategorias.UseVisualStyleBackColor = true;
+            this.BtnVerCategorias.Click += new System.EventHandler(this.BtnVerCategorias_Click);
             // 
             // label3
             // 

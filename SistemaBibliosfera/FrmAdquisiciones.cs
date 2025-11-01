@@ -22,6 +22,9 @@ namespace SistemaBibliosfera
             Close();
         }
 
-
+        private void BtnVerCategorias_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
