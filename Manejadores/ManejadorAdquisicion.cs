@@ -144,7 +144,7 @@ namespace Manejadores
             if (tabla.Columns.Contains("updated_at")) tabla.Columns["updated_at"].Visible = false;
 
             tabla.Columns.Insert(2, Boton("Seleccionar", Color.Orange));
-            tabla.Columns.Insert(3, Boton("Editar", Color.Blue));
+            tabla.Columns.Insert(3, Boton("Editar", Color.Green));
 
             if (tabla.Rows.Count > 0)
             {

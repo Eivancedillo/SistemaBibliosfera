@@ -16,5 +16,23 @@ namespace SistemaBibliosfera
         {
             InitializeComponent();
         }
+
+        private void BtnVerCategorias_Click(object sender, EventArgs e)
+        {
+            FrmCatagorias frm = new FrmCatagorias();
+            frm.ShowDialog();
+        }
+
+        private void BtnVerEditoriales_Click(object sender, EventArgs e)
+        {
+            FrmEditoriales frm = new FrmEditoriales();
+            frm.ShowDialog();
+        }
+
+        private void BtnVerAutores_Click(object sender, EventArgs e)
+        {
+            FrmAutores frm = new FrmAutores();
+            frm.ShowDialog();
+        }
     }
 }
