@@ -64,6 +64,18 @@
     <Compile Include="FrmAsistencias.Designer.cs">
       <DependentUpon>FrmAsistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutores.Designer.cs">
+      <DependentUpon>FrmAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatagorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCatagorias.Designer.cs">
+      <DependentUpon>FrmCatagorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +94,35 @@
     <Compile Include="FrmDatosAdministrador.Designer.cs">
       <DependentUpon>FrmDatosAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDatosAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosAutores.Designer.cs">
+      <DependentUpon>FrmDatosAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDatosCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosCategorias.Designer.cs">
+      <DependentUpon>FrmDatosCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDatosEditoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosEditoriales.Designer.cs">
+      <DependentUpon>FrmDatosEditoriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDatosMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDatosMiembro.Designer.cs">
       <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditoriales.Designer.cs">
+      <DependentUpon>FrmEditoriales.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
