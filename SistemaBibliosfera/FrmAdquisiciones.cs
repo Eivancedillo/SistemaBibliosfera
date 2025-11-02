@@ -28,5 +28,17 @@ namespace SistemaBibliosfera
             frmCategorias.ShowDialog();
 
         }
+
+        private void BtnVerEditoriales_Click(object sender, EventArgs e)
+        {
+            FrmEditoriales frmEditoriales = new FrmEditoriales();
+            frmEditoriales.ShowDialog();
+        }
+
+        private void BtnVerAutores_Click(object sender, EventArgs e)
+        {
+            FrmAutores frmAutores = new FrmAutores();
+            frmAutores.ShowDialog();
+        }
     }
 }

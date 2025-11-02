@@ -43,6 +43,7 @@
             this.BtnCancelar.TabIndex = 14;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnGuardar
             // 
@@ -52,6 +53,7 @@
             this.BtnGuardar.TabIndex = 13;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // TxtNombreEditorial
             // 
@@ -79,7 +81,7 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Agregar nueva editorial";
             // 
-            // FrmAgregarEditorial
+            // FrmDatosEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +91,7 @@
             this.Controls.Add(this.TxtNombreEditorial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAgregarEditorial";
+            this.Name = "FrmDatosEditorial";
             this.Text = "FrmAgregarEditorial";
             this.ResumeLayout(false);
             this.PerformLayout();

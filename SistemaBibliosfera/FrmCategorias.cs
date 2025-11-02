@@ -31,7 +31,7 @@ namespace SistemaBibliosfera
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             int estadoBool = (CmbEstado.SelectedIndex == 0) ? 1 : 0;
-            //mad.Mostrar($"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Categorias");
+
             string consulta = $"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%' AND Activo = {estadoBool}";
             mad.Mostrar(consulta, DtgDatos, "Categorias", CmbEstado.Text);
         }
@@ -43,13 +43,13 @@ namespace SistemaBibliosfera
 
             switch (columna)
             {
-                case 1:
+                case 3:
                     {
                         // Seleccionar
                         this.Close();
 
                     }; break;
-                case 2:
+                case 4:
                     {
                         //Editar
                         FrmDatosCategoria datosCategoria = new FrmDatosCategoria();
@@ -57,7 +57,7 @@ namespace SistemaBibliosfera
                         DtgDatos.Columns.Clear();
 
                     }; break;
-                case 3:
+                case 5:
                     {
                         // Activar / Desactivar
                         if (CmbEstado.Text == "Activo")

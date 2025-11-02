@@ -71,7 +71,7 @@ namespace Manejadores
         #region DESACTIVAR EDITORIAL
         public void DesactivarE (Editorial editorial)
         {
-            var rs = MessageBox.Show($"¿Está seguro de desactivar la categoría {editorial.Nombre}?",
+            var rs = MessageBox.Show($"¿Está seguro de desactivar la editorial {editorial.Nombre}?",
                 "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -104,7 +104,7 @@ namespace Manejadores
         #region DESACTIVAR AUTORES
         public void DesactivarA (Autor autor)
         {
-            var rs = MessageBox.Show($"¿Está seguro de desactivar la categoría {autor.Nombre}?",
+            var rs = MessageBox.Show($"¿Está seguro de desactivar el autor {autor.Nombre}?",
                 "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -125,22 +125,24 @@ namespace Manejadores
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
-            tabla.Columns["IdCategoria"].Visible = false;
-            //tabla.Columns["IdEditorial"].Visible = false;
-            //tabla.Columns["IdAutor"].Visible = false;
-            tabla.Columns["Activo"].Visible = false;
-            tabla.Columns["created_at"].Visible = false;
-            tabla.Columns["updated_at"].Visible = false;
+
+            if(tabla.Columns.Contains("IdCategoria")) tabla.Columns["IdCategoria"].Visible = false;
+            if(tabla.Columns.Contains("IdEditorial")) tabla.Columns["IdEditorial"].Visible = false;
+            if(tabla.Columns.Contains("IdAutor")) tabla.Columns["IdAutor"].Visible = false;
+            if(tabla.Columns.Contains("Activo")) tabla.Columns["Activo"].Visible = false;
+            if(tabla.Columns.Contains("created_at")) tabla.Columns["created_at"].Visible = false;
+            if(tabla.Columns.Contains("updated_at")) tabla.Columns["updated_at"].Visible = false;
+
             tabla.Columns.Insert(3, Boton("Seleccionar", Color.Orange));
             tabla.Columns.Insert(4, Boton("Editar", Color.Blue));
 
             if (estado == "Activo")
             {
-                tabla.Columns.Insert(3, Boton("Desactivar", Color.Red));
+                tabla.Columns.Insert(5, Boton("Desactivar", Color.Red));
             }
             else
             {
-                tabla.Columns.Insert(3, Boton("Activar", Color.LimeGreen));
+                tabla.Columns.Insert(5, Boton("Activar", Color.LimeGreen));
             }
                 tabla.AutoResizeColumns();
             tabla.AutoResizeRows();

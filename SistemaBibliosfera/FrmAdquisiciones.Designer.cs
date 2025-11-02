@@ -157,6 +157,7 @@
             this.BtnVerEditoriales.TabIndex = 11;
             this.BtnVerEditoriales.Text = "Ver editoriales";
             this.BtnVerEditoriales.UseVisualStyleBackColor = true;
+            this.BtnVerEditoriales.Click += new System.EventHandler(this.BtnVerEditoriales_Click);
             // 
             // BtnVerAutores
             // 
@@ -166,6 +167,7 @@
             this.BtnVerAutores.TabIndex = 12;
             this.BtnVerAutores.Text = "Ver autores";
             this.BtnVerAutores.UseVisualStyleBackColor = true;
+            this.BtnVerAutores.Click += new System.EventHandler(this.BtnVerAutores_Click);
             // 
             // label7
             // 
