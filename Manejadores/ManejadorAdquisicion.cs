@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatos;
 using Entidades;
+using ZstdSharp.Unsafe;
 
 namespace Manejadores
 {
@@ -21,21 +22,27 @@ namespace Manejadores
         #region GUARDAR CATEGORIA
         public void GuardarC (Categoria categoria )
         {
-            b.Comando($"CALL p_insertar_categorias({categoria.Nombre}");
+            b.Comando($"CALL p_insertar_categorias('{categoria.Nombre}')");
         }
         #endregion GUARDAR CATEGORIA
 
         #region MODIFICAR CATEGORIA
         public void ModificarC (Categoria categoria)
         {
-            b.Comando($"CALL p_editar_categoria({categoria.Nombre}, {categoria.IdCategoria})");
+            b.Comando($"CALL p_editar_categorias('{categoria.Nombre}', {categoria.IdCategoria})");
         }
         #endregion MODIFICAR CATEGORIA
 
         #region DESACTIVAR CATEGORIA
         public void DesactivarC (Categoria categoria)
         {
-            b.Comando($"CALL p_desactivar_categorias({categoria.IdCategoria})");
+            var rs = MessageBox.Show($"¿Está seguro de desactivar la categoría {categoria.Nombre}?", 
+                "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+               b.Comando($"CALL p_desactivar_categorias({categoria.IdCategoria})");
+            }
+            
         }
 
         #endregion DESACTIVAR CATEGORIA
@@ -50,21 +57,26 @@ namespace Manejadores
         #region GUARDAR EDITORIAL
         public void GuardarE (Editorial editorial)
         {
-            b.Comando($"CALL p_insertar_editoriales({editorial.Nombre})");
+            b.Comando($"CALL p_insertar_editoriales('{editorial.Nombre}')");
         }
         #endregion GUARDAR EDITORIAL
 
         #region MODIFICAR EDITORIAL
         public void ModificarE (Editorial editorial)
         {
-            b.Comando($"CALL p_editar_editoriales({editorial.Nombre}, {editorial.IdEditorial})");
+            b.Comando($"CALL p_editar_editoriales('{editorial.Nombre}', {editorial.IdEditorial})");
         }
         #endregion MODIFICAR EDITORIAL
 
         #region DESACTIVAR EDITORIAL
         public void DesactivarE (Editorial editorial)
         {
-            b.Comando($"CALL p_desactivar_editoriales({editorial.IdEditorial})");
+            var rs = MessageBox.Show($"¿Está seguro de desactivar la categoría {editorial.Nombre}?",
+                "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                b.Comando($"CALL p_desactivar_editoriales({editorial.IdEditorial})");
+            }
         }
         #endregion DESACTIVAR EDITORIAL
 
@@ -78,21 +90,26 @@ namespace Manejadores
         #region GUARDAR AUTORES
         public void GuardarA (Autor autor)
         {
-            b.Comando($"CALL p_insertar_autores({autor.Nombre})");
+            b.Comando($"CALL p_insertar_autores('{autor.Nombre}')");
         }
         #endregion GUARDAR AUTORES
 
         #region MODIFICAR AUTORES
         public void ModificarA (Autor autor)
         {
-            b.Comando($"CALL p_editar_autores({autor.Nombre}, {autor.IdAutor})");
+            b.Comando($"CALL p_editar_autores('{autor.Nombre}', {autor.IdAutor})");
         }
         #endregion MODIFICAR AUTORES
 
         #region DESACTIVAR AUTORES
         public void DesactivarA (Autor autor)
         {
-            b.Comando($"CALL p_desactivar_autores({autor.IdAutor})");
+            var rs = MessageBox.Show($"¿Está seguro de desactivar la categoría {autor.Nombre}?",
+                "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                b.Comando($"CALL p_desactivar_autores({autor.IdAutor})");
+            }
         }
         #endregion DESACTIVAR AUTORES
 
@@ -104,23 +121,35 @@ namespace Manejadores
         #endregion ACTIVAR AUTORES
 
         #region DATOS QUE SE MOSTRARAN EN EL DTG
-        public void Mostrar (string consulta, DataGridView tabla, string datos)
+        public void Mostrar (string consulta, DataGridView tabla, string datos, string estado)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
             tabla.Columns["IdCategoria"].Visible = false;
-            tabla.Columns["IdEditorial"].Visible = false;
-            tabla.Columns["IdAutor"].Visible = false;
-            tabla.Columns.Insert(3, Boton("Seleccionar", Color.Green));
+            //tabla.Columns["IdEditorial"].Visible = false;
+            //tabla.Columns["IdAutor"].Visible = false;
+            tabla.Columns["Activo"].Visible = false;
+            tabla.Columns["created_at"].Visible = false;
+            tabla.Columns["updated_at"].Visible = false;
+            tabla.Columns.Insert(3, Boton("Seleccionar", Color.Orange));
             tabla.Columns.Insert(4, Boton("Editar", Color.Blue));
-            tabla.Columns.Insert(5, Boton("Desactivar", Color.Red));
-            tabla.AutoResizeColumns();
+
+            if (estado == "Activo")
+            {
+                tabla.Columns.Insert(3, Boton("Desactivar", Color.Red));
+            }
+            else
+            {
+                tabla.Columns.Insert(3, Boton("Activar", Color.LimeGreen));
+            }
+                tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
 
         }
         #endregion DATOS QUE SE MOSTRARAN EN EL DTG
 
 
+        #region BOTONES
         public static DataGridViewButtonColumn Boton(string titulo, Color fondo)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -131,9 +160,7 @@ namespace Manejadores
             btn.DefaultCellStyle.ForeColor = Color.Black;
             return btn;
         }
-
-
-
+        #endregion BOTONES
 
     }
 }

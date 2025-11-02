@@ -253,6 +253,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{923ccdea-7f13-471a-8a75-a26caa5167cf}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Manejadores\Manejadores.csproj">
       <Project>{535c260c-a55f-4623-bf62-b89c96df9f0e}</Project>
       <Name>Manejadores</Name>

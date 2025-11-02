@@ -24,7 +24,9 @@ namespace SistemaBibliosfera
 
         private void BtnVerCategorias_Click(object sender, EventArgs e)
         {
-            
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.ShowDialog();
+
         }
     }
 }

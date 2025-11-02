@@ -13,7 +13,7 @@ namespace AccesoDatos
         MySqlConnection con;
         public Base()
         {
-            con = new MySqlConnection($"server=localhost; port=3309; user=root; password=12345; database=db_Bibliosfera;");
+            con = new MySqlConnection($"server=localhost; port=3309; user=root; password=12345; database=db_BiblioSfera;");
         }
 
         public void Comando(string query, bool mantenerConexion = false)
