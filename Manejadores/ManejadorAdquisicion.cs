@@ -143,8 +143,21 @@ namespace Manejadores
             if (tabla.Columns.Contains("created_at")) tabla.Columns["created_at"].Visible = false;
             if (tabla.Columns.Contains("updated_at")) tabla.Columns["updated_at"].Visible = false;
 
-            tabla.Columns.Insert(3, Boton("Seleccionar", Color.Orange));
-            tabla.Columns.Insert(4, Boton("Editar", Color.Blue));
+            tabla.Columns.Insert(2, Boton("Seleccionar", Color.Orange));
+            tabla.Columns.Insert(3, Boton("Editar", Color.Blue));
+
+            if (tabla.Rows.Count > 0)
+            {
+                bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
+                if (estado)
+                {
+                    tabla.Columns.Insert(4, Boton("Desasctivar", Color.Red));
+                }
+                else
+                {
+                    tabla.Columns.Insert(4, Boton("Activar", Color.Blue));
+                }
+            }
 
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
