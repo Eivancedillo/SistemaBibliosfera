@@ -43,6 +43,7 @@
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnGuardar
             // 
@@ -52,6 +53,7 @@
             this.BtnGuardar.TabIndex = 18;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // TxtNombreAutor
             // 
@@ -79,7 +81,7 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Agregar nuevo autor";
             // 
-            // FrmAgregarAutor
+            // FrmDatosAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +91,7 @@
             this.Controls.Add(this.TxtNombreAutor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAgregarAutor";
+            this.Name = "FrmDatosAutor";
             this.Text = "FrmAgregarAutor";
             this.ResumeLayout(false);
             this.PerformLayout();
