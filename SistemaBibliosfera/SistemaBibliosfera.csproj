@@ -162,6 +162,9 @@
     <EmbeddedResource Include="FrmAutores.resx">
       <DependentUpon>FrmAutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCatagorias.resx">
+      <DependentUpon>FrmCatagorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCatalogo.resx">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,8 +174,20 @@
     <EmbeddedResource Include="FrmDatosAdministrador.resx">
       <DependentUpon>FrmDatosAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosAutores.resx">
+      <DependentUpon>FrmDatosAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosCategorias.resx">
+      <DependentUpon>FrmDatosCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosEditoriales.resx">
+      <DependentUpon>FrmDatosEditoriales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosMiembro.resx">
       <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditoriales.resx">
+      <DependentUpon>FrmEditoriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

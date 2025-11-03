@@ -16,13 +16,16 @@ namespace SistemaBibliosfera
     {
         ManejadorAdquisicion mad;
         public static Autor autor = new Autor(0, "");
+        Libro libroBorrador;
         int fila = 0, columna = 0;
 
-        public FrmAutores()
+        public FrmAutores(Libro libro)
         {
             InitializeComponent();
 
             mad = new ManejadorAdquisicion();
+            libroBorrador = libro;
+
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
         }
@@ -40,6 +43,17 @@ namespace SistemaBibliosfera
             else
                 mad.Mostrar($"SELECT * FROM Autores WHERE Autor LIKE '%{TxtBuscar.Text}%' AND Activo = 0", DtgDatos, "Autores");
 
+            foreach (DataGridViewRow row in DtgDatos.Rows)
+            {
+                int idGrid = int.Parse(row.Cells["IdAutor"].Value.ToString());
+
+                // Compara el ID del grid con la lista del libro
+                if (libroBorrador.LibroAutores.Any(c => c.IdAutor == idGrid))
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+            }
+
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -52,12 +66,37 @@ namespace SistemaBibliosfera
             autor.IdAutor = int.Parse(DtgDatos.Rows[fila].Cells["IdAutor"].Value.ToString());
             autor.Nombre = DtgDatos.Rows[fila].Cells["Autor"].Value.ToString();
 
+            // Obtener la fila actual
+            DataGridViewRow filaActual = DtgDatos.Rows[e.RowIndex];
+
             switch (columna)
             {
                 case 2:
                     {
-                        // Seleccionar
 
+                        Autor autSeleccionado = new Autor(
+                            int.Parse(filaActual.Cells["IdAutor"].Value.ToString()),
+                            filaActual.Cells["Autor"].Value.ToString()
+                        );
+
+                        // 2. Buscamos si el objeto (por ID) YA ESTÁ en la lista del libro
+                        //    Usamos 'FirstOrDefault' para encontrar el objeto EXACTO en la lista
+                        Autor objetoEnLista = libroBorrador.LibroAutores
+                            .FirstOrDefault(c => c.IdAutor == autSeleccionado.IdAutor);
+
+
+                        if (objetoEnLista != null) // <-- Si es diferente de null, SÍ existe
+                        {
+                            libroBorrador.LibroAutores.Remove(objetoEnLista);
+
+                            filaActual.DefaultCellStyle.BackColor = Color.Empty;
+                        }
+                        else
+                        {
+                            libroBorrador.LibroAutores.Add(autSeleccionado);
+
+                            filaActual.DefaultCellStyle.BackColor = Color.LightGreen;
+                        }
                     }
                     ; break;
                 case 3:

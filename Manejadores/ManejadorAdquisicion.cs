@@ -42,7 +42,6 @@ namespace Manejadores
             {
                 b.Comando($"CALL p_desactivar_categorias({categoria.IdCategoria})");
             }
-
         }
 
         #endregion DESACTIVAR CATEGORIA
@@ -133,6 +132,8 @@ namespace Manejadores
         #region DATOS QUE SE MOSTRARAN EN EL DTG
         public void Mostrar(string consulta, DataGridView tabla, string datos)
         {
+            int posboton = 2;
+
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
 
@@ -143,19 +144,25 @@ namespace Manejadores
             if (tabla.Columns.Contains("created_at")) tabla.Columns["created_at"].Visible = false;
             if (tabla.Columns.Contains("updated_at")) tabla.Columns["updated_at"].Visible = false;
 
-            tabla.Columns.Insert(2, Boton("Seleccionar", Color.Orange));
-            tabla.Columns.Insert(3, Boton("Editar", Color.Green));
-
             if (tabla.Rows.Count > 0)
             {
                 bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
                 if (estado)
                 {
-                    tabla.Columns.Insert(4, Boton("Desasctivar", Color.Red));
+                    tabla.Columns.Insert(posboton, Boton("Seleccionar", Color.Orange));
+                    posboton++;
+                }
+
+                tabla.Columns.Insert(posboton, Boton("Editar", Color.Green));
+                posboton++;
+
+                if (estado)
+                {
+                    tabla.Columns.Insert(posboton, Boton("Desasctivar", Color.Red));
                 }
                 else
                 {
-                    tabla.Columns.Insert(4, Boton("Activar", Color.Blue));
+                    tabla.Columns.Insert(posboton, Boton("Activar", Color.Blue));
                 }
             }
 
@@ -165,6 +172,29 @@ namespace Manejadores
         }
         #endregion DATOS QUE SE MOSTRARAN EN EL DTG
 
+        public void GuardarLibro(Libro libro)
+        {
+            b.Comando($"CALL p_insertar_libro('{libro.ISBN}', '{libro.Titulo}', {libro.IdEditorial}, {libro.AnioPublicacion});");
+
+            foreach (var autor in libro.LibroAutores)
+            {
+                b.Comando($"CALL p_insertar_libroautores('{libro.ISBN}', {autor.IdAutor});");
+            }
+            foreach (var categoria in libro.LibroCategoria)
+            {
+                b.Comando($"CALL p_insertar_librocategorias('{libro.ISBN}', {categoria.IdCategoria});");
+            }
+        }
+
+        public string MostrarE(int IdEditorial)
+        {
+            var rs = b.Consultar($"select Nombre from v_mostrar_editorial where IdEditorial = {IdEditorial};", "v_mostrar_editorial");
+
+            if (rs != null)
+                return rs.Tables[0].Rows[0].Field<string>("Nombre");
+            else
+                return "";
+        }
 
         #region BOTONES
         public static DataGridViewButtonColumn Boton(string titulo, Color fondo)

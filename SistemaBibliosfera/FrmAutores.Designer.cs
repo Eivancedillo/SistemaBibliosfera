@@ -40,6 +40,7 @@
             // 
             // CmbEstado
             // 
+            this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEstado.FormattingEnabled = true;
             this.CmbEstado.Location = new System.Drawing.Point(351, 52);
             this.CmbEstado.Margin = new System.Windows.Forms.Padding(4);
