@@ -37,7 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CmbOrdenar = new System.Windows.Forms.ComboBox();
-            this.BtnAscDes = new System.Windows.Forms.Button();
+            this.CmbEstado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,10 @@
             // 
             this.CmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbFiltro.FormattingEnabled = true;
-            this.CmbFiltro.Location = new System.Drawing.Point(253, 90);
+            this.CmbFiltro.Location = new System.Drawing.Point(556, 90);
             this.CmbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.CmbFiltro.Name = "CmbFiltro";
-            this.CmbFiltro.Size = new System.Drawing.Size(160, 33);
+            this.CmbFiltro.Size = new System.Drawing.Size(139, 33);
             this.CmbFiltro.TabIndex = 33;
             // 
             // BtnCerrar
@@ -79,7 +80,7 @@
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(4);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
-            this.DtgDatos.Size = new System.Drawing.Size(766, 185);
+            this.DtgDatos.Size = new System.Drawing.Size(932, 185);
             this.DtgDatos.TabIndex = 31;
             this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
             this.DtgDatos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellEnter);
@@ -106,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 94);
+            this.label2.Location = new System.Drawing.Point(495, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 35;
@@ -115,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(420, 94);
+            this.label3.Location = new System.Drawing.Point(717, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 37;
@@ -125,22 +126,30 @@
             // 
             this.CmbOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOrdenar.FormattingEnabled = true;
-            this.CmbOrdenar.Location = new System.Drawing.Point(511, 90);
+            this.CmbOrdenar.Location = new System.Drawing.Point(808, 90);
             this.CmbOrdenar.Margin = new System.Windows.Forms.Padding(4);
             this.CmbOrdenar.Name = "CmbOrdenar";
-            this.CmbOrdenar.Size = new System.Drawing.Size(160, 33);
+            this.CmbOrdenar.Size = new System.Drawing.Size(137, 33);
             this.CmbOrdenar.TabIndex = 36;
             // 
-            // BtnAscDes
+            // CmbEstado
             // 
-            this.BtnAscDes.Location = new System.Drawing.Point(679, 90);
-            this.BtnAscDes.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnAscDes.Name = "BtnAscDes";
-            this.BtnAscDes.Size = new System.Drawing.Size(55, 33);
-            this.BtnAscDes.TabIndex = 38;
-            this.BtnAscDes.Text = "Asc";
-            this.BtnAscDes.UseVisualStyleBackColor = true;
-            this.BtnAscDes.Click += new System.EventHandler(this.BtnAscDes_Click);
+            this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbEstado.FormattingEnabled = true;
+            this.CmbEstado.Location = new System.Drawing.Point(353, 90);
+            this.CmbEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.CmbEstado.Name = "CmbEstado";
+            this.CmbEstado.Size = new System.Drawing.Size(119, 33);
+            this.CmbEstado.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(273, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 25);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Estado";
             // 
             // FrmCatalogo
             // 
@@ -148,8 +157,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(797, 376);
-            this.Controls.Add(this.BtnAscDes);
+            this.ClientSize = new System.Drawing.Size(958, 376);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CmbOrdenar);
             this.Controls.Add(this.label2);
@@ -181,6 +191,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CmbOrdenar;
-        private System.Windows.Forms.Button BtnAscDes;
+        private System.Windows.Forms.ComboBox CmbEstado;
+        private System.Windows.Forms.Label label4;
     }
 }
