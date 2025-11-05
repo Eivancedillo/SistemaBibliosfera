@@ -96,7 +96,7 @@ namespace Manejadores
             }
         }
 
-        public void Mostrar(DataGridView tabla, TextBox Buscar, ComboBox estadocmb ,ComboBox filtro, ComboBox Orden)
+        public void Mostrar(DataGridView tabla, TextBox Buscar, ComboBox estadocmb, ComboBox filtro, ComboBox Orden, bool prestamo = false)
         {
             tabla.Columns.Clear();
 
@@ -135,28 +135,30 @@ namespace Manejadores
                 // Caso por defecto (sin filtro)
                 filtroSql = $"AND Titulo LIKE '%{buscarTexto}%'";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Titulo ASC" : "ORDER BY Titulo DESC";
-             }
+            }
 
-                // Armar la consulta final
-                string consultaFinal = $"SELECT * FROM v_catalogo WHERE {estadoSql} {filtroSql} {ordenSql}";
+            // Armar la consulta final
+            string consultaFinal = $"SELECT * FROM v_catalogo WHERE {estadoSql} {filtroSql} {ordenSql}";
 
-                // Ejecutar
-                DataTable dt = b.Consultar(consultaFinal, "v_catalogo").Tables[0];
-                tabla.DataSource = dt;
+            // Ejecutar
+            DataTable dt = b.Consultar(consultaFinal, "v_catalogo").Tables[0];
+            tabla.DataSource = dt;
 
-                if (tabla.Rows.Count > 0)
+            if (tabla.Rows.Count > 0)
+            {
+                tabla.Columns["IdLibro"].Visible = false;
+                tabla.Columns["TotalEjemplares"].Visible = false;
+                tabla.Columns["Activo"].Visible = false;
+                tabla.Columns["IdEditorial"].Visible = false;
+            }
+
+            // Verificar el estado del primer registro para decidir qué botón agregar
+            if (tabla.Rows.Count > 0)
+            {
+                if (!prestamo)
                 {
-                    tabla.Columns["IdLibro"].Visible = false;
-                    tabla.Columns["TotalEjemplares"].Visible = false;
-                    tabla.Columns["Activo"].Visible = false;
-                    tabla.Columns["IdEditorial"].Visible = false;
-                }
+                    tabla.Columns.Insert(10, Boton("Editar", Color.Green));
 
-                tabla.Columns.Insert(10, Boton("Editar", Color.Green));
-
-                // Verificar el estado del primer registro para decidir qué botón agregar
-                if (tabla.Rows.Count > 0)
-                {
                     if (estadocmb.Text.Equals("Activos"))
                     {
                         tabla.Columns.Insert(11, Boton("Desasctivar", Color.Red));
@@ -166,10 +168,15 @@ namespace Manejadores
                         tabla.Columns.Insert(11, Boton("Activar", Color.Blue));
                     }
                 }
-
-                tabla.AutoResizeColumns();
-                tabla.AutoResizeRows();
+                else
+                {   
+                    tabla.Columns.Insert(11, Boton("Seleccionar", Color.Orange));
+                }
             }
+
+            tabla.AutoResizeColumns();
+            tabla.AutoResizeRows();
+        }
 
         public static DataGridViewButtonColumn Boton(string titulo, Color color)
         {

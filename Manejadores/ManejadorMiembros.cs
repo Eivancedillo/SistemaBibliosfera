@@ -49,7 +49,7 @@ namespace Manejadores
                 b.Comando($"call p_activar_miembro({miembro.NumeroControl});");
         }
 
-        public void Mostrar(string query, DataGridView tabla, string datos)
+        public void Mostrar(string query, DataGridView tabla, string datos, bool prestamo = false)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(query, datos).Tables[0];
@@ -57,19 +57,26 @@ namespace Manejadores
             tabla.Columns["created_at"].Visible = false;
             tabla.Columns["updated_at"].Visible = false;
 
-            tabla.Columns.Insert(5, Boton("Editar", Color.Green));
-
             // Verificar el estado del primer registro para decidir qué botón agregar
             if (tabla.Rows.Count > 0)
             {
-                bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Estado"].Value);
-                if (estado)
+                if (!prestamo)
                 {
-                    tabla.Columns.Insert(6, Boton("Desasctivar", Color.Red));
+                    tabla.Columns.Insert(5, Boton("Editar", Color.Green));
+
+                    bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Estado"].Value);
+                    if (estado)
+                    {
+                        tabla.Columns.Insert(6, Boton("Desasctivar", Color.Red));
+                    }
+                    else
+                    {
+                        tabla.Columns.Insert(6, Boton("Activar", Color.Blue));
+                    }
                 }
                 else
                 {
-                    tabla.Columns.Insert(6, Boton("Activar", Color.Blue));
+                    tabla.Columns.Insert(6, Boton("Seleccionar", Color.Orange));
                 }
             }
 

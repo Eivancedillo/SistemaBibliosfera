@@ -19,6 +19,7 @@ namespace SistemaBibliosfera
         List<Categoria> LibroCategorias;
         Libro libro;
         int fila = 0, columna = 0;
+        bool prestamo = false;
         public FrmCatalogo()
         {
             InitializeComponent();
@@ -27,6 +28,19 @@ namespace SistemaBibliosfera
             LibroAutores = new List<Autor>();
             LibroCategorias = new List<Categoria>();
             libro = new Libro(0, "", "", 0, 0, LibroAutores, LibroCategorias);
+
+            Mc.LlenarCmbs(CmbEstado, CmbFiltro, CmbOrdenar);
+        }
+
+        public FrmCatalogo(bool prestamotraido)
+        {
+            InitializeComponent();
+            Mc = new ManejadorCatalogo();
+
+            LibroAutores = new List<Autor>();
+            LibroCategorias = new List<Categoria>();
+            libro = new Libro(0, "", "", 0, 0, LibroAutores, LibroCategorias);
+            prestamo = prestamotraido;
 
             Mc.LlenarCmbs(CmbEstado, CmbFiltro, CmbOrdenar);
         }
@@ -46,7 +60,23 @@ namespace SistemaBibliosfera
                     ; break;
                 case 11:
                     {
-                        Mc.DesactivarLibro(libro);
+                        if(!prestamo)
+                            Mc.DesactivarLibro(libro);
+                        else
+                        {
+                            if(DtgDatos.Rows[e.RowIndex].Cells["Disp"].Value.ToString() == "0")
+                            {
+                                MessageBox.Show("No hay ejemplares disponibles de este libro para préstamo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            var rs = MessageBox.Show($"¿Desea seleccionar el libro '{libro.Titulo}' para el préstamo?", "Confirmar selección", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if(rs == DialogResult.Yes)
+                            {
+                                FrmDatosPrestamos.libroejemplar = libro;
+                                Close();
+                            }
+                        }
                     }
                     ; break;
             }
@@ -60,7 +90,10 @@ namespace SistemaBibliosfera
                 return;
             }
 
-            Mc.Mostrar(DtgDatos, TxtBuscar, CmbEstado, CmbFiltro, CmbOrdenar);
+            if(!prestamo)
+                Mc.Mostrar(DtgDatos, TxtBuscar, CmbEstado, CmbFiltro, CmbOrdenar);
+            else
+                Mc.Mostrar(DtgDatos, TxtBuscar, CmbEstado, CmbFiltro, CmbOrdenar, true);
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)

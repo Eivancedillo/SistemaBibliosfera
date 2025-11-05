@@ -15,6 +15,7 @@ namespace SistemaBibliosfera
     public partial class FrmEjemplares : Form
     {
         int fila = 0, columna = 0, IdLibro = 0;
+        bool prestamo = false;
         ManejadorEjemplares Me;
         public static Ejemplar ejemplar = new Ejemplar(0, 0, 0, "", "");
         public FrmEjemplares(int IdLibrotraido)
@@ -34,16 +35,42 @@ namespace SistemaBibliosfera
             IdLibro = IdLibrotraido;
         }
 
+        public FrmEjemplares(bool prestamotraido, int IdLibrotraido)
+        {
+            InitializeComponent();
+
+            Me = new ManejadorEjemplares();
+
+            Me.MostrarNombreEjemplar(IdLibrotraido, LblEjemplar);
+
+            CmbEstado.Items.Clear();
+            CmbEstado.Items.Add("Activos");
+            CmbEstado.Items.Add("Inactivos");
+
+            BtnAgregar.Enabled = false; BtnAceptar.Enabled = true; CmbEstado.Enabled = false;
+
+            CmbEstado.SelectedIndex = 0;
+
+            IdLibro = IdLibrotraido;
+            prestamo = prestamotraido;
+        }
+
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             if (CmbEstado.SelectedItem == null)
                 MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                if (CmbEstado.Text.Equals("Activos"))
-                    Me.Mostrar($"select * from Ejemplares where Activo = 1 and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares");
+                if (!prestamo)
+                {
+                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
+                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares");
+                }
                 else
-                    Me.Mostrar($"select * from Ejemplares where Activo = 0 and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares");
+                {
+                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
+                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares", true);
+                }
             }
         }
 
@@ -85,17 +112,35 @@ namespace SistemaBibliosfera
                     ; break;
                 case 6:
                     {
-                        bool activo = Convert.ToBoolean(DtgDatos.Rows[fila].Cells["Activo"].Value);
-                        if (activo)
+                        if (!prestamo)
                         {
-                            Me.DesactivarEjemplar(ejemplar.IdEjemplar);
-                            DtgDatos.Columns.Clear();
+                            bool activo = Convert.ToBoolean(DtgDatos.Rows[fila].Cells["Activo"].Value);
+                            if (activo)
+                            {
+                                Me.DesactivarEjemplar(ejemplar.IdEjemplar);
+                                DtgDatos.Columns.Clear();
+                            }
+                            else
+                            {
+                                Me.ActivarEjemplar(ejemplar.IdEjemplar);
+                                DtgDatos.Columns.Clear();
+                            }
                         }
                         else
                         {
-                            Me.ActivarEjemplar(ejemplar.IdEjemplar);
-                            DtgDatos.Columns.Clear();
-                        }
+                            if (DtgDatos.Rows[e.RowIndex].Cells["Estado"].Value.ToString() != "Disponible")
+                            {
+                                MessageBox.Show("El ejemplar seleccionado no está disponible para préstamo.", "Ejemplar no disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            var rs = MessageBox.Show($"¿Seleccionar el ejemplar {ejemplar.Codigo}?", "Confirmar selección", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (rs == DialogResult.Yes)
+                            {
+                                FrmDatosPrestamos.ejemplarprestamo = ejemplar;
+                                Close();
+                            }
+                        }    
                     }
                     ; break;
             }

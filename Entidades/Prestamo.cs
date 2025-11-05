@@ -8,12 +8,25 @@ namespace Entidades
 {
     public class Prestamo
     {
+        public Prestamo(int idPrestamo, int numeroControl, int idEjemplar, int idLibro, DateTime fechaPrestamo, DateTime fechaDevolucionPrevista, DateTime fechaDevolucionReal, string estadoPrestamo)
+        {
+            IdPrestamo = idPrestamo;
+            NumeroControl = numeroControl;
+            IdEjemplar = idEjemplar;
+            IdLibro = idLibro;
+            FechaPrestamo = fechaPrestamo;
+            FechaDevolucionPrevista = fechaDevolucionPrevista;
+            FechaDevolucionReal = fechaDevolucionReal;
+            EstadoPrestamo = estadoPrestamo;
+        }
+
         public int IdPrestamo { get; set; }
         public int NumeroControl { get; set; }
         public int IdEjemplar { get; set; }
-        public string FechaPrestamo { get; set; }
-        public string FechaDevolucionPrevista { get; set; }
-        public string FechaDevolucionReal { get; set; }
+        public int IdLibro { get; set; }
+        public DateTime FechaPrestamo { get; set; }
+        public DateTime FechaDevolucionPrevista { get; set; }
+        public DateTime FechaDevolucionReal { get; set; }
         public string EstadoPrestamo { get; set; }
     }
 }

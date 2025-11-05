@@ -124,6 +124,12 @@
     <Compile Include="FrmDatosMiembro.Designer.cs">
       <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDatosPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosPrestamos.Designer.cs">
+      <DependentUpon>FrmDatosPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditoriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosMiembro.resx">
       <DependentUpon>FrmDatosMiembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosPrestamos.resx">
+      <DependentUpon>FrmDatosPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditoriales.resx">
       <DependentUpon>FrmEditoriales.cs</DependentUpon>

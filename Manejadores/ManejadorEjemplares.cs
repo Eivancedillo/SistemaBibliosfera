@@ -46,7 +46,7 @@ namespace Manejadores
             label.Text = b.Consultar($"select Titulo from Libros where IdLibro = {IdLibro}", "Libros").Tables[0].Rows[0]["Titulo"].ToString();
         }
 
-        public void Mostrar(string consulta, DataGridView tabla, string datos)
+        public void Mostrar(string consulta, DataGridView tabla, string datos, bool prestamo = false)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
@@ -56,18 +56,25 @@ namespace Manejadores
             tabla.Columns["created_at"].Visible = false;
             tabla.Columns["updated_at"].Visible = false;
 
-            tabla.Columns.Insert(5, Boton("Editar", Color.Green));
-
             if (tabla.Rows.Count > 0)
             {
-                bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
-                if (estado)
+                if (!prestamo)
                 {
-                    tabla.Columns.Insert(6, Boton("Desasctivar", Color.Red));
+                    tabla.Columns.Insert(5, Boton("Editar", Color.Green));
+
+                    bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
+                    if (estado)
+                    {
+                        tabla.Columns.Insert(6, Boton("Desasctivar", Color.Red));
+                    }
+                    else
+                    {
+                        tabla.Columns.Insert(6, Boton("Activar", Color.Blue));
+                    }
                 }
                 else
                 {
-                    tabla.Columns.Insert(6, Boton("Activar", Color.Blue));
+                    tabla.Columns.Insert(6, Boton("Seleccionar", Color.Orange));
                 }
             }
             tabla.AutoResizeColumns();
