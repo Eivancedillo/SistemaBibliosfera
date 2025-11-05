@@ -69,7 +69,7 @@
             this.BtnDashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnDashboard.Name = "BtnDashboard";
             this.BtnDashboard.Size = new System.Drawing.Size(64, 64);
-            this.BtnDashboard.Text = "toolStripButton1";
+            this.BtnDashboard.Text = "DashBoard";
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // BtnCatalogo
@@ -80,7 +80,7 @@
             this.BtnCatalogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCatalogo.Name = "BtnCatalogo";
             this.BtnCatalogo.Size = new System.Drawing.Size(64, 64);
-            this.BtnCatalogo.Text = "toolStripButton2";
+            this.BtnCatalogo.Text = "Catalogo";
             this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
             // 
             // BtnPrestamos
@@ -91,7 +91,7 @@
             this.BtnPrestamos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnPrestamos.Name = "BtnPrestamos";
             this.BtnPrestamos.Size = new System.Drawing.Size(64, 64);
-            this.BtnPrestamos.Text = "toolStripButton3";
+            this.BtnPrestamos.Text = "Prestamos";
             this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
             // 
             // BtnAdquisiciones
@@ -102,7 +102,7 @@
             this.BtnAdquisiciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdquisiciones.Name = "BtnAdquisiciones";
             this.BtnAdquisiciones.Size = new System.Drawing.Size(64, 64);
-            this.BtnAdquisiciones.Text = "toolStripButton4";
+            this.BtnAdquisiciones.Text = "Adquisiciones";
             this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
             // 
             // BtnMiembros
@@ -113,7 +113,7 @@
             this.BtnMiembros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnMiembros.Name = "BtnMiembros";
             this.BtnMiembros.Size = new System.Drawing.Size(64, 64);
-            this.BtnMiembros.Text = "toolStripButton6";
+            this.BtnMiembros.Text = "Miembros";
             this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
             // 
             // BtnBibliotecarios
@@ -135,7 +135,7 @@
             this.BtnAsistencias.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsistencias.Name = "BtnAsistencias";
             this.BtnAsistencias.Size = new System.Drawing.Size(64, 64);
-            this.BtnAsistencias.Text = "toolStripButton7";
+            this.BtnAsistencias.Text = "Asistencias";
             this.BtnAsistencias.Click += new System.EventHandler(this.BtnAsistencias_Click);
             // 
             // BtnSalir
@@ -146,12 +146,12 @@
             this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(64, 64);
-            this.BtnSalir.Text = "toolStripButton8";
+            this.BtnSalir.Text = "Salir";
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(976, 590);
