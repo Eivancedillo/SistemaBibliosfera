@@ -97,6 +97,7 @@
     <Compile Include="ManejadorAsistencia.cs" />
     <Compile Include="ManejadorCatalogo.cs" />
     <Compile Include="ManejadorDashboard.cs" />
+    <Compile Include="ManejadorEjemplares.cs" />
     <Compile Include="ManejadorLogin.cs" />
     <Compile Include="ManejadorMiembros.cs" />
     <Compile Include="ManejadorPermisos.cs" />

@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CmbEstado = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.TxtIsbn = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.TxtUbicacion = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.BtnVerAutores = new System.Windows.Forms.Button();
             this.BtnVerEditoriales = new System.Windows.Forms.Button();
@@ -50,38 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnMasCodigo = new System.Windows.Forms.Button();
-            this.BtnMenosCodigo = new System.Windows.Forms.Button();
-            this.CmbCodigo = new System.Windows.Forms.ComboBox();
             this.TxtAnioPublicacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // CmbEstado
-            // 
-            this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbEstado.FormattingEnabled = true;
-            this.CmbEstado.Location = new System.Drawing.Point(620, 369);
-            this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(279, 33);
-            this.CmbEstado.TabIndex = 46;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(616, 341);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 25);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Estado";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(616, 205);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 25);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Código";
             // 
             // TxtIsbn
             // 
@@ -100,26 +65,10 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "ISBN";
             // 
-            // TxtUbicacion
-            // 
-            this.TxtUbicacion.Location = new System.Drawing.Point(620, 305);
-            this.TxtUbicacion.Name = "TxtUbicacion";
-            this.TxtUbicacion.Size = new System.Drawing.Size(279, 30);
-            this.TxtUbicacion.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(616, 277);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 25);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Ubicación";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(616, 66);
+            this.label7.Location = new System.Drawing.Point(16, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 25);
             this.label7.TabIndex = 37;
@@ -137,7 +86,7 @@
             // 
             // BtnVerEditoriales
             // 
-            this.BtnVerEditoriales.Location = new System.Drawing.Point(468, 368);
+            this.BtnVerEditoriales.Location = new System.Drawing.Point(468, 378);
             this.BtnVerEditoriales.Name = "BtnVerEditoriales";
             this.BtnVerEditoriales.Size = new System.Drawing.Size(76, 31);
             this.BtnVerEditoriales.TabIndex = 35;
@@ -163,15 +112,15 @@
             // 
             // TxtEditorial
             // 
-            this.TxtEditorial.Location = new System.Drawing.Point(20, 369);
+            this.TxtEditorial.Location = new System.Drawing.Point(20, 379);
             this.TxtEditorial.Name = "TxtEditorial";
-            this.TxtEditorial.Size = new System.Drawing.Size(285, 30);
+            this.TxtEditorial.Size = new System.Drawing.Size(174, 30);
             this.TxtEditorial.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 346);
+            this.label5.Location = new System.Drawing.Point(16, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 25);
             this.label5.TabIndex = 31;
@@ -230,7 +179,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(421, 448);
+            this.BtnGuardar.Location = new System.Drawing.Point(327, 470);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(123, 31);
             this.BtnGuardar.TabIndex = 24;
@@ -240,7 +189,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(562, 448);
+            this.BtnCancelar.Location = new System.Drawing.Point(468, 470);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(123, 31);
             this.BtnCancelar.TabIndex = 25;
@@ -248,36 +197,9 @@
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // BtnMasCodigo
-            // 
-            this.BtnMasCodigo.Location = new System.Drawing.Point(905, 232);
-            this.BtnMasCodigo.Name = "BtnMasCodigo";
-            this.BtnMasCodigo.Size = new System.Drawing.Size(29, 31);
-            this.BtnMasCodigo.TabIndex = 47;
-            this.BtnMasCodigo.Text = "+";
-            this.BtnMasCodigo.UseVisualStyleBackColor = true;
-            // 
-            // BtnMenosCodigo
-            // 
-            this.BtnMenosCodigo.Location = new System.Drawing.Point(940, 232);
-            this.BtnMenosCodigo.Name = "BtnMenosCodigo";
-            this.BtnMenosCodigo.Size = new System.Drawing.Size(29, 31);
-            this.BtnMenosCodigo.TabIndex = 48;
-            this.BtnMenosCodigo.Text = "x";
-            this.BtnMenosCodigo.UseVisualStyleBackColor = true;
-            // 
-            // CmbCodigo
-            // 
-            this.CmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCodigo.FormattingEnabled = true;
-            this.CmbCodigo.Location = new System.Drawing.Point(620, 232);
-            this.CmbCodigo.Name = "CmbCodigo";
-            this.CmbCodigo.Size = new System.Drawing.Size(279, 33);
-            this.CmbCodigo.TabIndex = 49;
-            // 
             // TxtAnioPublicacion
             // 
-            this.TxtAnioPublicacion.Location = new System.Drawing.Point(621, 94);
+            this.TxtAnioPublicacion.Location = new System.Drawing.Point(21, 455);
             this.TxtAnioPublicacion.Name = "TxtAnioPublicacion";
             this.TxtAnioPublicacion.Size = new System.Drawing.Size(173, 30);
             this.TxtAnioPublicacion.TabIndex = 50;
@@ -287,20 +209,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1076, 496);
+            this.ClientSize = new System.Drawing.Size(607, 513);
             this.Controls.Add(this.TxtAnioPublicacion);
-            this.Controls.Add(this.CmbCodigo);
-            this.Controls.Add(this.BtnMenosCodigo);
-            this.Controls.Add(this.BtnMasCodigo);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.CmbEstado);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.TxtIsbn);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.TxtUbicacion);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnVerAutores);
             this.Controls.Add(this.BtnVerEditoriales);
@@ -325,13 +239,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox CmbEstado;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TxtIsbn;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtUbicacion;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnVerAutores;
         private System.Windows.Forms.Button BtnVerEditoriales;
@@ -347,9 +256,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Button BtnMasCodigo;
-        private System.Windows.Forms.Button BtnMenosCodigo;
-        private System.Windows.Forms.ComboBox CmbCodigo;
         private System.Windows.Forms.TextBox TxtAnioPublicacion;
     }
 }

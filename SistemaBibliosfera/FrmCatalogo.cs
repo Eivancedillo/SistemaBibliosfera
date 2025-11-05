@@ -33,7 +33,23 @@ namespace SistemaBibliosfera
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Mc.LlenarEntidad(libro, DtgDatos);
+
+            switch (columna)
+            {
+                case 10:
+                    {
+                        FrmAdquisiciones frm = new FrmAdquisiciones(libro);
+                        frm.ShowDialog();
+                        DtgDatos.Columns.Clear();
+                    }
+                    ; break;
+                case 11:
+                    {
+                        Mc.DesactivarLibro(libro);
+                    }
+                    ; break;
+            }
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)

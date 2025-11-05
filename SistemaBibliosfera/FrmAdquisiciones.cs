@@ -15,10 +15,12 @@ namespace SistemaBibliosfera
     public partial class FrmAdquisiciones : Form
     {
         ManejadorAdquisicion Ma;
+        ManejadorCatalogo Mc;
         List<Autor> LibroAutores;
         List<Categoria> LibroCategorias;
+        List<Ejemplar> ejemplares;
         Libro libro;
-        bool x = false;
+        bool editando = false;
 
         public FrmAdquisiciones()
         {
@@ -26,19 +28,48 @@ namespace SistemaBibliosfera
 
             LibroAutores = new List<Autor>();
             LibroCategorias = new List<Categoria>();
+            ejemplares = new List<Ejemplar>();
 
             Ma = new ManejadorAdquisicion();
             libro = new Libro(0, "", "", 0, 0, LibroAutores, LibroCategorias);
 
-            CmbEstado.Items.Add("Disponible");
-            CmbEstado.Items.Add("Prestado");
-            CmbEstado.Items.Add("Reparacion");
-            CmbEstado.Items.Add("Perdido");
-
             TxtTitulo.Enabled = false; TxtCategoria.Enabled = false; TxtAutor.Enabled = false; TxtEditorial.Enabled = false; TxtAnioPublicacion.Enabled = false;
-            CmbCodigo.Enabled = false; TxtUbicacion.Enabled = false; CmbEstado.Enabled = false;
+            BtnVerAutores.Enabled = false; BtnVerCategorias.Enabled = false; BtnVerEditoriales.Enabled = false;
+        }
 
-            BtnVerAutores.Enabled = false; BtnVerCategorias.Enabled = false; BtnVerEditoriales.Enabled = false; BtnMasCodigo.Enabled = false; BtnMenosCodigo.Enabled = false;
+        // Segunda sobrecarga del constructor para recibir un libro ya existente
+        public FrmAdquisiciones(Libro librocatalogo)
+        {
+            InitializeComponent();
+
+            Ma = new ManejadorAdquisicion();
+            Mc = new ManejadorCatalogo();
+            ejemplares = new List<Ejemplar>();
+            editando = true;
+
+            libro = new Libro(librocatalogo.IdLibro, librocatalogo.ISBN, librocatalogo.Titulo, librocatalogo.IdEditorial, librocatalogo.AnioPublicacion, librocatalogo.LibroAutores, librocatalogo.LibroCategoria);
+            TxtCategoria.Enabled = false; TxtAutor.Enabled = false; TxtEditorial.Enabled = false;
+
+            // Llenar los campos con la informacion del libro pasado por parametro
+            TxtIsbn.Text = libro.ISBN;
+            TxtTitulo.Text = libro.Titulo;
+            TxtAnioPublicacion.Text = libro.AnioPublicacion.ToString();
+            TxtEditorial.Text = Ma.MostrarE(libro.IdEditorial);
+
+            foreach (var autor in libro.LibroAutores)
+            {
+                TxtAutor.Text += autor.Nombre + ", ";
+            }
+            foreach (var categoria in libro.LibroCategoria)
+            {
+                TxtCategoria.Text += categoria.Nombre + ", ";
+            }
+
+            // Quitar las comas finales
+            if (TxtAutor.Text.EndsWith(", "))
+                TxtAutor.Text = TxtAutor.Text.Substring(0, TxtAutor.Text.Length - 2);
+            if (TxtCategoria.Text.EndsWith(", "))
+                TxtCategoria.Text = TxtCategoria.Text.Substring(0, TxtCategoria.Text.Length - 2);
         }
 
         private void BtnVerCategorias_Click(object sender, EventArgs e)
@@ -99,13 +130,13 @@ namespace SistemaBibliosfera
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if(TxtAnioPublicacion.Text == "" || TxtTitulo.Text == "")
+            if (TxtAnioPublicacion.Equals("") || TxtTitulo.Equals("") || TxtAutor.Equals("") || TxtCategoria.Equals("") || TxtEditorial.Equals(""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if(TxtAnioPublicacion.Text.Length != 4 || !int.TryParse(TxtAnioPublicacion.Text, out _))
+            if (TxtAnioPublicacion.Text.Length != 4 || !int.TryParse(TxtAnioPublicacion.Text, out _))
             {
                 MessageBox.Show("Por favor, ingrese un año de publicación válido (4 dígitos).", "Año inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -114,29 +145,41 @@ namespace SistemaBibliosfera
             libro.Titulo = TxtTitulo.Text;
             libro.AnioPublicacion = int.Parse(TxtAnioPublicacion.Text);
 
+            if(editando)
+                Mc.EditarLibro(libro);
+            else
+                Ma.GuardarLibro(libro);
+
             var rs = MessageBox.Show("¿Desea agregar ejemplares del libro?", "Agregar ejemplares", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (rs == DialogResult.Yes)
             {
-                CmbCodigo.Enabled = true; TxtUbicacion.Enabled = true; CmbEstado.Enabled = true;
-                BtnMasCodigo.Enabled = true; BtnMenosCodigo.Enabled = true;
+                FrmEjemplares frm = new FrmEjemplares(libro.IdLibro);
+                frm.ShowDialog();
+
+                Close();
             }
             else
-                Ma.GuardarLibro(libro);
+            {
+                if (editando)
+                    Close();
+                else
+                {
+                    // Limpiar entidad libro
+                    libro.ISBN = "";
+                    libro.Titulo = "";
+                    libro.AnioPublicacion = 0;
+                    libro.IdEditorial = 0;
+                    libro.LibroAutores = new List<Autor>();
+                    libro.LibroCategoria = new List<Categoria>();
 
-            // Limpiar entidad libro
-                libro.ISBN = "";
-                libro.Titulo = "";
-                libro.AnioPublicacion = 0;
-                libro.IdEditorial = 0;
-                libro.LibroAutores = new List<Autor>();
-                libro.LibroCategoria = new List<Categoria>();
-
-            // Limpiar formulario
-            TxtIsbn.Enabled = true; TxtTitulo.Enabled = false; TxtAnioPublicacion.Enabled = false; 
-            BtnVerCategorias.Enabled = false; BtnVerEditoriales.Enabled = false; BtnVerAutores.Enabled = false;
-            TxtTitulo.Text = ""; TxtAnioPublicacion.Text = ""; TxtIsbn.Text = "";
-            TxtCategoria.Text = ""; TxtAutor.Text = ""; TxtEditorial.Text = "";
+                    // Limpiar formulario
+                    TxtIsbn.Enabled = true; TxtTitulo.Enabled = false; TxtAnioPublicacion.Enabled = false;
+                    BtnVerCategorias.Enabled = false; BtnVerEditoriales.Enabled = false; BtnVerAutores.Enabled = false;
+                    TxtTitulo.Text = ""; TxtAnioPublicacion.Text = ""; TxtIsbn.Text = "";
+                    TxtCategoria.Text = ""; TxtAutor.Text = ""; TxtEditorial.Text = "";
+                }
+            }
 
         }
 
@@ -153,12 +196,10 @@ namespace SistemaBibliosfera
 
                     libro.ISBN = TxtIsbn.Text;
 
-                    if (!x)
+                    if (!editando)
                     {
                         TxtAnioPublicacion.Enabled = true; TxtTitulo.Enabled = true;
                         BtnVerCategorias.Enabled = true; BtnVerEditoriales.Enabled = true; BtnVerAutores.Enabled = true;
-
-                        x = true;
                     }
                 }
 

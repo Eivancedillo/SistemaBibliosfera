@@ -55,7 +55,7 @@
             // 
             this.CmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbFiltro.FormattingEnabled = true;
-            this.CmbFiltro.Location = new System.Drawing.Point(556, 90);
+            this.CmbFiltro.Location = new System.Drawing.Point(686, 90);
             this.CmbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.CmbFiltro.Name = "CmbFiltro";
             this.CmbFiltro.Size = new System.Drawing.Size(139, 33);
@@ -63,7 +63,7 @@
             // 
             // BtnCerrar
             // 
-            this.BtnCerrar.Location = new System.Drawing.Point(679, 334);
+            this.BtnCerrar.Location = new System.Drawing.Point(975, 335);
             this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(100, 28);
@@ -80,7 +80,7 @@
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(4);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
-            this.DtgDatos.Size = new System.Drawing.Size(932, 185);
+            this.DtgDatos.Size = new System.Drawing.Size(1062, 185);
             this.DtgDatos.TabIndex = 31;
             this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
             this.DtgDatos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellEnter);
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 94);
+            this.label2.Location = new System.Drawing.Point(625, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 35;
@@ -116,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(717, 94);
+            this.label3.Location = new System.Drawing.Point(847, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 37;
@@ -126,7 +126,7 @@
             // 
             this.CmbOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOrdenar.FormattingEnabled = true;
-            this.CmbOrdenar.Location = new System.Drawing.Point(808, 90);
+            this.CmbOrdenar.Location = new System.Drawing.Point(938, 90);
             this.CmbOrdenar.Margin = new System.Windows.Forms.Padding(4);
             this.CmbOrdenar.Name = "CmbOrdenar";
             this.CmbOrdenar.Size = new System.Drawing.Size(137, 33);
@@ -136,7 +136,7 @@
             // 
             this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEstado.FormattingEnabled = true;
-            this.CmbEstado.Location = new System.Drawing.Point(353, 90);
+            this.CmbEstado.Location = new System.Drawing.Point(483, 90);
             this.CmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(119, 33);
@@ -145,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(273, 94);
+            this.label4.Location = new System.Drawing.Point(403, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 40;
@@ -157,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(958, 376);
+            this.ClientSize = new System.Drawing.Size(1088, 376);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.label3);

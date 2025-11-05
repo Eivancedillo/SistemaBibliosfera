@@ -186,6 +186,7 @@ namespace Manejadores
             }
         }
 
+
         public string MostrarE(int IdEditorial)
         {
             var rs = b.Consultar($"select Nombre from v_mostrar_editorial where IdEditorial = {IdEditorial};", "v_mostrar_editorial");

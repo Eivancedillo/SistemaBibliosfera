@@ -15,6 +15,34 @@ namespace Manejadores
     {
         Base b = new Base();
 
+        public void LlenarEntidad(Libro libro, DataGridView tabla)
+        {
+            libro.LibroAutores.Clear();
+            libro.LibroCategoria.Clear();
+
+            libro.IdLibro = Convert.ToInt32(tabla.Rows[tabla.CurrentRow.Index].Cells["IdLibro"].Value);
+            libro.ISBN = tabla.Rows[tabla.CurrentRow.Index].Cells["ISBN"].Value.ToString();
+            libro.Titulo = tabla.Rows[tabla.CurrentRow.Index].Cells["Titulo"].Value.ToString();
+            libro.IdEditorial = Convert.ToInt32(tabla.Rows[tabla.CurrentRow.Index].Cells["IdEditorial"].Value);
+            libro.AnioPublicacion = Convert.ToInt32(tabla.Rows[tabla.CurrentRow.Index].Cells["Año"].Value);
+
+            // Obtener autores
+            string consultaAutores = $"SELECT IdAutor, Autor FROM v_librosautores WHERE IdLibro = {libro.IdLibro}";
+            DataTable dtAutores = b.Consultar(consultaAutores, "v_librosautores").Tables[0];
+            foreach (DataRow row in dtAutores.Rows)
+            {
+                libro.LibroAutores.Add(new Autor(Convert.ToInt32(row["IdAutor"]), row["Autor"].ToString()));
+            }
+
+            // Obtener categorías
+            string consultaCategorias = $"SELECT IdCategoria, Categoria FROM v_libroscategorias WHERE IdLibro = {libro.IdLibro}";
+            DataTable dtCategorias = b.Consultar(consultaCategorias, "v_libroscategorias").Tables[0];
+            foreach (DataRow row in dtCategorias.Rows)
+            {
+                libro.LibroCategoria.Add(new Categoria(Convert.ToInt32(row["IdCategoria"]), row["Categoria"].ToString()));
+            }
+        }
+
         public void LlenarCmbs(ComboBox cmbEstado, ComboBox cmbFiltro, ComboBox cmbOrdenar)
         {
             // Limpiarlos antes de llenarlos
@@ -36,6 +64,36 @@ namespace Manejadores
             // Llenar cmbOrdenar
             cmbOrdenar.Items.Add("Ascendente");
             cmbOrdenar.Items.Add("Descendente");
+
+            // Valores por defecto
+            cmbEstado.SelectedIndex = 0;
+            cmbFiltro.SelectedIndex = 0;
+            cmbOrdenar.SelectedIndex = 0;
+        }
+
+        public void EditarLibro(Libro libro)
+        {
+            b.Comando($"call p_editar_libro({libro.IdLibro}, '{libro.ISBN}', '{libro.Titulo}', {libro.IdEditorial}, {libro.AnioPublicacion});");
+        }
+
+        public void DesactivarLibro(Libro libro)
+        {
+            // Verificar que todos los ejemplares del libro esten disponibles para poder desactivar el libro
+            string consulta = $"SELECT COUNT(*) FROM Ejemplares WHERE IdLibro = {libro.IdLibro} AND Estado <> 'Disponible';";
+            int ejemplaresPrestados = Convert.ToInt32(b.Consultar(consulta, "Ejemplares").Tables[0].Rows[0][0]);
+
+            if (ejemplaresPrestados > 0)
+            {
+                MessageBox.Show("No se puede desactivar este libro, todos sus ejemplares deben estar disponibles.", "Desactivación no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var rs = MessageBox.Show("¿Está seguro de desactivar este libro?", "Confirmar desactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rs == DialogResult.Yes)
+            {
+                b.Comando($"call p_desactivar_libro({libro.IdLibro})");
+            }
         }
 
         public void Mostrar(DataGridView tabla, TextBox Buscar, ComboBox estadocmb ,ComboBox filtro, ComboBox Orden)
@@ -91,20 +149,21 @@ namespace Manejadores
                     tabla.Columns["IdLibro"].Visible = false;
                     tabla.Columns["TotalEjemplares"].Visible = false;
                     tabla.Columns["Activo"].Visible = false;
+                    tabla.Columns["IdEditorial"].Visible = false;
                 }
 
-                tabla.Columns.Insert(9, Boton("Editar", Color.Green));
+                tabla.Columns.Insert(10, Boton("Editar", Color.Green));
 
                 // Verificar el estado del primer registro para decidir qué botón agregar
                 if (tabla.Rows.Count > 0)
                 {
                     if (estadocmb.Text.Equals("Activos"))
                     {
-                        tabla.Columns.Insert(10, Boton("Desasctivar", Color.Red));
+                        tabla.Columns.Insert(11, Boton("Desasctivar", Color.Red));
                     }
                     else
                     {
-                        tabla.Columns.Insert(10, Boton("Activar", Color.Blue));
+                        tabla.Columns.Insert(11, Boton("Activar", Color.Blue));
                     }
                 }
 
