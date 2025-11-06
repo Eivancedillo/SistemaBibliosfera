@@ -38,7 +38,7 @@ namespace Manejadores
 
         public void InsertarEjemplar(Ejemplar ejemplar)
         {
-            b.Comando($"CALL p_insertar_ejemplaresadm({ejemplar.IdLibro}, {ejemplar.Codigo}, '{ejemplar.Estado}', '{ejemplar.Ubicacion}');");
+            b.Comando($"CALL p_insertar_ejemplares({ejemplar.IdLibro}, {ejemplar.Codigo}, '{ejemplar.Estado}', '{ejemplar.Ubicacion}');");
         }
 
         public void MostrarNombreEjemplar(int IdLibro, Label label)

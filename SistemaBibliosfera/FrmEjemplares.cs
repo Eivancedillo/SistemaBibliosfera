@@ -64,12 +64,12 @@ namespace SistemaBibliosfera
                 if (!prestamo)
                 {
                     string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
-                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares");
+                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%' and IdLibro = {IdLibro}", DtgDatos, "Ejemplares");
                 }
                 else
                 {
                     string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
-                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%'", DtgDatos, "Ejemplares", true);
+                    Me.Mostrar($"select * from Ejemplares where Activo = {estado} and Codigo LIKE '%{TxtBuscar.Text}%' and IdLibro = {IdLibro}", DtgDatos, "Ejemplares", true);
                 }
             }
         }

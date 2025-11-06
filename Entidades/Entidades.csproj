@@ -51,7 +51,6 @@
     <Compile Include="Multa.cs" />
     <Compile Include="Prestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroEntrada.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

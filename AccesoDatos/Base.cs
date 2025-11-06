@@ -29,7 +29,7 @@ namespace AccesoDatos
                 if (!mantenerConexion)
                     con.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
@@ -52,7 +52,7 @@ namespace AccesoDatos
                 if (!mantenerConexion)
                     con.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();

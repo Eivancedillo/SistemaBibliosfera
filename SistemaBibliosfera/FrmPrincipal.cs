@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Manejadores;
 
 namespace SistemaBibliosfera
 {
     public partial class FrmPrincipal : Form
     {
+        ManejadorPrestamo mp;
         public FrmPrincipal()
         {
             InitializeComponent();
+            mp = new ManejadorPrestamo();
+            mp.AdeudarLibros();
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)

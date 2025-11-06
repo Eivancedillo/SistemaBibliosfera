@@ -89,6 +89,10 @@ namespace SistemaBibliosfera
             FrmMiembros frm = new FrmMiembros(true);
             frm.ShowDialog();
 
+            // Comprobar si se seleccionó un miembro
+            if (miembroprestamo.NumeroControl == 0)
+                return;
+
             TxtNumControl.Text = miembroprestamo.NumeroControl.ToString();
             TxtNombre.Text = miembroprestamo.Nombre + " " + miembroprestamo.Apellidos;
         }
@@ -100,9 +104,17 @@ namespace SistemaBibliosfera
             FrmCatalogo frm = new FrmCatalogo(true);
             frm.ShowDialog();
 
+            // Comprobar si se seleccionó un libro
+            if (libroejemplar.IdLibro == 0)
+                return;
+
             // Abrimos frmEjemplares para seleccionar un ejemplar
             FrmEjemplares frmejem = new FrmEjemplares(true, libroejemplar.IdLibro);
             frmejem.ShowDialog();
+
+            // Comprobar si se seleccionó un ejemplar
+            if (ejemplarprestamo.IdEjemplar == 0)
+                return;
 
             TxtLibro.Text = ejemplarprestamo.IdLibro.ToString();
             TxtEjemplar.Text = ejemplarprestamo.Codigo.ToString("D3");

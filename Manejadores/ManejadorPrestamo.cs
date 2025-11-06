@@ -38,12 +38,31 @@ namespace Manejadores
 
         public void Cancelar(Prestamo prestamo)
         {
-            b.Comando($"CALL p_cancelar_prestamos({prestamo.IdPrestamo})");
+            var rs = MessageBox.Show("¿Está seguro de que desea cancelar este préstamo? Esta acción no se puede deshacer.", "Confirmar cancelación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (rs == DialogResult.Yes)
+                b.Comando($"CALL p_cancelar_prestamos({prestamo.IdPrestamo}, {prestamo.IdEjemplar})");
         }
 
         public void Finalizar(Prestamo prestamo)
         {
-            b.Comando($"CALL p_finalizar_prestamos({prestamo.IdPrestamo})");
+            var rs = MessageBox.Show("¿Está seguro de que desea finalizar este préstamo? Esta acción no se puede deshacer.", "Confirmar finalización", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (rs == DialogResult.Yes)
+            {
+                // Conseguir fecha actual formateada
+                string fechaFormateada = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                // Consultar si el libro esta dañado para marcarlo como reparacion
+                var rs2 = MessageBox.Show("¿El ejemplar está dañado?", "Estado del ejemplar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if(rs2 == DialogResult.Yes)
+                {
+                    b.Comando($"CALL p_finalizar_prestamosreparacion({prestamo.IdPrestamo}, {prestamo.IdEjemplar},'{fechaFormateada}')");
+                }
+                else
+                    b.Comando($"CALL p_finalizar_prestamos({prestamo.IdPrestamo}, {prestamo.IdEjemplar},'{fechaFormateada}')");
+            }
         }
 
         public void MostrarNombreMiembro(int numeroControl, TextBox txt)
@@ -61,6 +80,34 @@ namespace Manejadores
             txt.Text = b.Consultar($"SELECT Codigo FROM Ejemplares WHERE IdEjemplar = {idEjemplar}", "Ejemplares").Tables[0].Rows[0]["Codigo"].ToString();
         }
 
+        public void MostrarAdeudo(int IdPrestamo, out int IdMulta, out int IdEjemplar, TextBox Titulo, TextBox Codigo, TextBox Fecha, TextBox Monto)
+        {
+            // Conseguir datos de la Multa de v_multas
+            var tabla = b.Consultar($"SELECT * FROM v_multas WHERE IdPrestamo = {IdPrestamo}", "v_multas").Tables[0];
+
+            Titulo.Text = tabla.Rows[0]["Titulo"].ToString();
+            Codigo.Text = tabla.Rows[0]["Codigo"].ToString();
+            Fecha.Text = tabla.Rows[0]["FechaDevolucionPrevista"].ToString();
+            Monto.Text = tabla.Rows[0]["Monto"].ToString();
+            IdMulta = int.Parse(tabla.Rows[0]["IdMulta"].ToString());
+            IdEjemplar = int.Parse(tabla.Rows[0]["IdEjemplar"].ToString());
+        }
+
+        public void AdeudarLibros()
+        {
+            b.Comando($"CALL p_adeudar_prestamos()");
+        }
+
+        public void PagarAdeudos(int IdMulta, int IdEjemplar, int IdPrestamo)
+        {
+            var rs = MessageBox.Show("¿Está seguro de que desea pagar esta multa? Esta acción no se puede deshacer.", "Confirmar pago", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
+            {
+                string fechaFormateada = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                b.Comando($"CALL p_pagar_multa({IdMulta}, {IdEjemplar}, {IdPrestamo},'{fechaFormateada}')");
+            }
+        }
+
         public void Mostrar(string query, DataGridView tabla, string datos)
         {
             int conteo = 11;
@@ -71,19 +118,22 @@ namespace Manejadores
             tabla.Columns["IdEjemplar"].Visible = false;
             tabla.Columns["IdLibro"].Visible = false;
 
-            tabla.Columns.Insert(conteo, Boton("Editar", Color.Green));
-            conteo++;
+            // Si FechaDevolucionReal no tiene datos, ocultarla
+            if (tabla.Rows.Count > 0 && tabla.Rows[0].Cells["FechaDevolucionReal"].Value.ToString() == "")
+                tabla.Columns["FechaDevolucionReal"].Visible = false;
 
             if (tabla.Rows.Count > 0)
             {
                 string estado = tabla.Rows[0].Cells["EstadoPrestamo"].Value.ToString();
                 if (estado.Equals("Activo"))
                 {
+                    tabla.Columns.Insert(conteo, Boton("Editar", Color.Green));
+                    conteo++;
                     tabla.Columns.Insert(conteo, Boton("Cancelar", Color.Red));
                     conteo++;
                     tabla.Columns.Insert(conteo, Boton("Finalizar", Color.Blue));
                 }
-                else if (estado.Equals("Adeudado"))
+                else if (estado.Equals("Adeudo"))
                 {
                     tabla.Columns.Insert(conteo, Boton("Pagar", Color.Orange));
                 }
