@@ -13,12 +13,15 @@ namespace SistemaBibliosfera
 {
     public partial class FrmPrincipal : Form
     {
+        public static int IdAdministrador = 0;
         ManejadorPrestamo mp;
-        public FrmPrincipal()
+        public FrmPrincipal(int IdAdministradortraido)
         {
             InitializeComponent();
             mp = new ManejadorPrestamo();
             mp.AdeudarLibros();
+
+            IdAdministrador = IdAdministradortraido;
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)

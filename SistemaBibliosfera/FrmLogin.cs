@@ -32,7 +32,9 @@ namespace SistemaBibliosfera
             }
             if (Ml.Validar(TxtUsuario, TxtContrasena))
             {
-                FrmPrincipal ia = new FrmPrincipal();
+                IdAdministrador = int.Parse(Ml.ConseguirIdAdministrador(TxtUsuario.Text));
+
+                FrmPrincipal ia = new FrmPrincipal(IdAdministrador);
                 ia.Show();
                 this.Hide();
             }

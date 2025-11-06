@@ -51,14 +51,26 @@
             this.LblCatTop5 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.LblDevolucionesHoy = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelAlertaVencimiento = new System.Windows.Forms.Panel();
+            this.panelAlertaReparacion = new System.Windows.Forms.Panel();
+            this.lblAlertaVencimiento = new System.Windows.Forms.Label();
+            this.lblAlertaReparacion = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.panelAlertaVencimiento.SuspendLayout();
+            this.panelAlertaReparacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblTotalLibros
@@ -138,22 +150,29 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.panelAlertaReparacion);
+            this.groupBox4.Controls.Add(this.panelAlertaVencimiento);
             this.groupBox4.Location = new System.Drawing.Point(12, 235);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1000, 100);
+            this.groupBox4.Size = new System.Drawing.Size(1000, 215);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Alertas del sistema";
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.LblCatTop5);
             this.groupBox5.Controls.Add(this.LblCatTop4);
             this.groupBox5.Controls.Add(this.LblCatTop3);
             this.groupBox5.Controls.Add(this.LblCatTop2);
             this.groupBox5.Controls.Add(this.LblCatTop1);
             this.groupBox5.Controls.Add(this.groupBox8);
-            this.groupBox5.Location = new System.Drawing.Point(12, 360);
+            this.groupBox5.Location = new System.Drawing.Point(12, 473);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(600, 331);
             this.groupBox5.TabIndex = 6;
@@ -163,7 +182,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.LblPrestamosHoy);
-            this.groupBox6.Location = new System.Drawing.Point(636, 360);
+            this.groupBox6.Location = new System.Drawing.Point(636, 473);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 83);
             this.groupBox6.TabIndex = 3;
@@ -182,7 +201,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.LblAsistenciasHoy);
-            this.groupBox7.Location = new System.Drawing.Point(636, 469);
+            this.groupBox7.Location = new System.Drawing.Point(636, 582);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 83);
             this.groupBox7.TabIndex = 4;
@@ -211,16 +230,17 @@
             // LblCategoriaMasPopular
             // 
             this.LblCategoriaMasPopular.AutoSize = true;
-            this.LblCategoriaMasPopular.Location = new System.Drawing.Point(92, 103);
+            this.LblCategoriaMasPopular.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategoriaMasPopular.Location = new System.Drawing.Point(80, 92);
             this.LblCategoriaMasPopular.Name = "LblCategoriaMasPopular";
-            this.LblCategoriaMasPopular.Size = new System.Drawing.Size(42, 25);
+            this.LblCategoriaMasPopular.Size = new System.Drawing.Size(60, 36);
             this.LblCategoriaMasPopular.TabIndex = 0;
             this.LblCategoriaMasPopular.Text = "xxx";
             // 
             // LblCatTop1
             // 
             this.LblCatTop1.AutoSize = true;
-            this.LblCatTop1.Location = new System.Drawing.Point(46, 40);
+            this.LblCatTop1.Location = new System.Drawing.Point(72, 40);
             this.LblCatTop1.Name = "LblCatTop1";
             this.LblCatTop1.Size = new System.Drawing.Size(42, 25);
             this.LblCatTop1.TabIndex = 1;
@@ -229,7 +249,7 @@
             // LblCatTop2
             // 
             this.LblCatTop2.AutoSize = true;
-            this.LblCatTop2.Location = new System.Drawing.Point(46, 84);
+            this.LblCatTop2.Location = new System.Drawing.Point(72, 84);
             this.LblCatTop2.Name = "LblCatTop2";
             this.LblCatTop2.Size = new System.Drawing.Size(42, 25);
             this.LblCatTop2.TabIndex = 5;
@@ -238,7 +258,7 @@
             // LblCatTop4
             // 
             this.LblCatTop4.AutoSize = true;
-            this.LblCatTop4.Location = new System.Drawing.Point(46, 181);
+            this.LblCatTop4.Location = new System.Drawing.Point(72, 181);
             this.LblCatTop4.Name = "LblCatTop4";
             this.LblCatTop4.Size = new System.Drawing.Size(42, 25);
             this.LblCatTop4.TabIndex = 7;
@@ -247,7 +267,7 @@
             // LblCatTop3
             // 
             this.LblCatTop3.AutoSize = true;
-            this.LblCatTop3.Location = new System.Drawing.Point(46, 133);
+            this.LblCatTop3.Location = new System.Drawing.Point(72, 133);
             this.LblCatTop3.Name = "LblCatTop3";
             this.LblCatTop3.Size = new System.Drawing.Size(42, 25);
             this.LblCatTop3.TabIndex = 6;
@@ -256,7 +276,7 @@
             // LblCatTop5
             // 
             this.LblCatTop5.AutoSize = true;
-            this.LblCatTop5.Location = new System.Drawing.Point(46, 228);
+            this.LblCatTop5.Location = new System.Drawing.Point(72, 228);
             this.LblCatTop5.Name = "LblCatTop5";
             this.LblCatTop5.Size = new System.Drawing.Size(42, 25);
             this.LblCatTop5.TabIndex = 8;
@@ -265,7 +285,7 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.LblDevolucionesHoy);
-            this.groupBox9.Location = new System.Drawing.Point(636, 578);
+            this.groupBox9.Location = new System.Drawing.Point(636, 691);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(200, 83);
             this.groupBox9.TabIndex = 4;
@@ -281,12 +301,91 @@
             this.LblDevolucionesHoy.TabIndex = 0;
             this.LblDevolucionesHoy.Text = "000";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 25);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "5.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 25);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "4.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "3.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "2.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "1.";
+            // 
+            // panelAlertaVencimiento
+            // 
+            this.panelAlertaVencimiento.Controls.Add(this.lblAlertaVencimiento);
+            this.panelAlertaVencimiento.Location = new System.Drawing.Point(11, 41);
+            this.panelAlertaVencimiento.Name = "panelAlertaVencimiento";
+            this.panelAlertaVencimiento.Size = new System.Drawing.Size(983, 60);
+            this.panelAlertaVencimiento.TabIndex = 0;
+            // 
+            // panelAlertaReparacion
+            // 
+            this.panelAlertaReparacion.Controls.Add(this.lblAlertaReparacion);
+            this.panelAlertaReparacion.Location = new System.Drawing.Point(11, 128);
+            this.panelAlertaReparacion.Name = "panelAlertaReparacion";
+            this.panelAlertaReparacion.Size = new System.Drawing.Size(983, 60);
+            this.panelAlertaReparacion.TabIndex = 1;
+            // 
+            // lblAlertaVencimiento
+            // 
+            this.lblAlertaVencimiento.AutoSize = true;
+            this.lblAlertaVencimiento.Location = new System.Drawing.Point(3, 18);
+            this.lblAlertaVencimiento.Name = "lblAlertaVencimiento";
+            this.lblAlertaVencimiento.Size = new System.Drawing.Size(45, 25);
+            this.lblAlertaVencimiento.TabIndex = 1;
+            this.lblAlertaVencimiento.Text = "000";
+            // 
+            // lblAlertaReparacion
+            // 
+            this.lblAlertaReparacion.AutoSize = true;
+            this.lblAlertaReparacion.Location = new System.Drawing.Point(3, 18);
+            this.lblAlertaReparacion.Name = "lblAlertaReparacion";
+            this.lblAlertaReparacion.Size = new System.Drawing.Size(45, 25);
+            this.lblAlertaReparacion.TabIndex = 2;
+            this.lblAlertaReparacion.Text = "000";
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1031, 703);
+            this.ClientSize = new System.Drawing.Size(1031, 829);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -308,6 +407,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -318,6 +418,10 @@
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.panelAlertaVencimiento.ResumeLayout(false);
+            this.panelAlertaVencimiento.PerformLayout();
+            this.panelAlertaReparacion.ResumeLayout(false);
+            this.panelAlertaReparacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +452,14 @@
         private System.Windows.Forms.Label LblAsistenciasHoy;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label LblDevolucionesHoy;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelAlertaVencimiento;
+        private System.Windows.Forms.Panel panelAlertaReparacion;
+        private System.Windows.Forms.Label lblAlertaReparacion;
+        private System.Windows.Forms.Label lblAlertaVencimiento;
     }
 }

@@ -24,6 +24,15 @@ namespace Manejadores
                 return false;
         }
 
+        public string ConseguirIdAdministrador(string usuario)
+        {
+            // Conseguir Id del administrador en base al nombre de administrador
+            DataTable dt = b.Consultar($"Call p_conseguiridadministrador('{usuario}')", "Administradores").Tables[0];
+            DataRow dr = dt.Rows[0];
+
+            return dr["IdAdministrador"].ToString();
+        }
+
         public static string Sha1(string texto)
         {
             SHA1 sha1 = SHA1CryptoServiceProvider.Create();
