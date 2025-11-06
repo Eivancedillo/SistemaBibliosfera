@@ -16,6 +16,7 @@ namespace SistemaBibliosfera
     {
         ManejadorLogin Ml;
         int contador = 0;
+        int IdAdministrador = 0;
         public FrmLogin()
         {
             InitializeComponent();
