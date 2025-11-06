@@ -40,7 +40,7 @@
             // DtgDatos
             // 
             this.DtgDatos.AllowUserToAddRows = false;
-            this.DtgDatos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DtgDatos.BackgroundColor = System.Drawing.Color.Brown;
             this.DtgDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(12, 100);
@@ -77,7 +77,7 @@
             // 
             this.TxtBuscar.Location = new System.Drawing.Point(12, 54);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(699, 30);
+            this.TxtBuscar.Size = new System.Drawing.Size(699, 26);
             this.TxtBuscar.TabIndex = 21;
             // 
             // CmbEstado
@@ -86,7 +86,7 @@
             this.CmbEstado.FormattingEnabled = true;
             this.CmbEstado.Location = new System.Drawing.Point(717, 54);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(121, 33);
+            this.CmbEstado.Size = new System.Drawing.Size(121, 28);
             this.CmbEstado.TabIndex = 24;
             // 
             // label1
@@ -94,13 +94,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 25);
+            this.label1.Size = new System.Drawing.Size(210, 20);
             this.label1.TabIndex = 25;
             this.label1.Text = "Nombre o numero de control";
             // 
             // FrmMiembros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1013, 422);
