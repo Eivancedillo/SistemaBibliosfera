@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -106,6 +107,17 @@ namespace Manejadores
                 string fechaFormateada = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 b.Comando($"CALL p_pagar_multa({IdMulta}, {IdEjemplar}, {IdPrestamo},'{fechaFormateada}')");
             }
+        }
+
+        public bool TieneAdeudosPendientes(int numeroControl)
+        {
+            // Consultamos si existe AL MENOS UN préstamo con estado 'Adeudo' para este usuario
+            DataTable dt = b.Consultar($"SELECT COUNT(*) FROM Prestamos WHERE NumeroControl = {numeroControl} AND EstadoPrestamo = 'Adeudo'", "Prestamos").Tables[0];
+
+            int cantidadAdeudos = int.Parse(dt.Rows[0][0].ToString());
+
+            // Si la cantidad es mayor a 0, significa que SÍ tiene adeudos
+            return cantidadAdeudos > 0;
         }
 
         public void Mostrar(string query, DataGridView tabla, string datos)

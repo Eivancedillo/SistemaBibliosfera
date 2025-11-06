@@ -60,11 +60,21 @@ namespace SistemaBibliosfera
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(TxtNumControl.Text) || string.IsNullOrWhiteSpace(TxtLibro.Text) || string.IsNullOrWhiteSpace(TxtEjemplar.Text) || string.IsNullOrWhiteSpace(TxtNombre.Text))
+            string numControl = TxtNumControl.Text;
+
+            if (string.IsNullOrWhiteSpace(TxtNumControl.Text) || string.IsNullOrWhiteSpace(TxtLibro.Text) || string.IsNullOrWhiteSpace(TxtEjemplar.Text) || string.IsNullOrWhiteSpace(TxtNombre.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos antes de continuar.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (Mp.TieneAdeudosPendientes(int.Parse(numControl)))
+            {
+                MessageBox.Show($"El miembro con número de control '{numControl}' tiene adeudos pendientes.\n\nDebe cubrirlos antes de poder solicitar un nuevo préstamo.",
+                                "Préstamo Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (FrmPrestamos.prestamo.IdPrestamo == 0)
             {
