@@ -40,7 +40,7 @@
             // DtgDatos
             // 
             this.DtgDatos.AllowUserToAddRows = false;
-            this.DtgDatos.BackgroundColor = System.Drawing.Color.Brown;
+            this.DtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(12, 100);
