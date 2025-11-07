@@ -45,9 +45,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
+            this.label1.Size = new System.Drawing.Size(65, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Código:";
+            this.label1.Text = "Código";
             // 
             // TxtCodigo
             // 
@@ -70,9 +70,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label2.Location = new System.Drawing.Point(12, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 21);
+            this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ubicación:";
+            this.label2.Text = "Ubicación";
             // 
             // label3
             // 
@@ -81,9 +81,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label3.Location = new System.Drawing.Point(12, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 21);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Estado:";
+            this.label3.Text = "Estado";
             // 
             // CmbEstado
             // 

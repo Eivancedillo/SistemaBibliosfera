@@ -129,5 +129,10 @@ namespace SistemaBibliosfera
             TxtLibro.Text = ejemplarprestamo.IdLibro.ToString();
             TxtEjemplar.Text = ejemplarprestamo.Codigo.ToString("D3");
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

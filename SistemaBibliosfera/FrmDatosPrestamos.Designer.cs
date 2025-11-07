@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosPrestamos));
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNumControl = new System.Windows.Forms.TextBox();
             this.BtnBuscarNumControl = new System.Windows.Forms.Button();
@@ -44,39 +45,41 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(67, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 25);
+            this.label1.Size = new System.Drawing.Size(113, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Num. Control";
             // 
             // TxtNumControl
             // 
-            this.TxtNumControl.Location = new System.Drawing.Point(144, 22);
+            this.TxtNumControl.Location = new System.Drawing.Point(213, 134);
             this.TxtNumControl.Name = "TxtNumControl";
-            this.TxtNumControl.Size = new System.Drawing.Size(191, 30);
+            this.TxtNumControl.Size = new System.Drawing.Size(212, 29);
             this.TxtNumControl.TabIndex = 1;
             // 
             // BtnBuscarNumControl
             // 
-            this.BtnBuscarNumControl.Location = new System.Drawing.Point(652, 22);
+            this.BtnBuscarNumControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarNumControl.BackgroundImage")));
+            this.BtnBuscarNumControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarNumControl.Location = new System.Drawing.Point(778, 129);
             this.BtnBuscarNumControl.Name = "BtnBuscarNumControl";
-            this.BtnBuscarNumControl.Size = new System.Drawing.Size(92, 30);
+            this.BtnBuscarNumControl.Size = new System.Drawing.Size(44, 39);
             this.BtnBuscarNumControl.TabIndex = 4;
-            this.BtnBuscarNumControl.Text = "Buscar";
             this.BtnBuscarNumControl.UseVisualStyleBackColor = true;
             this.BtnBuscarNumControl.Click += new System.EventHandler(this.BtnBuscarNumControl_Click);
             // 
             // BtnBuscarEjemplar
             // 
-            this.BtnBuscarEjemplar.Location = new System.Drawing.Point(652, 73);
+            this.BtnBuscarEjemplar.Location = new System.Drawing.Point(778, 188);
             this.BtnBuscarEjemplar.Name = "BtnBuscarEjemplar";
-            this.BtnBuscarEjemplar.Size = new System.Drawing.Size(92, 30);
+            this.BtnBuscarEjemplar.Size = new System.Drawing.Size(102, 31);
             this.BtnBuscarEjemplar.TabIndex = 7;
             this.BtnBuscarEjemplar.Text = "Buscar";
             this.BtnBuscarEjemplar.UseVisualStyleBackColor = true;
@@ -84,32 +87,34 @@
             // 
             // TxtLibro
             // 
-            this.TxtLibro.Location = new System.Drawing.Point(82, 73);
+            this.TxtLibro.Location = new System.Drawing.Point(144, 188);
             this.TxtLibro.Name = "TxtLibro";
-            this.TxtLibro.Size = new System.Drawing.Size(253, 30);
+            this.TxtLibro.Size = new System.Drawing.Size(281, 29);
             this.TxtLibro.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 76);
+            this.label2.Location = new System.Drawing.Point(67, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 25);
+            this.label2.Size = new System.Drawing.Size(49, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Libro";
             // 
             // DtpFechaDevolucion
             // 
-            this.DtpFechaDevolucion.Location = new System.Drawing.Point(284, 175);
+            this.DtpFechaDevolucion.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.DtpFechaDevolucion.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.DtpFechaDevolucion.Location = new System.Drawing.Point(369, 295);
             this.DtpFechaDevolucion.Name = "DtpFechaDevolucion";
-            this.DtpFechaDevolucion.Size = new System.Drawing.Size(460, 30);
+            this.DtpFechaDevolucion.Size = new System.Drawing.Size(511, 29);
             this.DtpFechaDevolucion.TabIndex = 8;
             // 
             // BtnAceptar
             // 
-            this.BtnAceptar.Location = new System.Drawing.Point(234, 232);
+            this.BtnAceptar.Location = new System.Drawing.Point(313, 355);
             this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(129, 66);
+            this.BtnAceptar.Size = new System.Drawing.Size(143, 69);
             this.BtnAceptar.TabIndex = 9;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = true;
@@ -117,9 +122,9 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(369, 232);
+            this.BtnCancelar.Location = new System.Drawing.Point(463, 355);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(129, 66);
+            this.BtnCancelar.Size = new System.Drawing.Size(143, 69);
             this.BtnCancelar.TabIndex = 10;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
@@ -127,51 +132,51 @@
             // 
             // TxtEjemplar
             // 
-            this.TxtEjemplar.Location = new System.Drawing.Point(435, 73);
+            this.TxtEjemplar.Location = new System.Drawing.Point(537, 188);
             this.TxtEjemplar.Name = "TxtEjemplar";
-            this.TxtEjemplar.Size = new System.Drawing.Size(98, 30);
+            this.TxtEjemplar.Size = new System.Drawing.Size(108, 29);
             this.TxtEjemplar.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(341, 76);
+            this.label3.Location = new System.Drawing.Point(432, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 11;
             this.label3.Text = "Ejemplar";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 175);
+            this.label4.Location = new System.Drawing.Point(67, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 25);
+            this.label4.Size = new System.Drawing.Size(232, 21);
             this.label4.TabIndex = 13;
             this.label4.Text = "Fecha de devolucion prevista";
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(435, 22);
+            this.TxtNombre.Location = new System.Drawing.Point(537, 134);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(211, 30);
+            this.TxtNombre.Size = new System.Drawing.Size(234, 29);
             this.TxtNombre.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(341, 25);
+            this.label5.Location = new System.Drawing.Point(432, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 14;
             this.label5.Text = "Nombre";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 126);
+            this.label6.Location = new System.Drawing.Point(67, 244);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 25);
+            this.label6.Size = new System.Drawing.Size(61, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "Estado";
             // 
@@ -179,17 +184,31 @@
             // 
             this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEstado.FormattingEnabled = true;
-            this.CmbEstado.Location = new System.Drawing.Point(91, 123);
+            this.CmbEstado.Location = new System.Drawing.Point(154, 240);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(161, 33);
+            this.CmbEstado.Size = new System.Drawing.Size(178, 29);
             this.CmbEstado.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.label7.Location = new System.Drawing.Point(392, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 30);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Agregar Préstamo";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // FrmDatosPrestamos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(753, 310);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(973, 464);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtNombre);
@@ -206,7 +225,9 @@
             this.Controls.Add(this.BtnBuscarNumControl);
             this.Controls.Add(this.TxtNumControl);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDatosPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -234,5 +255,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox CmbEstado;
+        private System.Windows.Forms.Label label7;
     }
 }
