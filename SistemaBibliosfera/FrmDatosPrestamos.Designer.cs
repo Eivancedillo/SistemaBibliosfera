@@ -77,11 +77,12 @@
             // 
             // BtnBuscarEjemplar
             // 
-            this.BtnBuscarEjemplar.Location = new System.Drawing.Point(778, 188);
+            this.BtnBuscarEjemplar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarEjemplar.BackgroundImage")));
+            this.BtnBuscarEjemplar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBuscarEjemplar.Location = new System.Drawing.Point(651, 180);
             this.BtnBuscarEjemplar.Name = "BtnBuscarEjemplar";
-            this.BtnBuscarEjemplar.Size = new System.Drawing.Size(102, 31);
+            this.BtnBuscarEjemplar.Size = new System.Drawing.Size(47, 43);
             this.BtnBuscarEjemplar.TabIndex = 7;
-            this.BtnBuscarEjemplar.Text = "Buscar";
             this.BtnBuscarEjemplar.UseVisualStyleBackColor = true;
             this.BtnBuscarEjemplar.Click += new System.EventHandler(this.BtnBuscarEjemplar_Click);
             // 
@@ -112,22 +113,26 @@
             // 
             // BtnAceptar
             // 
+            this.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.BtnAceptar.ForeColor = System.Drawing.Color.White;
             this.BtnAceptar.Location = new System.Drawing.Point(313, 355);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(143, 69);
             this.BtnAceptar.TabIndex = 9;
-            this.BtnAceptar.Text = "Aceptar";
-            this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Text = "Guardar";
+            this.BtnAceptar.UseVisualStyleBackColor = false;
             this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar.Location = new System.Drawing.Point(463, 355);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(143, 69);
             this.BtnCancelar.TabIndex = 10;
             this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // TxtEjemplar
@@ -140,7 +145,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(432, 191);
+            this.label3.Location = new System.Drawing.Point(453, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 11;
@@ -149,11 +154,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 295);
+            this.label4.Location = new System.Drawing.Point(131, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(232, 21);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Fecha de devolucion prevista";
+            this.label4.Text = "Fecha de devolución prevista";
             // 
             // TxtNombre
             // 
@@ -165,7 +170,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(432, 138);
+            this.label5.Location = new System.Drawing.Point(453, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 14;
