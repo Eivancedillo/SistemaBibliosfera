@@ -206,5 +206,10 @@ namespace SistemaBibliosfera
                 e.SuppressKeyPress = true;
             }
         }
-    }
+
+		private void FrmAdquisiciones_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

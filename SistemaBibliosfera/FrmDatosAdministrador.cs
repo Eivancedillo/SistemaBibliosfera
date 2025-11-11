@@ -145,5 +145,15 @@ namespace SistemaBibliosfera
                 return;
             ma.LlenarPermisos(int.Parse(CmbAccesos.SelectedValue.ToString()), FrmAdministradores.administradorr.IdAdministrador, CbVer, CbCrear, CbEditar, CbActivar);
         }
-    }
+
+		private void label6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

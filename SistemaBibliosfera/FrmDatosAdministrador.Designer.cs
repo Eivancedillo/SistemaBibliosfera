@@ -28,192 +28,284 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.CbActivar = new System.Windows.Forms.CheckBox();
-            this.CbEditar = new System.Windows.Forms.CheckBox();
-            this.CbCrear = new System.Windows.Forms.CheckBox();
-            this.CbVer = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CmbAccesos = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnGuardar = new System.Windows.Forms.Button();
-            this.TxtContraseña = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Location = new System.Drawing.Point(408, 132);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(92, 33);
-            this.BtnEditar.TabIndex = 65;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // CbActivar
-            // 
-            this.CbActivar.AutoSize = true;
-            this.CbActivar.Enabled = false;
-            this.CbActivar.Location = new System.Drawing.Point(368, 189);
-            this.CbActivar.Name = "CbActivar";
-            this.CbActivar.Size = new System.Drawing.Size(192, 29);
-            this.CbActivar.TabIndex = 64;
-            this.CbActivar.Text = "Activar/Desactivar";
-            this.CbActivar.UseVisualStyleBackColor = true;
-            this.CbActivar.CheckedChanged += new System.EventHandler(this.CbActivar_CheckedChanged);
-            // 
-            // CbEditar
-            // 
-            this.CbEditar.AutoSize = true;
-            this.CbEditar.Enabled = false;
-            this.CbEditar.Location = new System.Drawing.Point(278, 189);
-            this.CbEditar.Name = "CbEditar";
-            this.CbEditar.Size = new System.Drawing.Size(84, 29);
-            this.CbEditar.TabIndex = 63;
-            this.CbEditar.Text = "Editar";
-            this.CbEditar.UseVisualStyleBackColor = true;
-            this.CbEditar.CheckedChanged += new System.EventHandler(this.CbEditar_CheckedChanged);
-            // 
-            // CbCrear
-            // 
-            this.CbCrear.AutoSize = true;
-            this.CbCrear.Enabled = false;
-            this.CbCrear.Location = new System.Drawing.Point(189, 189);
-            this.CbCrear.Name = "CbCrear";
-            this.CbCrear.Size = new System.Drawing.Size(83, 29);
-            this.CbCrear.TabIndex = 62;
-            this.CbCrear.Text = "Crear";
-            this.CbCrear.UseVisualStyleBackColor = true;
-            this.CbCrear.CheckedChanged += new System.EventHandler(this.CbCrear_CheckedChanged);
-            // 
-            // CbVer
-            // 
-            this.CbVer.AutoSize = true;
-            this.CbVer.Enabled = false;
-            this.CbVer.Location = new System.Drawing.Point(118, 189);
-            this.CbVer.Name = "CbVer";
-            this.CbVer.Size = new System.Drawing.Size(65, 29);
-            this.CbVer.TabIndex = 61;
-            this.CbVer.Text = "Ver";
-            this.CbVer.UseVisualStyleBackColor = true;
-            this.CbVer.CheckedChanged += new System.EventHandler(this.CbVer_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 189);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Permisos";
-            // 
-            // CmbAccesos
-            // 
-            this.CmbAccesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbAccesos.Enabled = false;
-            this.CmbAccesos.FormattingEnabled = true;
-            this.CmbAccesos.Location = new System.Drawing.Point(118, 133);
-            this.CmbAccesos.Name = "CmbAccesos";
-            this.CmbAccesos.Size = new System.Drawing.Size(199, 33);
-            this.CmbAccesos.TabIndex = 59;
-            this.CmbAccesos.SelectedIndexChanged += new System.EventHandler(this.CmbAccesos_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 25);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Accesos";
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(288, 244);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(166, 49);
-            this.BtnCancelar.TabIndex = 57;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.Lime;
-            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(82, 244);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(166, 49);
-            this.BtnGuardar.TabIndex = 56;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = false;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // TxtContraseña
-            // 
-            this.TxtContraseña.Location = new System.Drawing.Point(132, 80);
-            this.TxtContraseña.Name = "TxtContraseña";
-            this.TxtContraseña.Size = new System.Drawing.Size(441, 30);
-            this.TxtContraseña.TabIndex = 55;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "Contraseña";
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(132, 26);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(441, 30);
-            this.TxtNombre.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 25);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Nombre";
-            // 
-            // FrmDatosAdministrador
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(585, 303);
-            this.Controls.Add(this.BtnEditar);
-            this.Controls.Add(this.CbActivar);
-            this.Controls.Add(this.CbEditar);
-            this.Controls.Add(this.CbCrear);
-            this.Controls.Add(this.CbVer);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.CmbAccesos);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.BtnGuardar);
-            this.Controls.Add(this.TxtContraseña);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxtNombre);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmDatosAdministrador";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDatosAdministrador";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosAdministrador));
+			this.BtnEditar = new System.Windows.Forms.Button();
+			this.CbActivar = new System.Windows.Forms.CheckBox();
+			this.CbEditar = new System.Windows.Forms.CheckBox();
+			this.CbCrear = new System.Windows.Forms.CheckBox();
+			this.CbVer = new System.Windows.Forms.CheckBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.CmbAccesos = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.BtnCancelar = new System.Windows.Forms.Button();
+			this.BtnGuardar = new System.Windows.Forms.Button();
+			this.TxtContraseña = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.TxtNombre = new System.Windows.Forms.TextBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// BtnEditar
+			// 
+			this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+			this.BtnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.BtnEditar.Location = new System.Drawing.Point(416, 224);
+			this.BtnEditar.Name = "BtnEditar";
+			this.BtnEditar.Size = new System.Drawing.Size(119, 44);
+			this.BtnEditar.TabIndex = 65;
+			this.BtnEditar.Text = "Editar";
+			this.BtnEditar.UseVisualStyleBackColor = false;
+			this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+			// 
+			// CbActivar
+			// 
+			this.CbActivar.AutoSize = true;
+			this.CbActivar.Enabled = false;
+			this.CbActivar.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.CbActivar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.CbActivar.Location = new System.Drawing.Point(686, 325);
+			this.CbActivar.Name = "CbActivar";
+			this.CbActivar.Size = new System.Drawing.Size(155, 25);
+			this.CbActivar.TabIndex = 64;
+			this.CbActivar.Text = "Activar/Desactivar";
+			this.CbActivar.UseVisualStyleBackColor = true;
+			this.CbActivar.CheckedChanged += new System.EventHandler(this.CbActivar_CheckedChanged);
+			// 
+			// CbEditar
+			// 
+			this.CbEditar.AutoSize = true;
+			this.CbEditar.Enabled = false;
+			this.CbEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.CbEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.CbEditar.Location = new System.Drawing.Point(596, 325);
+			this.CbEditar.Name = "CbEditar";
+			this.CbEditar.Size = new System.Drawing.Size(69, 25);
+			this.CbEditar.TabIndex = 63;
+			this.CbEditar.Text = "Editar";
+			this.CbEditar.UseVisualStyleBackColor = true;
+			this.CbEditar.CheckedChanged += new System.EventHandler(this.CbEditar_CheckedChanged);
+			// 
+			// CbCrear
+			// 
+			this.CbCrear.AutoSize = true;
+			this.CbCrear.Enabled = false;
+			this.CbCrear.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.CbCrear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.CbCrear.Location = new System.Drawing.Point(507, 325);
+			this.CbCrear.Name = "CbCrear";
+			this.CbCrear.Size = new System.Drawing.Size(67, 25);
+			this.CbCrear.TabIndex = 62;
+			this.CbCrear.Text = "Crear";
+			this.CbCrear.UseVisualStyleBackColor = true;
+			this.CbCrear.CheckedChanged += new System.EventHandler(this.CbCrear_CheckedChanged);
+			// 
+			// CbVer
+			// 
+			this.CbVer.AutoSize = true;
+			this.CbVer.Enabled = false;
+			this.CbVer.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.CbVer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.CbVer.Location = new System.Drawing.Point(436, 325);
+			this.CbVer.Name = "CbVer";
+			this.CbVer.Size = new System.Drawing.Size(52, 25);
+			this.CbVer.TabIndex = 61;
+			this.CbVer.Text = "Ver";
+			this.CbVer.UseVisualStyleBackColor = true;
+			this.CbVer.CheckedChanged += new System.EventHandler(this.CbVer_CheckedChanged);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label4.Location = new System.Drawing.Point(438, 291);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(79, 21);
+			this.label4.TabIndex = 60;
+			this.label4.Text = "Permisos";
+			// 
+			// CmbAccesos
+			// 
+			this.CmbAccesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.CmbAccesos.Enabled = false;
+			this.CmbAccesos.FormattingEnabled = true;
+			this.CmbAccesos.Location = new System.Drawing.Point(119, 233);
+			this.CmbAccesos.Name = "CmbAccesos";
+			this.CmbAccesos.Size = new System.Drawing.Size(277, 28);
+			this.CmbAccesos.TabIndex = 59;
+			this.CmbAccesos.SelectedIndexChanged += new System.EventHandler(this.CmbAccesos_SelectedIndexChanged);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label2.Location = new System.Drawing.Point(43, 237);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(70, 21);
+			this.label2.TabIndex = 58;
+			this.label2.Text = "Accesos";
+			// 
+			// BtnCancelar
+			// 
+			this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+			this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.BtnCancelar.Location = new System.Drawing.Point(698, 356);
+			this.BtnCancelar.Name = "BtnCancelar";
+			this.BtnCancelar.Size = new System.Drawing.Size(119, 44);
+			this.BtnCancelar.TabIndex = 57;
+			this.BtnCancelar.Text = "Cancelar";
+			this.BtnCancelar.UseVisualStyleBackColor = false;
+			this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+			// 
+			// BtnGuardar
+			// 
+			this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+			this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.BtnGuardar.Location = new System.Drawing.Point(492, 356);
+			this.BtnGuardar.Name = "BtnGuardar";
+			this.BtnGuardar.Size = new System.Drawing.Size(119, 44);
+			this.BtnGuardar.TabIndex = 56;
+			this.BtnGuardar.Text = "Guardar";
+			this.BtnGuardar.UseVisualStyleBackColor = false;
+			this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+			// 
+			// TxtContraseña
+			// 
+			this.TxtContraseña.Location = new System.Drawing.Point(452, 158);
+			this.TxtContraseña.Multiline = true;
+			this.TxtContraseña.Name = "TxtContraseña";
+			this.TxtContraseña.Size = new System.Drawing.Size(277, 29);
+			this.TxtContraseña.TabIndex = 55;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label3.Location = new System.Drawing.Point(448, 129);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(96, 21);
+			this.label3.TabIndex = 54;
+			this.label3.Text = "Contraseña";
+			// 
+			// TxtNombre
+			// 
+			this.TxtNombre.Location = new System.Drawing.Point(49, 158);
+			this.TxtNombre.Multiline = true;
+			this.TxtNombre.Name = "TxtNombre";
+			this.TxtNombre.Size = new System.Drawing.Size(277, 29);
+			this.TxtNombre.TabIndex = 53;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox1.Enabled = false;
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(77, 71);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 69;
+			this.pictureBox1.TabStop = false;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(605, 96);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(0, 20);
+			this.label8.TabIndex = 68;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label7.Location = new System.Drawing.Point(86, 48);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(509, 21);
+			this.label7.TabIndex = 67;
+			this.label7.Text = "Completa la información para agregar un nuevo bibliotecario al sistema.";
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label6.Location = new System.Drawing.Point(91, 15);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(297, 30);
+			this.label6.TabIndex = 66;
+			this.label6.Text = "Registrar nuevo bibliotecario";
+			this.label6.Click += new System.EventHandler(this.label6_Click);
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label5.Location = new System.Drawing.Point(89, 69);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(515, 21);
+			this.label5.TabIndex = 70;
+			this.label5.Text = "Este usuario pdrá acceder a las funciones administrativas de la biblioteca ";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+			this.label1.Location = new System.Drawing.Point(43, 129);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(157, 21);
+			this.label1.TabIndex = 52;
+			this.label1.Text = "Nombre de usuario";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
+			// 
+			// FrmDatosAdministrador
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ClientSize = new System.Drawing.Size(906, 443);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.BtnEditar);
+			this.Controls.Add(this.CbActivar);
+			this.Controls.Add(this.CbEditar);
+			this.Controls.Add(this.CbCrear);
+			this.Controls.Add(this.CbVer);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.CmbAccesos);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.BtnCancelar);
+			this.Controls.Add(this.BtnGuardar);
+			this.Controls.Add(this.TxtContraseña);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.TxtNombre);
+			this.Controls.Add(this.label1);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.Name = "FrmDatosAdministrador";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "FrmDatosAdministrador";
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
@@ -232,6 +324,11 @@
         private System.Windows.Forms.TextBox TxtContraseña;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.Label label1;
-    }
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label1;
+	}
 }

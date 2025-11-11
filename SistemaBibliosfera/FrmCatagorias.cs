@@ -125,7 +125,12 @@ namespace SistemaBibliosfera
             }
         }
 
-        private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex; columna = e.ColumnIndex;
         }
