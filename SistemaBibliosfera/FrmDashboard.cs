@@ -50,5 +50,7 @@ namespace SistemaBibliosfera
             panelAlertaReparacion,
             lblAlertaReparacion);
         }
+
+
     }
 }
