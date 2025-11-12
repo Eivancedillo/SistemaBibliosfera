@@ -101,6 +101,11 @@ namespace SistemaBibliosfera
             fila = e.RowIndex; columna = e.ColumnIndex;
         }
 
+        private void FrmCatalogo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
