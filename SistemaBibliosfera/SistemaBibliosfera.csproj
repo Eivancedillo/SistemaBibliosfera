@@ -276,5 +276,23 @@
   <ItemGroup>
     <None Include="Resources\estado.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-1-en-círculo-c-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-2-en-círculo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-2-en-círculo-c-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-3-en-círculo-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-4-en-círculo-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-5-en-círculo-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
