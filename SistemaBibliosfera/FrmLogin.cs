@@ -62,5 +62,16 @@ namespace SistemaBibliosfera
         {
             Application.Exit();
         }
+
+        private void TxtUsuario_Click(object sender, EventArgs e)
+        {
+            TxtUsuario.Clear();
+        }
+
+        private void TxtContrasena_Click(object sender, EventArgs e)
+        {
+            TxtContrasena.Clear();
+            TxtContrasena.PasswordChar = '*';
+        }
     }
 }
