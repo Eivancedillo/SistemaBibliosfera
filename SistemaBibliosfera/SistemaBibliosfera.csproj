@@ -294,5 +294,44 @@
   <ItemGroup>
     <None Include="Resources\icons8-5-en-círculo-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Libros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Libros1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filled Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-masculino-en-círculo-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reloj-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libro-abierto-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brake Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Improvement.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
