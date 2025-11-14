@@ -26,51 +26,51 @@ namespace SistemaBibliosfera
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            FrmDashboard frmDashboard = new FrmDashboard();
-            frmDashboard.MdiParent = this;
-            frmDashboard.Show();
+            FrmDashboard dashboard = new FrmDashboard();
+            dashboard.MdiParent = this;
+            dashboard.Show();
         }
 
         private void BtnCatalogo_Click(object sender, EventArgs e)
         {
-            FrmCatalogo frmCatalogo = new FrmCatalogo();
-            frmCatalogo.MdiParent = this;
-            frmCatalogo.Show();
+            FrmCatalogo catalogo = new FrmCatalogo();
+            catalogo.MdiParent = this;
+            catalogo.Show();
         }
 
         private void BtnPrestamos_Click(object sender, EventArgs e)
         {
-            FrmPrestamos frmPrestamos = new FrmPrestamos();
-            frmPrestamos.MdiParent = this;
-            frmPrestamos.Show();
+            FrmPrestamos prestamos = new FrmPrestamos();
+            prestamos.MdiParent = this;
+            prestamos.Show();
         }
 
         private void BtnAdquisiciones_Click(object sender, EventArgs e)
         {
-            FrmAdquisiciones frmAdquisiciones = new FrmAdquisiciones();
-            frmAdquisiciones.MdiParent = this;
-            frmAdquisiciones.Show();
+            FrmAdquisiciones adquisiciones = new FrmAdquisiciones();
+            adquisiciones.MdiParent = this;
+            adquisiciones.Show();
         }
 
         private void BtnMiembros_Click(object sender, EventArgs e)
         {
-            FrmMiembros frmMiembros = new FrmMiembros();
-            frmMiembros.MdiParent = this;
-            frmMiembros.Show();
+            FrmMiembros miembros = new FrmMiembros();
+            miembros.MdiParent = this;
+            miembros.Show();
         }
 
         private void BtnBibliotecarios_Click(object sender, EventArgs e)
         {
-            FrmAdministradores frmAdministradores = new FrmAdministradores();
-            frmAdministradores.MdiParent = this;
-            frmAdministradores.Show();
+            FrmAdministradores administradores = new FrmAdministradores();
+            administradores.MdiParent = this;
+            administradores.Show();
         }
 
-        private void BtnAsistencia_Click(object sender, EventArgs e)
+        private void BtnAsistencias_Click(object sender, EventArgs e)
         {
-            FrmAsistencias frmAsistencias = new FrmAsistencias();
-            frmAsistencias.MdiParent = this;
-            frmAsistencias.Show();
+            FrmAsistencias asistencias = new FrmAsistencias();
+            asistencias.MdiParent = this;
+            asistencias.Show();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
