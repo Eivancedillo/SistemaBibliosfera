@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAsistencia = new System.Windows.Forms.Button();
             this.BtnBibliotecarios = new System.Windows.Forms.Button();
@@ -38,8 +41,6 @@
             this.BtnPrestamos = new System.Windows.Forms.Button();
             this.BtnCatalogo = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +64,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 886);
             this.panel1.TabIndex = 15;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.label12.Location = new System.Drawing.Point(59, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(169, 21);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Gestión bibliotecaria";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(59, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 21);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "BiblioSfera";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.image_3h;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(467, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(761, 577);
+            this.panel2.TabIndex = 16;
             // 
             // BtnSalir
             // 
@@ -208,27 +240,6 @@
             this.BtnDashboard.UseVisualStyleBackColor = true;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.label12.Location = new System.Drawing.Point(59, 45);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 21);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Gestión bibliotecaria";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(59, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 21);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "BiblioSfera";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.image_3;
@@ -247,9 +258,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(976, 590);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -275,5 +288,6 @@
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnAsistencia;
         private System.Windows.Forms.Button BtnBibliotecarios;
+        private System.Windows.Forms.Panel panel2;
     }
 }
