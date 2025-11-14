@@ -47,7 +47,7 @@ namespace SistemaBibliosfera
 
         private void BtnAdquisiciones_Click(object sender, EventArgs e)
         {
-            FrmAdquisiciones frmAdquisiciones = new FrmAdquisiciones();
+            FrmAdquisiciones frmAdquisiciones = new FrmAdquisiciones(); 
             frmAdquisiciones.MdiParent = this;
             frmAdquisiciones.Show();
         }
