@@ -333,5 +333,20 @@
   <ItemGroup>
     <None Include="Resources\Improvement.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libros-64 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Read3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

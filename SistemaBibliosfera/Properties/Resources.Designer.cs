@@ -83,6 +83,26 @@ namespace SistemaBibliosfera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clipboard {
+            get {
+                object obj = ResourceManager.GetObject("Clipboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Clipboard1 {
+            get {
+                object obj = ResourceManager.GetObject("Clipboard1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard {
             get {
                 object obj = ResourceManager.GetObject("dashboard", resourceCulture);
@@ -193,6 +213,16 @@ namespace SistemaBibliosfera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_libros_64_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-libros-64 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_profile_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-profile-64", resourceCulture);
@@ -246,6 +276,26 @@ namespace SistemaBibliosfera.Properties {
         internal static System.Drawing.Bitmap Libros1 {
             get {
                 object obj = ResourceManager.GetObject("Libros1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Read {
+            get {
+                object obj = ResourceManager.GetObject("Read", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Read3 {
+            get {
+                object obj = ResourceManager.GetObject("Read3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
