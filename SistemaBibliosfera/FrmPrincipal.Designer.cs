@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnDashboard = new System.Windows.Forms.ToolStripButton();
             this.BtnCatalogo = new System.Windows.Forms.ToolStripButton();
@@ -38,9 +37,6 @@
             this.BtnBibliotecarios = new System.Windows.Forms.ToolStripButton();
             this.BtnAsistencias = new System.Windows.Forms.ToolStripButton();
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -70,136 +65,110 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(66, 590);
+            this.toolStrip1.Size = new System.Drawing.Size(177, 590);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // BtnDashboard
             // 
             this.BtnDashboard.AutoSize = false;
-            this.BtnDashboard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnDashboard.BackgroundImage")));
             this.BtnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnDashboard.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnDashboard.Name = "BtnDashboard";
-            this.BtnDashboard.Size = new System.Drawing.Size(64, 64);
-            this.BtnDashboard.Text = "DashBoard";
+            this.BtnDashboard.Size = new System.Drawing.Size(175, 64);
+            this.BtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // BtnCatalogo
             // 
             this.BtnCatalogo.AutoSize = false;
-            this.BtnCatalogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCatalogo.BackgroundImage")));
             this.BtnCatalogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnCatalogo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCatalogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCatalogo.Name = "BtnCatalogo";
-            this.BtnCatalogo.Size = new System.Drawing.Size(64, 64);
+            this.BtnCatalogo.Size = new System.Drawing.Size(175, 64);
             this.BtnCatalogo.Text = "Catalogo";
+            this.BtnCatalogo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
             // 
             // BtnPrestamos
             // 
             this.BtnPrestamos.AutoSize = false;
-            this.BtnPrestamos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrestamos.BackgroundImage")));
             this.BtnPrestamos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPrestamos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPrestamos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnPrestamos.Name = "BtnPrestamos";
-            this.BtnPrestamos.Size = new System.Drawing.Size(64, 64);
+            this.BtnPrestamos.Size = new System.Drawing.Size(175, 64);
             this.BtnPrestamos.Text = "Prestamos";
+            this.BtnPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
             // 
             // BtnAdquisiciones
             // 
             this.BtnAdquisiciones.AutoSize = false;
-            this.BtnAdquisiciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAdquisiciones.BackgroundImage")));
             this.BtnAdquisiciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnAdquisiciones.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnAdquisiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAdquisiciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdquisiciones.Name = "BtnAdquisiciones";
-            this.BtnAdquisiciones.Size = new System.Drawing.Size(64, 64);
+            this.BtnAdquisiciones.Size = new System.Drawing.Size(175, 64);
             this.BtnAdquisiciones.Text = "Adquisiciones";
+            this.BtnAdquisiciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
             // 
             // BtnMiembros
             // 
             this.BtnMiembros.AutoSize = false;
-            this.BtnMiembros.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnMiembros.BackgroundImage")));
             this.BtnMiembros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnMiembros.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnMiembros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMiembros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnMiembros.Name = "BtnMiembros";
-            this.BtnMiembros.Size = new System.Drawing.Size(64, 64);
+            this.BtnMiembros.Size = new System.Drawing.Size(175, 64);
             this.BtnMiembros.Text = "Miembros";
+            this.BtnMiembros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
             // 
             // BtnBibliotecarios
             // 
             this.BtnBibliotecarios.AutoSize = false;
-            this.BtnBibliotecarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBibliotecarios.BackgroundImage")));
             this.BtnBibliotecarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnBibliotecarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnBibliotecarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnBibliotecarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnBibliotecarios.Name = "BtnBibliotecarios";
-            this.BtnBibliotecarios.Size = new System.Drawing.Size(64, 64);
+            this.BtnBibliotecarios.Size = new System.Drawing.Size(175, 64);
             this.BtnBibliotecarios.Text = "Bibliotecarios";
+            this.BtnBibliotecarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
             // 
             // BtnAsistencias
             // 
             this.BtnAsistencias.AutoSize = false;
-            this.BtnAsistencias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAsistencias.BackgroundImage")));
             this.BtnAsistencias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnAsistencias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BtnAsistencias.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsistencias.Name = "BtnAsistencias";
-            this.BtnAsistencias.Size = new System.Drawing.Size(64, 64);
+            this.BtnAsistencias.Size = new System.Drawing.Size(175, 64);
             this.BtnAsistencias.Text = "Asistencias";
             this.BtnAsistencias.Click += new System.EventHandler(this.BtnAsistencias_Click);
             // 
             // BtnSalir
             // 
             this.BtnSalir.AutoSize = false;
-            this.BtnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSalir.BackgroundImage")));
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(64, 64);
+            this.BtnSalir.Size = new System.Drawing.Size(175, 64);
             this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(916, 605);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(377, 434);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 65);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "BiblioSfera";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.label2.Location = new System.Drawing.Point(409, 499);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Gestión bibliotecaria";
             // 
             // label3
             // 
@@ -305,9 +274,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -319,7 +285,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,9 +301,6 @@
         private System.Windows.Forms.ToolStripButton BtnBibliotecarios;
         private System.Windows.Forms.ToolStripButton BtnAsistencias;
         private System.Windows.Forms.ToolStripButton BtnSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
