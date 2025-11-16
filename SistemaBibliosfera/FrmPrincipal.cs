@@ -32,6 +32,7 @@ namespace SistemaBibliosfera
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmDashboard dashboard = new FrmDashboard();
             dashboard.MdiParent = this;
             dashboard.Show();
@@ -39,6 +40,7 @@ namespace SistemaBibliosfera
 
         private void BtnCatalogo_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmCatalogo catalogo = new FrmCatalogo();
             catalogo.MdiParent = this;
             catalogo.Show();
@@ -46,6 +48,7 @@ namespace SistemaBibliosfera
 
         private void BtnPrestamos_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmPrestamos prestamos = new FrmPrestamos();
             prestamos.MdiParent = this;
             prestamos.Show();
@@ -53,6 +56,7 @@ namespace SistemaBibliosfera
 
         private void BtnAdquisiciones_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmAdquisiciones adquisiciones = new FrmAdquisiciones();
             adquisiciones.MdiParent = this;
             adquisiciones.Show();
@@ -60,6 +64,7 @@ namespace SistemaBibliosfera
 
         private void BtnBibliotecarios_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmMiembros miembros = new FrmMiembros();
             miembros.MdiParent = this;
             miembros.Show();
@@ -67,6 +72,7 @@ namespace SistemaBibliosfera
 
         private void BtnMiembros_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmAdministradores administradores = new FrmAdministradores();
             administradores.MdiParent = this;
             administradores.Show();
@@ -74,6 +80,7 @@ namespace SistemaBibliosfera
 
         private void BtnAsistencia_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             FrmAsistencias asistencias = new FrmAsistencias();
             asistencias.MdiParent = this;
             asistencias.Show();
@@ -81,7 +88,21 @@ namespace SistemaBibliosfera
 
         private void Boton (object senderBoton)
         {
-            Color colorSeleccionado = Color.FromArgb(205, 173, )
+            Color colorSeleccionado = Color.FromArgb(205, 173, 143);
+            Color colorTool = Color.FromArgb(242, 242, 242);
+
+            foreach (ToolStripItem item in toolStrip1.Items)
+            {
+                if (item is ToolStripButton)
+                {
+                    item.BackColor = colorTool;
+                }
+            }
+
+            if (senderBoton is ToolStripButton boton)
+            {
+                boton.BackColor = colorSeleccionado;
+            }
         }
     }
 }
