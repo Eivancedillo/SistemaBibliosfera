@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.LblBiblioSfera = new System.Windows.Forms.ToolStripLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnDashboard = new System.Windows.Forms.ToolStripButton();
+            this.BtnCatalogo = new System.Windows.Forms.ToolStripButton();
+            this.BtnPrestamos = new System.Windows.Forms.ToolStripButton();
+            this.BtnAdquisiciones = new System.Windows.Forms.ToolStripButton();
+            this.BtnBibliotecarios = new System.Windows.Forms.ToolStripButton();
+            this.BtnMiembros = new System.Windows.Forms.ToolStripButton();
+            this.BtnAsistencia = new System.Windows.Forms.ToolStripButton();
+            this.BtnSalir = new System.Windows.Forms.ToolStripButton();
+            this.BtnBibliosfera = new System.Windows.Forms.ToolStripLabel();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblBiblioSfera
@@ -41,6 +52,150 @@
             this.LblBiblioSfera.Size = new System.Drawing.Size(175, 60);
             this.LblBiblioSfera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnBibliosfera,
+            this.BtnDashboard,
+            this.BtnCatalogo,
+            this.BtnPrestamos,
+            this.BtnAdquisiciones,
+            this.BtnBibliotecarios,
+            this.BtnMiembros,
+            this.BtnAsistencia,
+            this.BtnSalir});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(200, 590);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnDashboard
+            // 
+            this.BtnDashboard.AutoSize = false;
+            this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnDashboard.Image = global::SistemaBibliosfera.Properties.Resources.Clipboard;
+            this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Size = new System.Drawing.Size(200, 40);
+            this.BtnDashboard.Text = "Dashboard";
+            this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            // 
+            // BtnCatalogo
+            // 
+            this.BtnCatalogo.AutoSize = false;
+            this.BtnCatalogo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCatalogo.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnCatalogo.Image = global::SistemaBibliosfera.Properties.Resources.icons8_cashbook_48;
+            this.BtnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCatalogo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCatalogo.Name = "BtnCatalogo";
+            this.BtnCatalogo.Size = new System.Drawing.Size(200, 40);
+            this.BtnCatalogo.Text = "Catálogo";
+            this.BtnCatalogo.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
+            // 
+            // BtnPrestamos
+            // 
+            this.BtnPrestamos.AutoSize = false;
+            this.BtnPrestamos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrestamos.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnPrestamos.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libros_64_21;
+            this.BtnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPrestamos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnPrestamos.Name = "BtnPrestamos";
+            this.BtnPrestamos.Size = new System.Drawing.Size(200, 40);
+            this.BtnPrestamos.Text = "Préstamos";
+            this.BtnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
+            // 
+            // BtnAdquisiciones
+            // 
+            this.BtnAdquisiciones.AutoSize = false;
+            this.BtnAdquisiciones.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdquisiciones.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnAdquisiciones.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libro_de_cuentos_641;
+            this.BtnAdquisiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAdquisiciones.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAdquisiciones.Name = "BtnAdquisiciones";
+            this.BtnAdquisiciones.Size = new System.Drawing.Size(200, 40);
+            this.BtnAdquisiciones.Text = "Adquisiciones";
+            this.BtnAdquisiciones.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
+            // 
+            // BtnBibliotecarios
+            // 
+            this.BtnBibliotecarios.AutoSize = false;
+            this.BtnBibliotecarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBibliotecarios.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnBibliotecarios.Image = global::SistemaBibliosfera.Properties.Resources.icons8_llamada_de_conferencia_60_1;
+            this.BtnBibliotecarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBibliotecarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnBibliotecarios.Name = "BtnBibliotecarios";
+            this.BtnBibliotecarios.Size = new System.Drawing.Size(200, 40);
+            this.BtnBibliotecarios.Text = "Miembros";
+            this.BtnBibliotecarios.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
+            // 
+            // BtnMiembros
+            // 
+            this.BtnMiembros.AutoSize = false;
+            this.BtnMiembros.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMiembros.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnMiembros.Image = global::SistemaBibliosfera.Properties.Resources.icons8_administrador_64_1;
+            this.BtnMiembros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMiembros.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnMiembros.Name = "BtnMiembros";
+            this.BtnMiembros.Size = new System.Drawing.Size(200, 40);
+            this.BtnMiembros.Text = "Bibliotecarios";
+            this.BtnMiembros.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
+            // 
+            // BtnAsistencia
+            // 
+            this.BtnAsistencia.AutoSize = false;
+            this.BtnAsistencia.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAsistencia.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnAsistencia.Image = global::SistemaBibliosfera.Properties.Resources.icons8_asistencia_100_1;
+            this.BtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAsistencia.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAsistencia.Name = "BtnAsistencia";
+            this.BtnAsistencia.Size = new System.Drawing.Size(200, 40);
+            this.BtnAsistencia.Text = "Asistencia";
+            this.BtnAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.AutoSize = false;
+            this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnSalir.Image = global::SistemaBibliosfera.Properties.Resources.icons8_cancelar_48__1_1;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(200, 40);
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnBibliosfera
+            // 
+            this.BtnBibliosfera.AutoSize = false;
+            this.BtnBibliosfera.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.BtnBibliosfera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBibliosfera.ForeColor = System.Drawing.Color.Black;
+            this.BtnBibliosfera.Name = "BtnBibliosfera";
+            this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
+            this.BtnBibliosfera.Text = "BiblioSfera";
+            this.BtnBibliosfera.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -49,6 +204,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(976, 590);
             this.ControlBox = false;
+            this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -57,11 +213,23 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.ToolStripLabel LblBiblioSfera;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnDashboard;
+        private System.Windows.Forms.ToolStripButton BtnCatalogo;
+        private System.Windows.Forms.ToolStripButton BtnPrestamos;
+        private System.Windows.Forms.ToolStripButton BtnAdquisiciones;
+        private System.Windows.Forms.ToolStripButton BtnMiembros;
+        private System.Windows.Forms.ToolStripButton BtnBibliotecarios;
+        private System.Windows.Forms.ToolStripButton BtnAsistencia;
+        private System.Windows.Forms.ToolStripButton BtnSalir;
+        private System.Windows.Forms.ToolStripLabel BtnBibliosfera;
     }
 }

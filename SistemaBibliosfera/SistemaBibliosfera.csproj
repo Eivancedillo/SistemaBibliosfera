@@ -348,5 +348,59 @@
   <ItemGroup>
     <None Include="Resources\Read3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cashbook-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libros-64 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libro-de-cuentos-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-llamada-de-conferencia-60 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrador-64 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-asistencia-100 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-48 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 3 w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
