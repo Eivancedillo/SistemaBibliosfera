@@ -30,6 +30,7 @@
         {
             this.LblBiblioSfera = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnBibliosfera = new System.Windows.Forms.ToolStripLabel();
             this.BtnDashboard = new System.Windows.Forms.ToolStripButton();
             this.BtnCatalogo = new System.Windows.Forms.ToolStripButton();
             this.BtnPrestamos = new System.Windows.Forms.ToolStripButton();
@@ -38,7 +39,6 @@
             this.BtnMiembros = new System.Windows.Forms.ToolStripButton();
             this.BtnAsistencia = new System.Windows.Forms.ToolStripButton();
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
-            this.BtnBibliosfera = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,9 +69,21 @@
             this.BtnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(200, 590);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnBibliosfera
+            // 
+            this.BtnBibliosfera.AutoSize = false;
+            this.BtnBibliosfera.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.BtnBibliosfera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBibliosfera.ForeColor = System.Drawing.Color.Black;
+            this.BtnBibliosfera.Name = "BtnBibliosfera";
+            this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
+            this.BtnBibliosfera.Text = "BiblioSfera";
+            this.BtnBibliosfera.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
             // BtnDashboard
             // 
@@ -86,6 +98,8 @@
             this.BtnDashboard.Text = "Dashboard";
             this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            this.BtnDashboard.MouseEnter += new System.EventHandler(this.BtnDashboard_MouseEnter);
+            this.BtnDashboard.MouseLeave += new System.EventHandler(this.BtnDashboard_MouseLeave);
             // 
             // BtnCatalogo
             // 
@@ -100,6 +114,8 @@
             this.BtnCatalogo.Text = "Catálogo";
             this.BtnCatalogo.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
+            this.BtnCatalogo.MouseEnter += new System.EventHandler(this.BtnCatalogo_MouseEnter);
+            this.BtnCatalogo.MouseLeave += new System.EventHandler(this.BtnCatalogo_MouseLeave);
             // 
             // BtnPrestamos
             // 
@@ -114,6 +130,8 @@
             this.BtnPrestamos.Text = "Préstamos";
             this.BtnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
+            this.BtnPrestamos.MouseEnter += new System.EventHandler(this.BtnPrestamos_MouseEnter);
+            this.BtnPrestamos.MouseLeave += new System.EventHandler(this.BtnPrestamos_MouseLeave);
             // 
             // BtnAdquisiciones
             // 
@@ -128,6 +146,8 @@
             this.BtnAdquisiciones.Text = "Adquisiciones";
             this.BtnAdquisiciones.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
+            this.BtnAdquisiciones.MouseEnter += new System.EventHandler(this.BtnAdquisiciones_MouseEnter);
+            this.BtnAdquisiciones.MouseLeave += new System.EventHandler(this.BtnAdquisiciones_MouseLeave);
             // 
             // BtnBibliotecarios
             // 
@@ -142,6 +162,8 @@
             this.BtnBibliotecarios.Text = "Miembros";
             this.BtnBibliotecarios.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
+            this.BtnBibliotecarios.MouseEnter += new System.EventHandler(this.BtnBibliotecarios_MouseEnter);
+            this.BtnBibliotecarios.MouseLeave += new System.EventHandler(this.BtnBibliotecarios_MouseLeave);
             // 
             // BtnMiembros
             // 
@@ -156,6 +178,8 @@
             this.BtnMiembros.Text = "Bibliotecarios";
             this.BtnMiembros.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
+            this.BtnMiembros.MouseEnter += new System.EventHandler(this.BtnMiembros_MouseEnter);
+            this.BtnMiembros.MouseLeave += new System.EventHandler(this.BtnMiembros_MouseLeave);
             // 
             // BtnAsistencia
             // 
@@ -170,6 +194,8 @@
             this.BtnAsistencia.Text = "Asistencia";
             this.BtnAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
+            this.BtnAsistencia.MouseEnter += new System.EventHandler(this.BtnAsistencia_MouseEnter);
+            this.BtnAsistencia.MouseLeave += new System.EventHandler(this.BtnAsistencia_MouseLeave);
             // 
             // BtnSalir
             // 
@@ -184,17 +210,6 @@
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // BtnBibliosfera
-            // 
-            this.BtnBibliosfera.AutoSize = false;
-            this.BtnBibliosfera.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.BtnBibliosfera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBibliosfera.ForeColor = System.Drawing.Color.Black;
-            this.BtnBibliosfera.Name = "BtnBibliosfera";
-            this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
-            this.BtnBibliosfera.Text = "BiblioSfera";
-            this.BtnBibliosfera.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
             // FrmPrincipal
             // 
