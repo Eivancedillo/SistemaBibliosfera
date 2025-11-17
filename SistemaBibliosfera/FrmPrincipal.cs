@@ -23,6 +23,7 @@ namespace SistemaBibliosfera
             mp.AdeudarLibros();
 
             IdAdministrador = IdAdministradortraido;
+            
         }
 
 
@@ -239,6 +240,27 @@ namespace SistemaBibliosfera
             {
                 botonFlotante.BackColor = colorNormal;
             }
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            MdiClient mdiClient = null;
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is MdiClient)
+                {
+                    mdiClient = (MdiClient)control;
+                    break;
+                }
+            }
+
+            if (mdiClient != null)
+            {
+                mdiClient.BackColor = Color.White;
+                
+            }
+
         }
     }
 }
