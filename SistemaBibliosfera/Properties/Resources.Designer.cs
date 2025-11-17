@@ -303,6 +303,16 @@ namespace SistemaBibliosfera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eliminar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_libro_abierto_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-libro-abierto-60", resourceCulture);

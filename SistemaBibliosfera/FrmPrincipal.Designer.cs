@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.LblBiblioSfera = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnBibliosfera = new System.Windows.Forms.ToolStripLabel();
@@ -79,7 +80,7 @@
             this.BtnBibliosfera.AutoSize = false;
             this.BtnBibliosfera.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.BtnBibliosfera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBibliosfera.ForeColor = System.Drawing.Color.Black;
+            this.BtnBibliosfera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.BtnBibliosfera.Name = "BtnBibliosfera";
             this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
             this.BtnBibliosfera.Text = "BiblioSfera";
@@ -89,14 +90,13 @@
             // 
             this.BtnDashboard.AutoSize = false;
             this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDashboard.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnDashboard.Image = global::SistemaBibliosfera.Properties.Resources.Clipboard;
             this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnDashboard.Name = "BtnDashboard";
             this.BtnDashboard.Size = new System.Drawing.Size(200, 40);
             this.BtnDashboard.Text = "Dashboard";
-            this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             this.BtnDashboard.MouseEnter += new System.EventHandler(this.BtnDashboard_MouseEnter);
             this.BtnDashboard.MouseLeave += new System.EventHandler(this.BtnDashboard_MouseLeave);
@@ -105,14 +105,13 @@
             // 
             this.BtnCatalogo.AutoSize = false;
             this.BtnCatalogo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCatalogo.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnCatalogo.Image = global::SistemaBibliosfera.Properties.Resources.icons8_cashbook_48;
             this.BtnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCatalogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCatalogo.Name = "BtnCatalogo";
             this.BtnCatalogo.Size = new System.Drawing.Size(200, 40);
             this.BtnCatalogo.Text = "Catálogo";
-            this.BtnCatalogo.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnCatalogo.Click += new System.EventHandler(this.BtnCatalogo_Click);
             this.BtnCatalogo.MouseEnter += new System.EventHandler(this.BtnCatalogo_MouseEnter);
             this.BtnCatalogo.MouseLeave += new System.EventHandler(this.BtnCatalogo_MouseLeave);
@@ -121,14 +120,13 @@
             // 
             this.BtnPrestamos.AutoSize = false;
             this.BtnPrestamos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrestamos.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnPrestamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnPrestamos.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libros_64_21;
             this.BtnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPrestamos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnPrestamos.Name = "BtnPrestamos";
             this.BtnPrestamos.Size = new System.Drawing.Size(200, 40);
             this.BtnPrestamos.Text = "Préstamos";
-            this.BtnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
             this.BtnPrestamos.MouseEnter += new System.EventHandler(this.BtnPrestamos_MouseEnter);
             this.BtnPrestamos.MouseLeave += new System.EventHandler(this.BtnPrestamos_MouseLeave);
@@ -137,14 +135,13 @@
             // 
             this.BtnAdquisiciones.AutoSize = false;
             this.BtnAdquisiciones.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdquisiciones.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnAdquisiciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnAdquisiciones.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libro_de_cuentos_641;
             this.BtnAdquisiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAdquisiciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdquisiciones.Name = "BtnAdquisiciones";
             this.BtnAdquisiciones.Size = new System.Drawing.Size(200, 40);
             this.BtnAdquisiciones.Text = "Adquisiciones";
-            this.BtnAdquisiciones.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnAdquisiciones.Click += new System.EventHandler(this.BtnAdquisiciones_Click);
             this.BtnAdquisiciones.MouseEnter += new System.EventHandler(this.BtnAdquisiciones_MouseEnter);
             this.BtnAdquisiciones.MouseLeave += new System.EventHandler(this.BtnAdquisiciones_MouseLeave);
@@ -153,14 +150,13 @@
             // 
             this.BtnBibliotecarios.AutoSize = false;
             this.BtnBibliotecarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBibliotecarios.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnBibliotecarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnBibliotecarios.Image = global::SistemaBibliosfera.Properties.Resources.icons8_llamada_de_conferencia_60_1;
             this.BtnBibliotecarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnBibliotecarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnBibliotecarios.Name = "BtnBibliotecarios";
             this.BtnBibliotecarios.Size = new System.Drawing.Size(200, 40);
             this.BtnBibliotecarios.Text = "Miembros";
-            this.BtnBibliotecarios.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
             this.BtnBibliotecarios.MouseEnter += new System.EventHandler(this.BtnBibliotecarios_MouseEnter);
             this.BtnBibliotecarios.MouseLeave += new System.EventHandler(this.BtnBibliotecarios_MouseLeave);
@@ -169,14 +165,13 @@
             // 
             this.BtnMiembros.AutoSize = false;
             this.BtnMiembros.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMiembros.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnMiembros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnMiembros.Image = global::SistemaBibliosfera.Properties.Resources.icons8_administrador_64_1;
             this.BtnMiembros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMiembros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnMiembros.Name = "BtnMiembros";
             this.BtnMiembros.Size = new System.Drawing.Size(200, 40);
             this.BtnMiembros.Text = "Bibliotecarios";
-            this.BtnMiembros.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnMiembros.Click += new System.EventHandler(this.BtnMiembros_Click);
             this.BtnMiembros.MouseEnter += new System.EventHandler(this.BtnMiembros_MouseEnter);
             this.BtnMiembros.MouseLeave += new System.EventHandler(this.BtnMiembros_MouseLeave);
@@ -185,14 +180,13 @@
             // 
             this.BtnAsistencia.AutoSize = false;
             this.BtnAsistencia.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAsistencia.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnAsistencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.BtnAsistencia.Image = global::SistemaBibliosfera.Properties.Resources.icons8_asistencia_100_1;
             this.BtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAsistencia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsistencia.Name = "BtnAsistencia";
             this.BtnAsistencia.Size = new System.Drawing.Size(200, 40);
             this.BtnAsistencia.Text = "Asistencia";
-            this.BtnAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
             this.BtnAsistencia.MouseEnter += new System.EventHandler(this.BtnAsistencia_MouseEnter);
             this.BtnAsistencia.MouseLeave += new System.EventHandler(this.BtnAsistencia_MouseLeave);
@@ -201,14 +195,13 @@
             // 
             this.BtnSalir.AutoSize = false;
             this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.BtnSalir.Image = global::SistemaBibliosfera.Properties.Resources.icons8_cancelar_48__1_1;
+            this.BtnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.BtnSalir.Image = global::SistemaBibliosfera.Properties.Resources.icons8_eliminar_30;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(200, 40);
             this.BtnSalir.Text = "Salir";
-            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmPrincipal
@@ -217,11 +210,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.image_3_h;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(976, 590);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
