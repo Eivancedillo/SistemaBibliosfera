@@ -411,5 +411,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-eliminar-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrar-participantes-64 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-buscar-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-buscar-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-60.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

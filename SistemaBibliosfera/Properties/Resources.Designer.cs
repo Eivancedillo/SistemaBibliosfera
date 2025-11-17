@@ -213,9 +213,49 @@ namespace SistemaBibliosfera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrar_participantes_64_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrar-participantes-64 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_añadir_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-añadir-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_asistencia_100_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8-asistencia-100 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_buscar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-buscar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_buscar_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-buscar-60", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
