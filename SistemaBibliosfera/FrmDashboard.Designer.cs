@@ -89,6 +89,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,7 +137,7 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.LblTotalLibros);
-            this.groupBox1.Location = new System.Drawing.Point(45, 90);
+            this.groupBox1.Location = new System.Drawing.Point(45, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 71);
             this.groupBox1.TabIndex = 1;
@@ -158,7 +159,7 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.LblTotalMiembros);
-            this.groupBox2.Location = new System.Drawing.Point(363, 88);
+            this.groupBox2.Location = new System.Drawing.Point(363, 78);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(206, 71);
             this.groupBox2.TabIndex = 2;
@@ -189,7 +190,7 @@
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.LblPrestamosActivos);
-            this.groupBox3.Location = new System.Drawing.Point(681, 90);
+            this.groupBox3.Location = new System.Drawing.Point(681, 80);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(212, 69);
             this.groupBox3.TabIndex = 3;
@@ -219,7 +220,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label1.Location = new System.Drawing.Point(44, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 21);
@@ -234,7 +235,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.panelAlertaVencimiento);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(61, 192);
+            this.groupBox4.Location = new System.Drawing.Point(60, 182);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(884, 202);
             this.groupBox4.TabIndex = 5;
@@ -244,9 +245,9 @@
             // 
             this.pictureBox11.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Brake_Warning;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(11, 0);
+            this.pictureBox11.Location = new System.Drawing.Point(12, 0);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(25, 33);
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
             this.pictureBox11.TabIndex = 23;
             this.pictureBox11.TabStop = false;
             // 
@@ -389,7 +390,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Peru;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(326, 84);
             this.panel3.Name = "panel3";
@@ -527,7 +528,7 @@
             this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.LblAsistenciasHoy);
-            this.groupBox7.Location = new System.Drawing.Point(6, 9);
+            this.groupBox7.Location = new System.Drawing.Point(7, 7);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 83);
             this.groupBox7.TabIndex = 4;
@@ -560,7 +561,7 @@
             this.groupBox9.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox9.Controls.Add(this.label4);
             this.groupBox9.Controls.Add(this.LblDevolucionesHoy);
-            this.groupBox9.Location = new System.Drawing.Point(5, 5);
+            this.groupBox9.Location = new System.Drawing.Point(6, 3);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(200, 83);
             this.groupBox9.TabIndex = 4;
@@ -605,16 +606,17 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(30, 79);
+            this.button1.Location = new System.Drawing.Point(30, 69);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 94);
+            this.button1.Size = new System.Drawing.Size(291, 94);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(350, 79);
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(350, 69);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(294, 94);
             this.button2.TabIndex = 9;
@@ -623,7 +625,8 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(671, 79);
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(671, 69);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(287, 94);
             this.button3.TabIndex = 10;
@@ -631,21 +634,22 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Peru;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(173)))), ((int)(((byte)(143)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(30, 179);
+            this.button4.Location = new System.Drawing.Point(30, 169);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(874, 235);
+            this.button4.Size = new System.Drawing.Size(873, 235);
             this.button4.TabIndex = 11;
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(45, 179);
+            this.button5.Location = new System.Drawing.Point(44, 169);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(914, 235);
             this.button5.TabIndex = 12;
@@ -655,7 +659,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Location = new System.Drawing.Point(30, 435);
+            this.panel1.Location = new System.Drawing.Point(30, 410);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(632, 302);
             this.panel1.TabIndex = 13;
@@ -664,7 +668,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
             this.panel4.Controls.Add(this.groupBox6);
-            this.panel4.Location = new System.Drawing.Point(739, 432);
+            this.panel4.Location = new System.Drawing.Point(737, 410);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 93);
             this.panel4.TabIndex = 14;
@@ -673,7 +677,7 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.groupBox7);
-            this.panel5.Location = new System.Drawing.Point(739, 531);
+            this.panel5.Location = new System.Drawing.Point(737, 509);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(219, 99);
             this.panel5.TabIndex = 15;
@@ -682,14 +686,14 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.groupBox9);
-            this.panel6.Location = new System.Drawing.Point(740, 639);
+            this.panel6.Location = new System.Drawing.Point(738, 617);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(218, 98);
             this.panel6.TabIndex = 16;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Peru;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(173)))), ((int)(((byte)(143)))));
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.LblBibliotecario);
             this.panel7.Controls.Add(this.label1);
@@ -710,8 +714,9 @@
             // 
             // LblBibliotecario
             // 
-            this.LblBibliotecario.BackColor = System.Drawing.Color.Peru;
+            this.LblBibliotecario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(173)))), ((int)(((byte)(143)))));
             this.LblBibliotecario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBibliotecario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.LblBibliotecario.Location = new System.Drawing.Point(123, 10);
             this.LblBibliotecario.Name = "LblBibliotecario";
             this.LblBibliotecario.Size = new System.Drawing.Size(171, 20);
@@ -723,7 +728,7 @@
             this.pictureBox9.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox9.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_profile_64;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(570, 99);
+            this.pictureBox9.Location = new System.Drawing.Point(570, 89);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(63, 60);
             this.pictureBox9.TabIndex = 22;
@@ -734,7 +739,7 @@
             this.pictureBox10.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox10.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_reloj_64;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(899, 99);
+            this.pictureBox10.Location = new System.Drawing.Point(899, 89);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(50, 50);
             this.pictureBox10.TabIndex = 21;
@@ -745,9 +750,9 @@
             this.pictureBox8.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox8.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Libros1;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(242, 99);
+            this.pictureBox8.Location = new System.Drawing.Point(251, 89);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(74, 60);
+            this.pictureBox8.Size = new System.Drawing.Size(64, 56);
             this.pictureBox8.TabIndex = 19;
             this.pictureBox8.TabStop = false;
             // 
@@ -761,13 +766,29 @@
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(173)))), ((int)(((byte)(143)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.button6.Location = new System.Drawing.Point(861, 721);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(95, 32);
+            this.button6.TabIndex = 25;
+            this.button6.Text = "Cerrar";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 749);
+            this.ClientSize = new System.Drawing.Size(994, 764);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox8);
@@ -902,5 +923,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button button6;
     }
 }
