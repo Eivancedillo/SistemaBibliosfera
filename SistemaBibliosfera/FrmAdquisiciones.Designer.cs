@@ -50,7 +50,8 @@
             // 
             // TxtIsbn
             // 
-            this.TxtIsbn.Location = new System.Drawing.Point(452, 106);
+            this.TxtIsbn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIsbn.Location = new System.Drawing.Point(473, 113);
             this.TxtIsbn.Multiline = true;
             this.TxtIsbn.Name = "TxtIsbn";
             this.TxtIsbn.Size = new System.Drawing.Size(182, 30);
@@ -62,9 +63,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label9.Location = new System.Drawing.Point(448, 82);
+            this.label9.Location = new System.Drawing.Point(469, 82);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 21);
+            this.label9.Size = new System.Drawing.Size(58, 28);
             this.label9.TabIndex = 41;
             this.label9.Text = "ISBN";
             // 
@@ -73,9 +74,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label7.Location = new System.Drawing.Point(448, 159);
+            this.label7.Location = new System.Drawing.Point(469, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 21);
+            this.label7.Size = new System.Drawing.Size(194, 28);
             this.label7.TabIndex = 37;
             this.label7.Text = "Año de publicación";
             // 
@@ -83,9 +84,9 @@
             // 
             this.BtnVerAutores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
             this.BtnVerAutores.FlatAppearance.BorderSize = 0;
-            this.BtnVerAutores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnVerAutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerAutores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVerAutores.Location = new System.Drawing.Point(291, 261);
+            this.BtnVerAutores.Location = new System.Drawing.Point(290, 268);
             this.BtnVerAutores.Name = "BtnVerAutores";
             this.BtnVerAutores.Size = new System.Drawing.Size(107, 30);
             this.BtnVerAutores.TabIndex = 36;
@@ -97,9 +98,9 @@
             // 
             this.BtnVerEditoriales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
             this.BtnVerEditoriales.FlatAppearance.BorderSize = 0;
-            this.BtnVerEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnVerEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerEditoriales.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVerEditoriales.Location = new System.Drawing.Point(215, 356);
+            this.BtnVerEditoriales.Location = new System.Drawing.Point(289, 351);
             this.BtnVerEditoriales.Name = "BtnVerEditoriales";
             this.BtnVerEditoriales.Size = new System.Drawing.Size(108, 30);
             this.BtnVerEditoriales.TabIndex = 35;
@@ -109,7 +110,7 @@
             // 
             // TxtAutor
             // 
-            this.TxtAutor.Location = new System.Drawing.Point(16, 261);
+            this.TxtAutor.Location = new System.Drawing.Point(16, 268);
             this.TxtAutor.Multiline = true;
             this.TxtAutor.Name = "TxtAutor";
             this.TxtAutor.Size = new System.Drawing.Size(268, 30);
@@ -122,16 +123,16 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label6.Location = new System.Drawing.Point(12, 237);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 21);
+            this.label6.Size = new System.Drawing.Size(100, 28);
             this.label6.TabIndex = 33;
             this.label6.Text = "Autor(es)";
             // 
             // TxtEditorial
             // 
-            this.TxtEditorial.Location = new System.Drawing.Point(16, 356);
+            this.TxtEditorial.Location = new System.Drawing.Point(16, 351);
             this.TxtEditorial.Multiline = true;
             this.TxtEditorial.Name = "TxtEditorial";
-            this.TxtEditorial.Size = new System.Drawing.Size(193, 30);
+            this.TxtEditorial.Size = new System.Drawing.Size(267, 30);
             this.TxtEditorial.TabIndex = 32;
             // 
             // label5
@@ -139,18 +140,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label5.Location = new System.Drawing.Point(13, 332);
+            this.label5.Location = new System.Drawing.Point(13, 320);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 21);
+            this.label5.Size = new System.Drawing.Size(92, 28);
             this.label5.TabIndex = 31;
             this.label5.Text = "Editorial";
             // 
             // TxtTitulo
             // 
-            this.TxtTitulo.Location = new System.Drawing.Point(17, 106);
+            this.TxtTitulo.Location = new System.Drawing.Point(17, 113);
             this.TxtTitulo.Multiline = true;
             this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(267, 30);
+            this.TxtTitulo.Size = new System.Drawing.Size(380, 30);
             this.TxtTitulo.TabIndex = 30;
             // 
             // label4
@@ -160,7 +161,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label4.Location = new System.Drawing.Point(13, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 21);
+            this.label4.Size = new System.Drawing.Size(68, 28);
             this.label4.TabIndex = 29;
             this.label4.Text = "Titulo";
             // 
@@ -168,9 +169,9 @@
             // 
             this.BtnVerCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
             this.BtnVerCategorias.FlatAppearance.BorderSize = 0;
-            this.BtnVerCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnVerCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerCategorias.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVerCategorias.Location = new System.Drawing.Point(291, 182);
+            this.BtnVerCategorias.Location = new System.Drawing.Point(290, 190);
             this.BtnVerCategorias.Name = "BtnVerCategorias";
             this.BtnVerCategorias.Size = new System.Drawing.Size(107, 31);
             this.BtnVerCategorias.TabIndex = 27;
@@ -180,7 +181,7 @@
             // 
             // TxtCategoria
             // 
-            this.TxtCategoria.Location = new System.Drawing.Point(17, 183);
+            this.TxtCategoria.Location = new System.Drawing.Point(16, 190);
             this.TxtCategoria.Multiline = true;
             this.TxtCategoria.Name = "TxtCategoria";
             this.TxtCategoria.Size = new System.Drawing.Size(268, 30);
@@ -193,7 +194,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label2.Location = new System.Drawing.Point(13, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
+            this.label2.Size = new System.Drawing.Size(126, 28);
             this.label2.TabIndex = 25;
             this.label2.Text = "Categoría(s)";
             // 
@@ -201,10 +202,10 @@
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnGuardar.Location = new System.Drawing.Point(404, 392);
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Location = new System.Drawing.Point(415, 392);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(111, 29);
+            this.BtnGuardar.Size = new System.Drawing.Size(111, 49);
             this.BtnGuardar.TabIndex = 24;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -214,10 +215,10 @@
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(533, 392);
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Location = new System.Drawing.Point(544, 392);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(111, 29);
+            this.BtnCancelar.Size = new System.Drawing.Size(111, 49);
             this.BtnCancelar.TabIndex = 25;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -225,9 +226,9 @@
             // 
             // TxtAnioPublicacion
             // 
-            this.TxtAnioPublicacion.Location = new System.Drawing.Point(452, 184);
+            this.TxtAnioPublicacion.Location = new System.Drawing.Point(473, 190);
             this.TxtAnioPublicacion.Name = "TxtAnioPublicacion";
-            this.TxtAnioPublicacion.Size = new System.Drawing.Size(192, 29);
+            this.TxtAnioPublicacion.Size = new System.Drawing.Size(182, 34);
             this.TxtAnioPublicacion.TabIndex = 50;
             // 
             // label3
@@ -237,13 +238,13 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.label3.Location = new System.Drawing.Point(11, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 32);
+            this.label3.Size = new System.Drawing.Size(214, 41);
             this.label3.TabIndex = 72;
             this.label3.Text = "Agregar Libro";
             // 
             // FrmAdquisiciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

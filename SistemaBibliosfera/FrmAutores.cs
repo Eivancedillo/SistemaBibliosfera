@@ -28,32 +28,8 @@ namespace SistemaBibliosfera
 
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
-        }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            if (CmbEstado.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (CmbEstado.Text.Equals("Activos"))
-                mad.Mostrar($"SELECT * FROM Autores WHERE Autor LIKE '%{TxtBuscar.Text}%' AND Activo = 1", DtgDatos, "Autores");
-            else
-                mad.Mostrar($"SELECT * FROM Autores WHERE Autor LIKE '%{TxtBuscar.Text}%' AND Activo = 0", DtgDatos, "Autores");
-
-            foreach (DataGridViewRow row in DtgDatos.Rows)
-            {
-                int idGrid = int.Parse(row.Cells["IdAutor"].Value.ToString());
-
-                // Compara el ID del grid con la lista del libro
-                if (libroBorrador.LibroAutores.Any(c => c.IdAutor == idGrid))
-                {
-                    row.DefaultCellStyle.BackColor = Color.LightGreen;
-                }
-            }
-
+            CmbEstado.SelectedIndex = 0;
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -122,7 +98,32 @@ namespace SistemaBibliosfera
             }
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        private void BtnBuscarr_Click(object sender, EventArgs e)
+        {
+            if (CmbEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (CmbEstado.Text.Equals("Activos"))
+                mad.Mostrar($"SELECT * FROM Autores WHERE Autor LIKE '%{TxtBuscar.Text}%' AND Activo = 1", DtgDatos, "Autores");
+            else
+                mad.Mostrar($"SELECT * FROM Autores WHERE Autor LIKE '%{TxtBuscar.Text}%' AND Activo = 0", DtgDatos, "Autores");
+
+            foreach (DataGridViewRow row in DtgDatos.Rows)
+            {
+                int idGrid = int.Parse(row.Cells["IdAutor"].Value.ToString());
+
+                // Compara el ID del grid con la lista del libro
+                if (libroBorrador.LibroAutores.Any(c => c.IdAutor == idGrid))
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+            }
+        }
+
+        private void BtnAgregarr_Click(object sender, EventArgs e)
         {
             autor.IdAutor = 0;
             autor.Nombre = "";

@@ -151,6 +151,13 @@ namespace Manejadores
                 }
             }
 
+            // Cambiar nombres de columnas a formato amigable
+            tabla.Columns["NumeroControl"].HeaderText = "Número de Control";
+            tabla.Columns["FechaPrestamo"].HeaderText = "Fecha de Préstamo";
+            tabla.Columns["FechaDevolucionPrevista"].HeaderText = "Fecha de Devolución Prevista";
+            tabla.Columns["FechaDevolucionReal"].HeaderText = "Fecha de Devolución Real";
+            tabla.Columns["EstadoPrestamo"].HeaderText = "Estado del Préstamo";
+
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }

@@ -25,6 +25,8 @@ namespace SistemaBibliosfera
             CmbEstado.Items.Clear();
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
+
+            CmbEstado.SelectedIndex = 0;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -81,6 +83,11 @@ namespace SistemaBibliosfera
                     }
                     break;
             }
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)

@@ -161,7 +161,7 @@ namespace Manejadores
 
                     if (estadocmb.Text.Equals("Activos"))
                     {
-                        tabla.Columns.Insert(11, Boton("Desasctivar", Color.White, ColorTranslator.FromHtml("#6B261F")));
+                        tabla.Columns.Insert(11, Boton("Desactivar", Color.White, ColorTranslator.FromHtml("#6B261F")));
                     }
                     else
                     {

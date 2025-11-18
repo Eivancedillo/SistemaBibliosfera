@@ -42,13 +42,13 @@
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.BtnCancelar.Location = new System.Drawing.Point(250, 128);
+            this.BtnCancelar.Location = new System.Drawing.Point(249, 145);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(91, 33);
+            this.BtnCancelar.Size = new System.Drawing.Size(105, 33);
             this.BtnCancelar.TabIndex = 29;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -58,13 +58,13 @@
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.BtnGuardar.Location = new System.Drawing.Point(137, 128);
+            this.BtnGuardar.Location = new System.Drawing.Point(136, 145);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(91, 33);
+            this.BtnGuardar.Size = new System.Drawing.Size(105, 33);
             this.BtnGuardar.TabIndex = 28;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(82, 94);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(320, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(320, 30);
             this.TxtNombre.TabIndex = 27;
             // 
             // label2
@@ -86,7 +86,7 @@
             this.label2.Location = new System.Drawing.Point(78, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 21);
+            this.label2.Size = new System.Drawing.Size(236, 28);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nombre de la categoria\r\n";
             // 
@@ -98,7 +98,7 @@
             this.label1.Location = new System.Drawing.Point(96, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 30);
+            this.label1.Size = new System.Drawing.Size(335, 37);
             this.label1.TabIndex = 25;
             this.label1.Text = "Agregar nueva categoria";
             // 
@@ -114,7 +114,7 @@
             // 
             // FrmDatosCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(488, 191);

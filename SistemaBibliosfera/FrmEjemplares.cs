@@ -47,7 +47,7 @@ namespace SistemaBibliosfera
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
 
-            BtnAgregar.Enabled = false; BtnAceptar.Enabled = true; CmbEstado.Enabled = false;
+            BtnAgregarr.Enabled = false; BtnAceptar.Enabled = true; CmbEstado.Enabled = false;
 
             CmbEstado.SelectedIndex = 0;
 
@@ -55,7 +55,12 @@ namespace SistemaBibliosfera
             prestamo = prestamotraido;
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnBuscarr_Click(object sender, EventArgs e)
         {
             if (CmbEstado.SelectedItem == null)
                 MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -74,7 +79,7 @@ namespace SistemaBibliosfera
             }
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        private void BtnAgregarr_Click(object sender, EventArgs e)
         {
             // Vaciar datos para nuevo ejemplar
             ejemplar.IdEjemplar = 0;
@@ -86,11 +91,6 @@ namespace SistemaBibliosfera
             FrmDatosEjemplares frm = new FrmDatosEjemplares();
             frm.ShowDialog();
             DtgDatos.Columns.Clear();
-        }
-
-        private void BtnAceptar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)

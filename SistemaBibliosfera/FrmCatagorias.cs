@@ -25,46 +25,13 @@ namespace SistemaBibliosfera
             libroBorrador = libro;
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
+
+            CmbEstado.SelectedIndex = 0;
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            categoria.IdCategoria = 0;
-            categoria.Nombre = "";
-
-            FrmDatosCategorias frm = new FrmDatosCategorias();
-            frm.ShowDialog();
-            DtgDatos.Columns.Clear();
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            if (CmbEstado.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (CmbEstado.Text.Equals("Activos"))
-                mad.Mostrar($"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%' AND Activo = 1", DtgDatos, "Categorias");
-            else
-                mad.Mostrar($"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%' AND Activo = 0", DtgDatos, "Categorias");
-
-            foreach (DataGridViewRow row in DtgDatos.Rows)
-            {
-                int idGrid = int.Parse(row.Cells["IdCategoria"].Value.ToString());
-
-                // Compara el ID del grid con la lista del libro
-                if (libroBorrador.LibroCategoria.Any(c => c.IdCategoria == idGrid))
-                {
-                    row.DefaultCellStyle.BackColor = Color.LightGreen;
-                }
-            }
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -125,12 +92,42 @@ namespace SistemaBibliosfera
             }
         }
 
-		private void label2_Click(object sender, EventArgs e)
-		{
+        private void BtnBuscarr_Click(object sender, EventArgs e)
+        {
+            if (CmbEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-		}
+            if (CmbEstado.Text.Equals("Activos"))
+                mad.Mostrar($"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%' AND Activo = 1", DtgDatos, "Categorias");
+            else
+                mad.Mostrar($"SELECT * FROM Categorias WHERE Nombre LIKE '%{TxtBuscar.Text}%' AND Activo = 0", DtgDatos, "Categorias");
 
-		private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
+            foreach (DataGridViewRow row in DtgDatos.Rows)
+            {
+                int idGrid = int.Parse(row.Cells["IdCategoria"].Value.ToString());
+
+                // Compara el ID del grid con la lista del libro
+                if (libroBorrador.LibroCategoria.Any(c => c.IdCategoria == idGrid))
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+            }
+        }
+
+        private void BtnAgregarr_Click(object sender, EventArgs e)
+        {
+            categoria.IdCategoria = 0;
+            categoria.Nombre = "";
+
+            FrmDatosCategorias frm = new FrmDatosCategorias();
+            frm.ShowDialog();
+            DtgDatos.Columns.Clear();
+        }
+
+        private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex; columna = e.ColumnIndex;
         }

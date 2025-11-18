@@ -126,6 +126,40 @@ namespace SistemaBibliosfera
             }
         }
 
+        private void BtnBuscarr_Click(object sender, EventArgs e)
+        {
+            if (CmbEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un filtro para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (CmbEstado.SelectedItem.ToString().Equals("Activos"))
+                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Activo'", DtgDatos, "v_prestamos");
+            else if (CmbEstado.SelectedItem.ToString().Equals("Cancelados"))
+                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Cancelado'", DtgDatos, "v_prestamos");
+            else if (CmbEstado.SelectedItem.ToString().Equals("Finalizados"))
+                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Finalizado'", DtgDatos, "v_prestamos");
+            else if (CmbEstado.SelectedItem.ToString().Equals("Adeudados"))
+                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Adeudo'", DtgDatos, "v_prestamos");
+        }
+
+        private void BtnAgregarr_Click(object sender, EventArgs e)
+        {
+            // Limpiar entidad
+            prestamo.IdPrestamo = 0;
+            prestamo.NumeroControl = 0;
+            prestamo.IdEjemplar = 0;
+            prestamo.IdLibro = 0;
+            prestamo.FechaPrestamo = DateTime.MinValue;
+            prestamo.FechaDevolucionPrevista = DateTime.MinValue;
+            prestamo.EstadoPrestamo = "";
+
+            FrmDatosPrestamos frm = new FrmDatosPrestamos();
+            frm.ShowDialog();
+            DtgDatos.Columns.Clear();
+        }
+
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             columna = e.ColumnIndex; fila = e.RowIndex;

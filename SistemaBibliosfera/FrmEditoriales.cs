@@ -26,21 +26,13 @@ namespace SistemaBibliosfera
             libroBorrador = libro;
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Inactivos");
+
+            CmbEstado.SelectedIndex = 0;
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            editorial.IdEditorial = 0;
-            editorial.Nombre = "";
-
-            FrmDatosEditoriales frm = new FrmDatosEditoriales();
-            frm.ShowDialog();
-            DtgDatos.Columns.Clear();
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -114,7 +106,7 @@ namespace SistemaBibliosfera
             columna = e.ColumnIndex;
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnBuscarr_Click(object sender, EventArgs e)
         {
             if (CmbEstado.SelectedItem == null)
             {
@@ -136,6 +128,16 @@ namespace SistemaBibliosfera
                     row.DefaultCellStyle.BackColor = Color.LightGreen;
                 }
             }
+        }
+
+        private void BtnAgregarr_Click(object sender, EventArgs e)
+        {
+            editorial.IdEditorial = 0;
+            editorial.Nombre = "";
+
+            FrmDatosEditoriales frm = new FrmDatosEditoriales();
+            frm.ShowDialog();
+            DtgDatos.Columns.Clear();
         }
     }
 }

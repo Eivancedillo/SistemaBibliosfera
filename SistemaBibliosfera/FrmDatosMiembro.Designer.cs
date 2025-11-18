@@ -52,10 +52,10 @@
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(448, 394);
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Location = new System.Drawing.Point(692, 409);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(121, 37);
+            this.BtnCancelar.Size = new System.Drawing.Size(111, 43);
             this.BtnCancelar.TabIndex = 23;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -65,10 +65,10 @@
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnGuardar.Location = new System.Drawing.Point(277, 394);
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Location = new System.Drawing.Point(575, 409);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(121, 37);
+            this.BtnGuardar.Size = new System.Drawing.Size(111, 43);
             this.BtnGuardar.TabIndex = 22;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(448, 307);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 21);
+            this.label4.Size = new System.Drawing.Size(94, 28);
             this.label4.TabIndex = 21;
             this.label4.Text = "Teléfono";
             // 
@@ -87,7 +87,7 @@
             // 
             this.TxtTelefono.Location = new System.Drawing.Point(448, 337);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(355, 29);
+            this.TxtTelefono.Size = new System.Drawing.Size(355, 34);
             this.TxtTelefono.TabIndex = 20;
             // 
             // label5
@@ -95,7 +95,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(43, 307);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 21);
+            this.label5.Size = new System.Drawing.Size(72, 28);
             this.label5.TabIndex = 19;
             this.label5.Text = "E-mail";
             // 
@@ -103,7 +103,7 @@
             // 
             this.TxtEmail.Location = new System.Drawing.Point(43, 337);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(355, 29);
+            this.TxtEmail.Size = new System.Drawing.Size(355, 34);
             this.TxtEmail.TabIndex = 18;
             // 
             // label3
@@ -111,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(448, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 21);
+            this.label3.Size = new System.Drawing.Size(100, 28);
             this.label3.TabIndex = 17;
             this.label3.Text = "Apellidos";
             // 
@@ -119,7 +119,7 @@
             // 
             this.TxtApellido.Location = new System.Drawing.Point(448, 244);
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(355, 29);
+            this.TxtApellido.Size = new System.Drawing.Size(355, 34);
             this.TxtApellido.TabIndex = 16;
             // 
             // label2
@@ -127,7 +127,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.Size = new System.Drawing.Size(112, 28);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nombre(s)";
             // 
@@ -135,7 +135,7 @@
             // 
             this.TxtNombre.Location = new System.Drawing.Point(43, 244);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(355, 29);
+            this.TxtNombre.Size = new System.Drawing.Size(355, 34);
             this.TxtNombre.TabIndex = 14;
             // 
             // label1
@@ -143,7 +143,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 21);
+            this.label1.Size = new System.Drawing.Size(192, 28);
             this.label1.TabIndex = 13;
             this.label1.Text = "Número de control";
             // 
@@ -151,7 +151,7 @@
             // 
             this.TxtNumControl.Location = new System.Drawing.Point(43, 158);
             this.TxtNumControl.Name = "TxtNumControl";
-            this.TxtNumControl.Size = new System.Drawing.Size(277, 29);
+            this.TxtNumControl.Size = new System.Drawing.Size(277, 34);
             this.TxtNumControl.TabIndex = 12;
             // 
             // label6
@@ -160,7 +160,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(85, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(273, 30);
+            this.label6.Size = new System.Drawing.Size(362, 37);
             this.label6.TabIndex = 24;
             this.label6.Text = "Registrar / editar miembro";
             // 
@@ -170,7 +170,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(86, 62);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(509, 21);
+            this.label7.Size = new System.Drawing.Size(641, 28);
             this.label7.TabIndex = 25;
             this.label7.Text = "Completa la información para agregar un nuevo miembro a la bibloteca.";
             // 
@@ -179,7 +179,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(587, 107);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 21);
+            this.label8.Size = new System.Drawing.Size(0, 28);
             this.label8.TabIndex = 26;
             // 
             // pictureBox1
@@ -196,11 +196,11 @@
             // 
             // FrmDatosMiembro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(841, 495);
+            this.ClientSize = new System.Drawing.Size(826, 471);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);

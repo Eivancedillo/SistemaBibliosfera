@@ -44,7 +44,7 @@ namespace SistemaBibliosfera
                 DtpFechaDevolucion.Value = FrmPrestamos.prestamo.FechaDevolucionPrevista;
 
                 // Deshabilitar los campos que no se deben editar
-                BtnBuscarNumControl.Enabled = false; BtnBuscarEjemplar.Enabled = false;
+                BtnBuscarrNumControl.Enabled = false; BtnBuscarrLibro.Enabled = false;
 
                 // Habilitar el estado del préstamo
                 CmbEstado.Enabled = true;
@@ -92,7 +92,7 @@ namespace SistemaBibliosfera
             Close();
         }
 
-        private void BtnBuscarNumControl_Click(object sender, EventArgs e)
+        private void BtnBuscarrNumControl_Click(object sender, EventArgs e)
         {
             TxtNumControl.Text = "";
             // Abriremos frmMiembros para seleccionar un miembro
@@ -107,7 +107,7 @@ namespace SistemaBibliosfera
             TxtNombre.Text = miembroprestamo.Nombre + " " + miembroprestamo.Apellidos;
         }
 
-        private void BtnBuscarEjemplar_Click(object sender, EventArgs e)
+        private void BtnBuscarrLibro_Click(object sender, EventArgs e)
         {
             TxtLibro.Text = ""; TxtEjemplar.Text = "";
             // Abrimos frmCatalogo para seleccionar un libro
@@ -128,11 +128,6 @@ namespace SistemaBibliosfera
 
             TxtLibro.Text = ejemplarprestamo.IdLibro.ToString();
             TxtEjemplar.Text = ejemplarprestamo.Codigo.ToString("D3");
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

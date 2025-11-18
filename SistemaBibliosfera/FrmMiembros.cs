@@ -42,41 +42,9 @@ namespace SistemaBibliosfera
             CmbEstado.Items.Add("Inactivos");
             CmbEstado.SelectedIndex = 0;
 
-            BtnAgregar.Enabled = false;
+            button1.Enabled = false;
             CmbEstado.Enabled = false;
             prestamo = prestamotraido;
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            if(CmbEstado.SelectedItem == null)
-                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                if (!prestamo)
-                {
-                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
-                    Mm.Mostrar($"select * from Miembros where (NumeroControl like '%{TxtBuscar.Text}%' or Nombre like '%{TxtBuscar.Text}%') and Estado = {estado};", DtgDatos, "Miembros");
-                }
-                else
-                {
-                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
-                    Mm.Mostrar($"select * from Miembros where (NumeroControl like '%{TxtBuscar.Text}%' or Nombre like '%{TxtBuscar.Text}%') and Estado = {estado};", DtgDatos, "Miembros", true);
-                }
-            }
-        }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            miembro.NumeroControl = 0;
-            miembro.Nombre = "";
-            miembro.Apellidos = "";
-            miembro.Email = "";
-            miembro.Telefono = "";
-
-            FrmDatosMiembro frm = new FrmDatosMiembro();
-            frm.ShowDialog();
-            DtgDatos.Columns.Clear();
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -121,6 +89,43 @@ namespace SistemaBibliosfera
                     }
                     ; break;
             }
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CmbEstado.SelectedItem == null)
+                MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                if (!prestamo)
+                {
+                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
+                    Mm.Mostrar($"select * from Miembros where (NumeroControl like '%{TxtBuscar.Text}%' or Nombre like '%{TxtBuscar.Text}%') and Estado = {estado};", DtgDatos, "Miembros");
+                }
+                else
+                {
+                    string estado = CmbEstado.SelectedItem.ToString() == "Activos" ? "1" : "0";
+                    Mm.Mostrar($"select * from Miembros where (NumeroControl like '%{TxtBuscar.Text}%' or Nombre like '%{TxtBuscar.Text}%') and Estado = {estado};", DtgDatos, "Miembros", true);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            miembro.NumeroControl = 0;
+            miembro.Nombre = "";
+            miembro.Apellidos = "";
+            miembro.Email = "";
+            miembro.Telefono = "";
+
+            FrmDatosMiembro frm = new FrmDatosMiembro();
+            frm.ShowDialog();
+            DtgDatos.Columns.Clear();
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)

@@ -44,11 +44,12 @@
             // TxtUsuario
             // 
             this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtUsuario.Location = new System.Drawing.Point(337, 245);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(389, 39);
+            this.TxtUsuario.Size = new System.Drawing.Size(389, 34);
             this.TxtUsuario.TabIndex = 2;
             this.TxtUsuario.Text = "Usuario";
             this.TxtUsuario.Click += new System.EventHandler(this.TxtUsuario_Click);
@@ -56,11 +57,12 @@
             // TxtContrasena
             // 
             this.TxtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.TxtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.TxtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtContrasena.Location = new System.Drawing.Point(337, 339);
             this.TxtContrasena.Name = "TxtContrasena";
-            this.TxtContrasena.Size = new System.Drawing.Size(389, 39);
+            this.TxtContrasena.Size = new System.Drawing.Size(389, 34);
             this.TxtContrasena.TabIndex = 3;
             this.TxtContrasena.Text = "Contraseña";
             this.TxtContrasena.Click += new System.EventHandler(this.TxtContrasena_Click);
@@ -68,26 +70,30 @@
             // BtnIniciarSesion
             // 
             this.BtnIniciarSesion.BackColor = System.Drawing.Color.White;
+            this.BtnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnIniciarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.BtnIniciarSesion.Location = new System.Drawing.Point(413, 435);
             this.BtnIniciarSesion.Name = "BtnIniciarSesion";
             this.BtnIniciarSesion.Size = new System.Drawing.Size(231, 44);
             this.BtnIniciarSesion.TabIndex = 4;
-            this.BtnIniciarSesion.Text = "INICIAR SESION";
+            this.BtnIniciarSesion.Text = "INICIAR SESIÓN";
             this.BtnIniciarSesion.UseVisualStyleBackColor = false;
             this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnSalir.BackColor = System.Drawing.Color.White;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.BtnSalir.Location = new System.Drawing.Point(413, 485);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(231, 46);
             this.BtnSalir.TabIndex = 5;
-            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.Text = "SALIR";
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -126,7 +132,7 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
