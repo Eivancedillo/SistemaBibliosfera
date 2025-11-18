@@ -157,20 +157,20 @@ namespace Manejadores
             {
                 if (!prestamo)
                 {
-                    tabla.Columns.Insert(10, Boton("Editar", Color.Green));
+                    tabla.Columns.Insert(10, Boton("Editar", Color.White, ColorTranslator.FromHtml("#6B261F")));
 
                     if (estadocmb.Text.Equals("Activos"))
                     {
-                        tabla.Columns.Insert(11, Boton("Desasctivar", Color.Red));
+                        tabla.Columns.Insert(11, Boton("Desasctivar", Color.White, ColorTranslator.FromHtml("#6B261F")));
                     }
                     else
                     {
-                        tabla.Columns.Insert(11, Boton("Activar", Color.Blue));
+                        tabla.Columns.Insert(11, Boton("Activar", Color.White, ColorTranslator.FromHtml("#6B261F")));
                     }
                 }
                 else
                 {   
-                    tabla.Columns.Insert(11, Boton("Seleccionar", Color.Orange));
+                    tabla.Columns.Insert(11, Boton("Seleccionar", Color.White, ColorTranslator.FromHtml("#6B261F")));
                 }
             }
 
@@ -178,14 +178,14 @@ namespace Manejadores
             tabla.AutoResizeRows();
         }
 
-        public static DataGridViewButtonColumn Boton(string titulo, Color color)
+        public static DataGridViewButtonColumn Boton(string titulo, Color color, Color fcolor)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.Text = titulo;
             btn.UseColumnTextForButtonValue = true;
             btn.FlatStyle = FlatStyle.Popup;
             btn.DefaultCellStyle.BackColor = color;
-            btn.DefaultCellStyle.ForeColor = Color.White;
+            btn.DefaultCellStyle.ForeColor = fcolor;
             return btn;
         }
     }
