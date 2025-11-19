@@ -46,9 +46,9 @@ namespace SistemaBibliosfera
             else
             {
                 if (CmbEstado.Text.Equals("Activos"))
-                    ma.Mostrar($"select * from Administradores where Activo = 1", DtgDatos, "Administradores");
+                    ma.Mostrar($"select * from Administradores where Activo = 1 and Nombre like '%{TxtUsuario.Text}%'", DtgDatos, "Administradores");
                 else
-                    ma.Mostrar($"select * from Administradores where Activo = 0", DtgDatos, "Administradores");
+                    ma.Mostrar($"select * from Administradores where Activo = 0 and Nombre like '%{TxtUsuario.Text}%'", DtgDatos, "Administradores");
             }
         }
 
