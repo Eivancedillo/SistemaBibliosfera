@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -172,5 +174,85 @@ namespace Manejadores
             btn.DefaultCellStyle.ForeColor = Color.White;
             return btn;
         }
+
+        #region ENVÍO DE CORREOS AUTOMÁTICOS
+        public void EnviarRecordatoriosAutomaticos()
+        {
+            // 1. CONSULTA
+            DataTable dt = b.Consultar("SELECT * FROM v_correos_pendientes", "Correos").Tables[0];
+
+            int enviados = 0;
+
+            // 2. PROCESO: Recorremos la lista que nos dio la vista
+            foreach (DataRow row in dt.Rows)
+            {
+                // Obtenemos los datos de la fila
+                string idPrestamo = row["IdPrestamo"].ToString();
+                string email = row["Email"].ToString();
+                string nombre = row["NombreCompleto"].ToString(); // Ya viene concatenado
+                string libro = row["Libro"].ToString();
+                string fecha = DateTime.Parse(row["FechaDevolucionPrevista"].ToString()).ToShortDateString();
+
+                // Armamos el correo
+                string asunto = "📚 Recordatorio Bibliosfera: Tu libro vence pronto";
+                string cuerpo = $@"
+            <h3>Hola, {nombre}</h3>
+            <p>El libro <b>'{libro}'</b> tiene como fecha límite: <b style='color:red'>{fecha}</b>.</p>
+            <p>¡No olvides devolverlo!</p>";
+
+                // 3. ENVÍO Y ACTUALIZACIÓN
+                if (EnviarCorreo(email, asunto, cuerpo))
+                {
+                    // Marcamos en la tabla original que ya se avisó
+                    b.Comando($"UPDATE Prestamos SET AvisoEnviado = 1 WHERE IdPrestamo = {idPrestamo}");
+                    enviados++;
+                }
+            }
+
+            if (enviados > 0)
+            {
+                // Depuracion
+                // MessageBox.Show($"Se enviaron {enviados} correos exitosamente.");
+            }
+        }
+
+        private bool EnviarCorreo(string destinatario, string asunto, string cuerpo)
+        {
+            // 1. Configuración del Servidor (Ejemplo con GMAIL)
+            // Si usas Outlook/Hotmail el host es "smtp.office365.com" y puerto 587
+            string remitente = "bibliosfera6@gmail.com";
+            string password = "lsqx yulg fmbl didt";
+            string host = "smtp.gmail.com";
+            int puerto = 587;
+
+            try
+            {
+                // 2. Preparamos el mensaje
+                MailMessage mensaje = new MailMessage();
+                mensaje.From = new MailAddress(remitente, "Biblioteca Bibliosfera"); // El segundo parámetro es el nombre que ve el usuario
+                mensaje.To.Add(destinatario);
+                mensaje.Subject = asunto;
+                mensaje.Body = cuerpo;
+                mensaje.IsBodyHtml = true; // Importante para que se vean bien las negritas y formatos HTML
+
+                // 3. Configuramos el cliente SMTP
+                SmtpClient cliente = new SmtpClient(host, puerto);
+                cliente.EnableSsl = true; // Gmail requiere SSL
+                cliente.UseDefaultCredentials = false;
+                cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
+                cliente.Credentials = new NetworkCredential(remitente, password);
+
+                // 4. Enviamos
+                cliente.Send(mensaje);
+                return true; // Todo salió bien
+            }
+            catch (Exception ex)
+            {
+                // Si falla, puedes guardar el error en un log o mostrarlo en consola para depurar
+                Console.WriteLine("Error al enviar correo: " + ex.Message);
+                return false; // Hubo un error
+            }
+        }
+        #endregion
     }
 }

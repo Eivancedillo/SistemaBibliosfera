@@ -22,6 +22,12 @@ namespace SistemaBibliosfera
             mp = new ManejadorPrestamo();
             mp.AdeudarLibros();
 
+            Task.Run(() =>
+            {
+                // Esto ocurre en un hilo separado para no trabar la pantalla
+                mp.EnviarRecordatoriosAutomaticos();
+            });
+
             IdAdministrador = IdAdministradortraido;
             
         }

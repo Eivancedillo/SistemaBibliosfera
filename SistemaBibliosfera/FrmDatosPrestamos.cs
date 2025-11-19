@@ -68,6 +68,14 @@ namespace SistemaBibliosfera
                 return;
             }
 
+            // Verificar que la fecha de devolución prevista sea la fecha actual o posterior
+            if (DtpFechaDevolucion.Value.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha de devolución prevista no puede ser anterior a la fecha actual.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verificar si el miembro tiene adeudos pendientes
             if (Mp.TieneAdeudosPendientes(int.Parse(numControl)))
             {
                 MessageBox.Show($"El miembro con número de control '{numControl}' tiene adeudos pendientes.\n\nDebe cubrirlos antes de poder solicitar un nuevo préstamo.",
