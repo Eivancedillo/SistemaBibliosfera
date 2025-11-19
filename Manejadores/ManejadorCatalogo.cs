@@ -74,6 +74,19 @@ namespace Manejadores
         public void EditarLibro(Libro libro)
         {
             b.Comando($"call p_editar_libro({libro.IdLibro}, '{libro.ISBN}', '{libro.Titulo}', {libro.IdEditorial}, {libro.AnioPublicacion});");
+
+            // Guardar autores y categorias
+            b.Comando($"CALL p_eliminar_libroautores({libro.IdLibro});");
+            b.Comando($"CALL p_eliminar_librocategorias({libro.IdLibro});");
+
+            foreach (var autor in libro.LibroAutores)
+            {
+                b.Comando($"CALL p_insertar_libroautores('{libro.ISBN}', {autor.IdAutor});");
+            }
+            foreach (var categoria in libro.LibroCategoria)
+            {
+                b.Comando($"CALL p_insertar_librocategorias('{libro.ISBN}', {categoria.IdCategoria});");
+            }
         }
 
         public void DesactivarLibro(Libro libro)
@@ -129,6 +142,12 @@ namespace Manejadores
                 // Filtrado por editorial
                 filtroSql = $"AND Editorial LIKE '%{buscarTexto}%'";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Editorial ASC" : "ORDER BY Editorial DESC";
+            }
+            else if (filtro.Text.Equals("Año"))
+            {
+                // Filtrado por año
+                filtroSql = $"AND Año LIKE '%{buscarTexto}%'";
+                ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Año ASC" : "ORDER BY Año DESC";
             }
             else
             {

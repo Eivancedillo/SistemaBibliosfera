@@ -149,6 +149,20 @@ namespace SistemaBibliosfera
                 return;
             }
 
+            if (int.Parse(TxtAnioPublicacion.Text) >= 1901)
+            {
+                if (int.Parse(TxtAnioPublicacion.Text) > DateTime.Now.Year)
+                {
+                    MessageBox.Show($"El año de publicación no puede ser mayor al año actual ({DateTime.Now.Year}).", "Año inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("El año de publicación no puede ser menor a 1901.", "Año inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             libro.Titulo = TxtTitulo.Text;
             libro.AnioPublicacion = int.Parse(TxtAnioPublicacion.Text);
 
@@ -206,13 +220,17 @@ namespace SistemaBibliosfera
                 {
                     TxtIsbn.ReadOnly = true;
 
-                    libro.ISBN = TxtIsbn.Text;
+                    libro.ISBN = TxtIsbn.Text.Trim();
 
                     if (!editando)
                     {
                         TxtAnioPublicacion.Enabled = true; TxtTitulo.Enabled = true;
                         BtnVerCategorias.Enabled = true; BtnVerEditoriales.Enabled = true; BtnVerAutores.Enabled = true;
                     }
+                }
+                else
+                {
+                    TxtIsbn.Text = "";
                 }
             }
         }
@@ -226,13 +244,17 @@ namespace SistemaBibliosfera
             {
                 TxtIsbn.ReadOnly = true;
 
-                libro.ISBN = TxtIsbn.Text;
+                libro.ISBN = TxtIsbn.Text.Trim();
 
                 if (!editando)
                 {
                     TxtAnioPublicacion.Enabled = true; TxtTitulo.Enabled = true;
                     BtnVerCategorias.Enabled = true; BtnVerEditoriales.Enabled = true; BtnVerAutores.Enabled = true;
                 }
+            }
+            else
+            {
+                TxtIsbn.Text = "";
             }
         }
 
