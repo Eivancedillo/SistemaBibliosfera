@@ -130,7 +130,14 @@ namespace SistemaBibliosfera
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (TxtAnioPublicacion.Equals("") || TxtTitulo.Equals("") || TxtAutor.Equals("") || TxtCategoria.Equals("") || TxtEditorial.Equals(""))
+            // Primero validar que se ingreso un ISBN
+            if (TxtIsbn.Text.Equals(""))
+            { 
+                MessageBox.Show("Por favor, ingrese un ISBN.", "ISBN vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (TxtTitulo.Text.Equals("") || TxtAutor.Text.Equals("") || TxtCategoria.Text.Equals("") || TxtEditorial.Text  .Equals(""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -138,7 +145,7 @@ namespace SistemaBibliosfera
 
             if (TxtAnioPublicacion.Text.Length != 4 || !int.TryParse(TxtAnioPublicacion.Text, out _))
             {
-                MessageBox.Show("Por favor, ingrese un año de publicación válido (4 dígitos).", "Año inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, ingrese un año de publicación (4 dígitos).", "Año inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -187,12 +194,17 @@ namespace SistemaBibliosfera
         {
             if (e.KeyCode == Keys.Enter)
             {
+                TxtIsbn.Select(0, 0);
+                this.ActiveControl = null;
+
+                e.SuppressKeyPress = true;
+
                 // Conirmar si es el ISBN correcto
                 var rs = MessageBox.Show($"ISBN ingresado: '{TxtIsbn.Text}', ¿es correcto?", "IBSN ingresado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (rs == DialogResult.Yes)
                 {
-                    TxtIsbn.Enabled = false;
+                    TxtIsbn.ReadOnly = true;
 
                     libro.ISBN = TxtIsbn.Text;
 
@@ -202,14 +214,31 @@ namespace SistemaBibliosfera
                         BtnVerCategorias.Enabled = true; BtnVerEditoriales.Enabled = true; BtnVerAutores.Enabled = true;
                     }
                 }
-
-                e.SuppressKeyPress = true;
             }
         }
 
-		private void FrmAdquisiciones_Load(object sender, EventArgs e)
+        private void BtnInsertarISBN_Click(object sender, EventArgs e)
+        {
+            // Conirmar si es el ISBN correcto
+            var rs = MessageBox.Show($"ISBN ingresado: '{TxtIsbn.Text}', ¿es correcto?", "IBSN ingresado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rs == DialogResult.Yes)
+            {
+                TxtIsbn.ReadOnly = true;
+
+                libro.ISBN = TxtIsbn.Text;
+
+                if (!editando)
+                {
+                    TxtAnioPublicacion.Enabled = true; TxtTitulo.Enabled = true;
+                    BtnVerCategorias.Enabled = true; BtnVerEditoriales.Enabled = true; BtnVerAutores.Enabled = true;
+                }
+            }
+        }
+
+        private void FrmAdquisiciones_Load(object sender, EventArgs e)
 		{
 
 		}
-	}
+    }
 }

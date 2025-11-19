@@ -46,6 +46,7 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.TxtAnioPublicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.BtnInsertarISBN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtIsbn
@@ -203,7 +204,7 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Location = new System.Drawing.Point(415, 392);
+            this.BtnGuardar.Location = new System.Drawing.Point(460, 392);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(111, 49);
             this.BtnGuardar.TabIndex = 24;
@@ -216,7 +217,7 @@
             this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(544, 392);
+            this.BtnCancelar.Location = new System.Drawing.Point(589, 392);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(111, 49);
             this.BtnCancelar.TabIndex = 25;
@@ -242,13 +243,28 @@
             this.label3.TabIndex = 72;
             this.label3.Text = "Agregar Libro";
             // 
+            // BtnInsertarISBN
+            // 
+            this.BtnInsertarISBN.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_añadir_60;
+            this.BtnInsertarISBN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnInsertarISBN.FlatAppearance.BorderSize = 0;
+            this.BtnInsertarISBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInsertarISBN.Location = new System.Drawing.Point(660, 108);
+            this.BtnInsertarISBN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.BtnInsertarISBN.Name = "BtnInsertarISBN";
+            this.BtnInsertarISBN.Size = new System.Drawing.Size(40, 35);
+            this.BtnInsertarISBN.TabIndex = 73;
+            this.BtnInsertarISBN.UseVisualStyleBackColor = true;
+            this.BtnInsertarISBN.Click += new System.EventHandler(this.BtnInsertarISBN_Click);
+            // 
             // FrmAdquisiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(680, 453);
+            this.ClientSize = new System.Drawing.Size(712, 453);
+            this.Controls.Add(this.BtnInsertarISBN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtAnioPublicacion);
             this.Controls.Add(this.BtnGuardar);
@@ -299,5 +315,6 @@
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.TextBox TxtAnioPublicacion;
 		private System.Windows.Forms.Label label3;
-	}
+        private System.Windows.Forms.Button BtnInsertarISBN;
+    }
 }
