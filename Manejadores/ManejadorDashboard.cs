@@ -109,12 +109,59 @@ namespace Manejadores
             }
         }
 
-        public int ContarPrestamosPorVencer()
+        private (int PorVencer, int Vencidos) ObtenerEstadoPrestamos()
         {
-            DataTable dt = b.Consultar("SELECT * FROM v_prestamosavencer", "v_prestamosavencer").Tables[0];
+            // Consultamos la nueva vista
+            DataTable dt = b.Consultar("SELECT * FROM v_alertas_prestamos", "v_alertas_prestamos").Tables[0];
 
-            // Devolvemos el valor de la primera (y única) celda
-            return int.Parse(dt.Rows[0][0].ToString());
+            if (dt.Rows.Count > 0)
+            {
+                // Usamos int.TryParse para evitar errores si viene nulo
+                int.TryParse(dt.Rows[0]["PorVencer"].ToString(), out int porVencer);
+                int.TryParse(dt.Rows[0]["Vencidos"].ToString(), out int vencidos);
+
+                return (porVencer, vencidos);
+            }
+
+            return (0, 0);
+        }
+
+        public void ActualizarAlertaPrestamos(Panel pnlAlerta, Label lblAlerta)
+        {
+            var estado = ObtenerEstadoPrestamos();
+            int totalAlertas = estado.PorVencer + estado.Vencidos;
+
+            if (totalAlertas == 0)
+            {
+                pnlAlerta.Visible = false;
+                return;
+            }
+
+            string mensaje = "";
+            Color colorAlerta = Color.LightPink;
+
+            // CASO 1: Mixto (Hay de los dos)
+            if (estado.PorVencer > 0 && estado.Vencidos > 0)
+            {
+                // Visualmente dirá: "5 Alertas: 3 por vencer y 2 vencidos"
+                mensaje = $"Alertas: {estado.PorVencer} préstamo(s) por vencer y {estado.Vencidos} préstamo(s) vencido(s)";
+                colorAlerta = Color.IndianRed;
+            }
+            // CASO 2: Solo Vencidos
+            else if (estado.Vencidos > 0)
+            {
+                // Visualmente dirá: "3 préstamos ya vencidos" (El 3 lo pone MostrarAlerta)
+                mensaje = "préstamo(s) vencido(s)";
+                colorAlerta = Color.IndianRed;
+            }
+            // CASO 3: Solo Por Vencer
+            else
+            {
+                // Visualmente dirá: "2 préstamos prontos a vencer"
+                mensaje = "préstamo(s) pronto(s) a vencer";
+            }
+
+            MostrarAlerta(totalAlertas, mensaje, colorAlerta, pnlAlerta, lblAlerta);
         }
 
         public int ContarLibrosEnReparacion()

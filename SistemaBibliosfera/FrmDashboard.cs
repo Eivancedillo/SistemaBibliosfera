@@ -39,10 +39,7 @@ namespace SistemaBibliosfera
             // Alertas
 
             // 1. Alerta de Vencimientos (Color Rojo Claro)
-            Md.MostrarAlerta(Md.ContarPrestamosPorVencer(), "préstamos prontos a vencer",
-            Color.LightPink,
-            panelAlertaVencimiento,
-            lblAlertaVencimiento);
+            Md.ActualizarAlertaPrestamos(panelAlertaVencimiento, lblAlertaVencimiento);
 
             // 2. Alerta de Reparaciones (Color Amarillo Claro)
             Md.MostrarAlerta(Md.ContarLibrosEnReparacion(), "libros en mal estado (reparación)",
