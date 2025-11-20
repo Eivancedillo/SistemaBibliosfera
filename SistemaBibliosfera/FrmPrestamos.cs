@@ -15,6 +15,7 @@ namespace SistemaBibliosfera
     public partial class FrmPrestamos : Form
     {
         ManejadorPrestamo Mp;
+        ManejadorPermisos permisos;
         int columna = 0, fila = 0;
         public static Prestamo prestamo = new Prestamo(0, 0, 0, 0, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, "");
         public FrmPrestamos()
@@ -22,6 +23,7 @@ namespace SistemaBibliosfera
             InitializeComponent();
 
             Mp = new ManejadorPrestamo();
+            permisos = new ManejadorPermisos();
 
             CmbEstado.Items.Add("Activos");
             CmbEstado.Items.Add("Cancelados");
@@ -34,40 +36,6 @@ namespace SistemaBibliosfera
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            if (CmbEstado.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un filtro para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (CmbEstado.SelectedItem.ToString().Equals("Activos"))
-                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Activo'", DtgDatos, "v_prestamos");
-            else if (CmbEstado.SelectedItem.ToString().Equals("Cancelados"))
-                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Cancelado'", DtgDatos, "v_prestamos");
-            else if (CmbEstado.SelectedItem.ToString().Equals("Finalizados"))
-                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Finalizado'", DtgDatos, "v_prestamos");
-            else if (CmbEstado.SelectedItem.ToString().Equals("Adeudados"))
-                Mp.Mostrar($"SELECT * FROM v_prestamos WHERE (Nombre LIKE '%{TxtBuscar.Text}%' OR NumeroControl LIKE '%{TxtBuscar.Text}%') AND EstadoPrestamo = 'Adeudo'", DtgDatos, "v_prestamos");
-        }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            // Limpiar entidad
-            prestamo.IdPrestamo = 0;
-            prestamo.NumeroControl = 0;
-            prestamo.IdEjemplar = 0;
-            prestamo.IdLibro = 0;
-            prestamo.FechaPrestamo = DateTime.MinValue;
-            prestamo.FechaDevolucionPrevista = DateTime.MinValue;
-            prestamo.EstadoPrestamo = "";
-
-            FrmDatosPrestamos frm = new FrmDatosPrestamos();
-            frm.ShowDialog();
-            DtgDatos.Columns.Clear();
         }
 
         private void DtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,6 +65,12 @@ namespace SistemaBibliosfera
                         else
                         {
                             //Editar
+                            if(!permisos.ComprobarPermiso(2, 3, FrmPrincipal.IdAdministrador))
+                            {
+                                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
                             FrmDatosPrestamos datosPrestamo = new FrmDatosPrestamos();
                             datosPrestamo.ShowDialog();
                             DtgDatos.Columns.Clear();
@@ -106,6 +80,11 @@ namespace SistemaBibliosfera
 
                 case 12:
                     {
+                        if (!permisos.ComprobarPermiso(2, 4, FrmPrincipal.IdAdministrador))
+                        {
+                            MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
                         if (prestamo.EstadoPrestamo.Equals("Activo"))
                         {   //Cancelar
                             Mp.Cancelar(prestamo);
@@ -116,6 +95,12 @@ namespace SistemaBibliosfera
                     ; break;
                 case 13:
                     {
+                        if (!permisos.ComprobarPermiso(2, 4, FrmPrincipal.IdAdministrador))
+                        {
+                            MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
                         if (prestamo.EstadoPrestamo.Equals("Activo"))
                         {   //Finalizar
                             Mp.Finalizar(prestamo);
@@ -128,6 +113,12 @@ namespace SistemaBibliosfera
 
         private void BtnBuscarr_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(2, 1, FrmPrincipal.IdAdministrador))
+            {
+                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (CmbEstado.SelectedItem == null)
             {
                 MessageBox.Show("Seleccione un filtro para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -146,6 +137,12 @@ namespace SistemaBibliosfera
 
         private void BtnAgregarr_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(2, 2, FrmPrincipal.IdAdministrador))
+            {
+                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Limpiar entidad
             prestamo.IdPrestamo = 0;
             prestamo.NumeroControl = 0;

@@ -19,11 +19,13 @@ namespace SistemaBibliosfera
         bool prestamo = false;
         public static Miembro miembro = new Miembro(0,"", "", "", "", true);
         ManejadorMiembros Mm;
+        ManejadorPermisos permisos;
 
         public FrmMiembros()
         {
             InitializeComponent();
             Mm = new ManejadorMiembros();
+            permisos = new ManejadorPermisos();
 
             CmbEstado.Items.Clear();
             CmbEstado.Items.Add("Activos");
@@ -31,6 +33,7 @@ namespace SistemaBibliosfera
             CmbEstado.SelectedIndex = 0;
         }
 
+        // Sobre carga para el caso de préstamos
         public FrmMiembros(bool prestamotraido)
         {
             InitializeComponent();
@@ -59,6 +62,13 @@ namespace SistemaBibliosfera
             {
                 case 5:
                     {
+                        // Editar
+                        if(!permisos.ComprobarPermiso(4, 3, FrmPrincipal.IdAdministrador))
+                        {
+                            MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
                         FrmDatosMiembro frm = new FrmDatosMiembro();
                         frm.ShowDialog();
                         DtgDatos.Columns.Clear();
@@ -68,6 +78,13 @@ namespace SistemaBibliosfera
                     {
                         if (!prestamo)
                         {
+                            // Activar/Desactivar
+                            if(!permisos.ComprobarPermiso(4, 4, FrmPrincipal.IdAdministrador))
+                            {
+                                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
                             bool estado = Convert.ToBoolean(DtgDatos.Rows[0].Cells["Estado"].Value);
                             if (estado)
                                 Mm.Desactivar(miembro);
@@ -98,6 +115,12 @@ namespace SistemaBibliosfera
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(4, 1, FrmPrincipal.IdAdministrador))
+            {
+                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (CmbEstado.SelectedItem == null)
                 MessageBox.Show("Seleccione un estado para buscar.", "Estado no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
@@ -117,6 +140,12 @@ namespace SistemaBibliosfera
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(4, 2, FrmPrincipal.IdAdministrador))
+            {
+                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             miembro.NumeroControl = 0;
             miembro.Nombre = "";
             miembro.Apellidos = "";

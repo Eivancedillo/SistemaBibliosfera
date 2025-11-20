@@ -15,11 +15,14 @@ namespace SistemaBibliosfera
     {
         public static int IdAdministrador = 0;
         ManejadorPrestamo mp;
+        ManejadorPermisos permisos;
         private ToolStripButton botonActivoActual = null;
+
         public FrmPrincipal(int IdAdministradortraido)
         {
             InitializeComponent();
             mp = new ManejadorPrestamo();
+            permisos = new ManejadorPermisos();
             mp.AdeudarLibros();
 
             Task.Run(() =>
@@ -32,6 +35,25 @@ namespace SistemaBibliosfera
             
         }
 
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            MdiClient mdiClient = null;
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is MdiClient)
+                {
+                    mdiClient = (MdiClient)control;
+                    break;
+                }
+            }
+
+            if (mdiClient != null)
+            {
+                mdiClient.BackColor = Color.White;
+
+            }
+        }
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
@@ -48,69 +70,91 @@ namespace SistemaBibliosfera
 
         private void BtnCatalogo_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmCatalogo catalogo = new FrmCatalogo();
-            catalogo.MdiParent = this;
-            catalogo.Show();
+            if(permisos.ComprobarAcceso(1, IdAdministrador))
+            {
+                Boton(sender);
+                FrmCatalogo catalogo = new FrmCatalogo();
+                catalogo.MdiParent = this;
+                catalogo.Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnPrestamos_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmPrestamos prestamos = new FrmPrestamos();
-            prestamos.MdiParent = this;
-            prestamos.Show();
+            if(permisos.ComprobarAcceso(2, IdAdministrador))
+            {
+                Boton(sender);
+                FrmPrestamos prestamos = new FrmPrestamos();
+                prestamos.MdiParent = this;
+                prestamos.Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnAdquisiciones_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmAdquisiciones adquisiciones = new FrmAdquisiciones();
-            adquisiciones.MdiParent = this;
-            adquisiciones.Show();
+            if (permisos.ComprobarAcceso(3, IdAdministrador))
+            {
+                Boton(sender);
+                FrmAdquisiciones adquisiciones = new FrmAdquisiciones();
+                adquisiciones.MdiParent = this;
+                adquisiciones.Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnBibliotecarios_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmMiembros miembros = new FrmMiembros();
-            miembros.MdiParent = this;
-            miembros.Show();
+            if(permisos.ComprobarAcceso(4, IdAdministrador))
+            {
+                Boton(sender);
+                FrmMiembros miembros = new FrmMiembros();
+                miembros.MdiParent = this;
+                miembros.Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnMiembros_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmAdministradores administradores = new FrmAdministradores();
-            administradores.MdiParent = this;
-            administradores.Show();
+            if(permisos.ComprobarAcceso(5, IdAdministrador))
+            {
+                Boton(sender);
+                FrmAdministradores administradores = new FrmAdministradores();
+                administradores.MdiParent = this;
+                administradores.Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnAsistencia_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmAsistencias asistencias = new FrmAsistencias();
-            asistencias.MdiParent = this;
-            asistencias.Show();
-        }
-
-        private void Boton (object senderBoton)
-        {
-            Color colorSeleccionado = Color.FromArgb(205, 173, 143);
-            Color colorTool = Color.FromArgb(242, 242, 242);
-
-            foreach (ToolStripItem item in toolStrip1.Items)
+            if(permisos.ComprobarAcceso(6, IdAdministrador))
             {
-                if (item is ToolStripButton)
-                {
-                    item.BackColor = colorTool;
-                }
+                Boton(sender);
+                FrmAsistencias asistencias = new FrmAsistencias();
+                asistencias.MdiParent = this;
+                asistencias.Show();
             }
-
-            if (senderBoton is ToolStripButton boton)
+            else
             {
-                boton.BackColor = colorSeleccionado;
-                botonActivoActual = boton;
+                MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -248,25 +292,24 @@ namespace SistemaBibliosfera
             }
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void Boton(object senderBoton)
         {
-            MdiClient mdiClient = null;
+            Color colorSeleccionado = Color.FromArgb(205, 173, 143);
+            Color colorTool = Color.FromArgb(242, 242, 242);
 
-            foreach (Control control in this.Controls)
+            foreach (ToolStripItem item in toolStrip1.Items)
             {
-                if (control is MdiClient)
+                if (item is ToolStripButton)
                 {
-                    mdiClient = (MdiClient)control;
-                    break;
+                    item.BackColor = colorTool;
                 }
             }
 
-            if (mdiClient != null)
+            if (senderBoton is ToolStripButton boton)
             {
-                mdiClient.BackColor = Color.White;
-                
+                boton.BackColor = colorSeleccionado;
+                botonActivoActual = boton;
             }
-
         }
     }
 }

@@ -30,7 +30,12 @@ namespace SistemaBibliosfera
 
                 if(FrmAdministradores.administradorr.IdAdministrador == 1)
                 {
-                    BtnEditar.Enabled = false; // Admin no se puede editar
+                    BtnEditar.Enabled = false;
+                }
+
+                if(FrmAdministradores.administradorr.IdAdministrador == FrmPrincipal.IdAdministrador)
+                {
+                    BtnEditar.Enabled = false;
                 }
             }
 
@@ -144,9 +149,50 @@ namespace SistemaBibliosfera
             if (!cargado)
                 return;
             ma.LlenarPermisos(int.Parse(CmbAccesos.SelectedValue.ToString()), FrmAdministradores.administradorr.IdAdministrador, CbVer, CbCrear, CbEditar, CbActivar);
+
+            // Si es Asistencias unicamente habilitar crear
+            if (CmbAccesos.Text.Equals("Asistencias"))
+            {
+                CbVer.Enabled = false; CbEditar.Enabled = false; CbActivar.Enabled = false;
+            }
+            else
+            {
+                CbVer.Enabled = true; CbEditar.Enabled = true; CbActivar.Enabled = true;
+            }
+
+            // Si es Catalogo deshabilitar Crear
+            if (CmbAccesos.Text.Equals("Catalogo"))
+            {
+                CbCrear.Enabled = false;
+            }
+            else
+            {
+                CbCrear.Enabled = true;
+            }
+
+            // Si es Prestamo cambiar nombres de permisos
+            // Activar/Desactivar por Finalizar/Cancelar
+            if (CmbAccesos.Text.Equals("Prestamos"))
+            {
+                CbActivar.Text = "Finalizar/Cancelar";
+            }
+            else
+            {
+                CbActivar.Text = "Activar/Desactivar";
+            }
+
+            // Si es Adquisiciones desabilitar Ver, Editar y Activar/Desactivar
+            if (CmbAccesos.Text.Equals("Adquisiciones"))
+            {
+                CbVer.Enabled = false; CbEditar.Enabled = false; CbActivar.Enabled = false;
+            }
+            else
+            {
+                CbVer.Enabled = true; CbEditar.Enabled = true; CbActivar.Enabled = true;
+            }
         }
 
-		private void label6_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
 		{
 
 		}

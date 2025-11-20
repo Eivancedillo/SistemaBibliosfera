@@ -15,15 +15,20 @@ namespace SistemaBibliosfera
     public partial class FrmCatalogo : Form
     {
         ManejadorCatalogo Mc;
+        ManejadorPermisos permisos;
+
         List<Autor> LibroAutores;
         List<Categoria> LibroCategorias;
+
         Libro libro;
+
         int fila = 0, columna = 0;
         bool prestamo = false;
         public FrmCatalogo()
         {
             InitializeComponent();
             Mc = new ManejadorCatalogo();
+            permisos = new ManejadorPermisos();
 
             LibroAutores = new List<Autor>();
             LibroCategorias = new List<Categoria>();
@@ -32,10 +37,12 @@ namespace SistemaBibliosfera
             Mc.LlenarCmbs(CmbEstado, CmbFiltro, CmbOrdenar);
         }
 
+        // Sobrecarga del constructor para cuando se abre el catálogo para seleccionar un libro para préstamo
         public FrmCatalogo(bool prestamotraido)
         {
             InitializeComponent();
             Mc = new ManejadorCatalogo();
+            permisos = new ManejadorPermisos();
 
             LibroAutores = new List<Autor>();
             LibroCategorias = new List<Categoria>();
@@ -53,6 +60,12 @@ namespace SistemaBibliosfera
             {
                 case 10:
                     {
+                        if(!permisos.ComprobarPermiso(1,3, FrmPrincipal.IdAdministrador))
+                        {
+                            MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
                         FrmAdquisiciones frm = new FrmAdquisiciones(libro);
                         frm.ShowDialog();
                         DtgDatos.Columns.Clear();
@@ -60,18 +73,28 @@ namespace SistemaBibliosfera
                     ; break;
                 case 11:
                     {
-                        if(!prestamo)
+                        // Desactivar libro
+                        if (!prestamo)
+                        {
+                            if (!permisos.ComprobarPermiso(1, 4, FrmPrincipal.IdAdministrador))
+                            {
+                                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+
                             Mc.DesactivarLibro(libro);
+                        }
+
+                        // Seleccionar libro para préstamo
                         else
                         {
-                            if(DtgDatos.Rows[e.RowIndex].Cells["Disp"].Value.ToString() == "0")
+                            if (DtgDatos.Rows[e.RowIndex].Cells["Disp"].Value.ToString() == "0")
                             {
                                 MessageBox.Show("No hay ejemplares disponibles de este libro para préstamo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
 
                             var rs = MessageBox.Show($"¿Desea seleccionar el libro '{libro.Titulo}' para el préstamo?", "Confirmar selección", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if(rs == DialogResult.Yes)
+                            if (rs == DialogResult.Yes)
                             {
                                 FrmDatosPrestamos.libroejemplar = libro;
                                 Close();
@@ -84,6 +107,12 @@ namespace SistemaBibliosfera
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            if (!permisos.ComprobarPermiso(1, 1, FrmPrincipal.IdAdministrador) && !prestamo)
+            {
+                MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (CmbEstado.SelectedItem == null || CmbFiltro.SelectedItem == null || CmbOrdenar.SelectedItem == null)
             {
                 MessageBox.Show("Seleccione todos los filtros antes de continuar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);

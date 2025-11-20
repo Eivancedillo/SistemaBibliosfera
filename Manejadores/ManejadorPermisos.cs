@@ -23,9 +23,10 @@ namespace Manejadores
                 return false;
         }
 
-        public bool ComprobarAcceso(int idacceso, int idusuario)
+        public bool ComprobarAcceso(int idacceso, int administrador)
         {
-            DataRow dr = b.Consultar($"call p_validar_accesos({idacceso}, {idusuario})", "permisos").Tables[0].Rows[0];
+            // Comprobar si el usuario tiene el acceso
+            DataRow dr = b.Consultar($"call p_consultar_acceso({idacceso}, {administrador})", "accesos").Tables[0].Rows[0];
 
             if (dr["rs"].ToString().Equals("Aceptado"))
                 return true;

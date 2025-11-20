@@ -14,11 +14,13 @@ namespace SistemaBibliosfera
     public partial class FrmAsistencias : Form
     {
         ManejadorAsistencia Ma;
+        ManejadorPermisos permisos;
         public FrmAsistencias()
         {
             InitializeComponent();
 
             Ma = new ManejadorAsistencia();
+            permisos = new ManejadorPermisos();
 
             BtnRegistrar.Enabled = false;
         }
@@ -58,6 +60,12 @@ namespace SistemaBibliosfera
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(6, 2, FrmPrincipal.IdAdministrador))
+            {
+                MessageBox.Show("No tienes permiso para realizar esta accion.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Ma.Registrar(int.Parse(TxtNumControl.Text));
 
             TxtNumControl.Text = "";

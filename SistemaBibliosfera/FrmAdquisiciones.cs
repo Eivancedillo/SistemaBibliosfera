@@ -16,10 +16,14 @@ namespace SistemaBibliosfera
     {
         ManejadorAdquisicion Ma;
         ManejadorCatalogo Mc;
+        ManejadorPermisos permisos;
+
         List<Autor> LibroAutores;
         List<Categoria> LibroCategorias;
         List<Ejemplar> ejemplares;
+
         Libro libro;
+
         bool editando = false;
 
         public FrmAdquisiciones()
@@ -31,6 +35,7 @@ namespace SistemaBibliosfera
             ejemplares = new List<Ejemplar>();
 
             Ma = new ManejadorAdquisicion();
+            permisos = new ManejadorPermisos();
             libro = new Libro(0, "", "", 0, 0, LibroAutores, LibroCategorias);
 
             TxtTitulo.Enabled = false; TxtCategoria.Enabled = false; TxtAutor.Enabled = false; TxtEditorial.Enabled = false; TxtAnioPublicacion.Enabled = false;
@@ -44,6 +49,8 @@ namespace SistemaBibliosfera
 
             Ma = new ManejadorAdquisicion();
             Mc = new ManejadorCatalogo();
+            permisos = new ManejadorPermisos();
+
             ejemplares = new List<Ejemplar>();
             editando = true;
 
@@ -130,6 +137,12 @@ namespace SistemaBibliosfera
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            if(!permisos.ComprobarPermiso(3, 2, FrmPrincipal.IdAdministrador) && !editando)
+            {
+                MessageBox.Show("No tiene permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Primero validar que se ingreso un ISBN
             if (TxtIsbn.Text.Equals(""))
             { 
