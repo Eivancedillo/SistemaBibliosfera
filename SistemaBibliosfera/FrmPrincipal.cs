@@ -55,8 +55,10 @@ namespace SistemaBibliosfera
             }
         }
 
+        #region Click de botones de navegación
         private void BtnSalir_Click(object sender, EventArgs e)
         {
+            Boton(sender);
             Application.Exit();
         }
 
@@ -64,6 +66,7 @@ namespace SistemaBibliosfera
         {
             Boton(sender);
             FrmDashboard dashboard = new FrmDashboard();
+            dashboard.FormClosed += FormularioHijo_FormClosed;
             dashboard.MdiParent = this;
             dashboard.Show();
         }
@@ -74,6 +77,7 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmCatalogo catalogo = new FrmCatalogo();
+                catalogo.FormClosed += FormularioHijo_FormClosed;
                 catalogo.MdiParent = this;
                 catalogo.Show();
             }
@@ -89,6 +93,7 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmPrestamos prestamos = new FrmPrestamos();
+                prestamos.FormClosed += FormularioHijo_FormClosed;
                 prestamos.MdiParent = this;
                 prestamos.Show();
             }
@@ -104,6 +109,7 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmAdquisiciones adquisiciones = new FrmAdquisiciones();
+                adquisiciones.FormClosed += FormularioHijo_FormClosed;
                 adquisiciones.MdiParent = this;
                 adquisiciones.Show();
             }
@@ -119,6 +125,7 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmMiembros miembros = new FrmMiembros();
+                miembros.FormClosed += FormularioHijo_FormClosed;
                 miembros.MdiParent = this;
                 miembros.Show();
             }
@@ -134,6 +141,7 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmAdministradores administradores = new FrmAdministradores();
+                administradores.FormClosed += FormularioHijo_FormClosed;
                 administradores.MdiParent = this;
                 administradores.Show();
             }
@@ -149,12 +157,35 @@ namespace SistemaBibliosfera
             {
                 Boton(sender);
                 FrmAsistencias asistencias = new FrmAsistencias();
+                asistencias.FormClosed += FormularioHijo_FormClosed;
                 asistencias.MdiParent = this;
                 asistencias.Show();
             }
             else
             {
                 MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
+        #region Efectos de hover en botones
+
+        private void BtnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            Color colorHover = Color.FromArgb(205, 173, 143);
+            ToolStripButton botonFlotante = (ToolStripButton)sender;
+
+            botonFlotante.BackColor = colorHover;
+        }
+
+        private void BtnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            Color colorNormal = Color.FromArgb(242, 242, 242);
+            ToolStripButton botonFlotante = (ToolStripButton)sender;
+
+            if (botonFlotante != botonActivoActual)
+            {
+                botonFlotante.BackColor = colorNormal;
             }
         }
 
@@ -292,6 +323,8 @@ namespace SistemaBibliosfera
             }
         }
 
+        #endregion
+
         private void Boton(object senderBoton)
         {
             Color colorSeleccionado = Color.FromArgb(205, 173, 143);
@@ -309,6 +342,23 @@ namespace SistemaBibliosfera
             {
                 boton.BackColor = colorSeleccionado;
                 botonActivoActual = boton;
+            }
+        }
+
+        private void FormularioHijo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Desactivar el color de selección del botón activo.
+            if (botonActivoActual != null)
+            {
+                // Color normal que usas para los botones no seleccionados/no hover
+                Color colorNormal = Color.FromArgb(242, 242, 242);
+
+                botonActivoActual.BackColor = colorNormal;
+
+                // Es importante establecer botonActivoActual a null para que 
+                // la lógica de MouseLeave funcione correctamente y para indicar 
+                // que no hay ningún formulario/botón activo.
+                botonActivoActual = null;
             }
         }
     }

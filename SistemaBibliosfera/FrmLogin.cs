@@ -70,12 +70,6 @@ namespace SistemaBibliosfera
             TxtUsuario.Clear();
         }
 
-        private void TxtContrasena_Click(object sender, EventArgs e)
-        {
-            TxtContrasena.Clear();
-            TxtContrasena.PasswordChar = '*';
-        }
-
         private void TxtContrasena_Enter(object sender, EventArgs e)
         {
             // Limpia el contenido del TextBox
