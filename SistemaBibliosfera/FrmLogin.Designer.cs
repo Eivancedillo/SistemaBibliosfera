@@ -45,7 +45,7 @@
             // 
             this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtUsuario.Location = new System.Drawing.Point(337, 245);
             this.TxtUsuario.Name = "TxtUsuario";
@@ -58,14 +58,14 @@
             // 
             this.TxtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.TxtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TxtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtContrasena.Location = new System.Drawing.Point(337, 339);
             this.TxtContrasena.Name = "TxtContrasena";
             this.TxtContrasena.Size = new System.Drawing.Size(389, 34);
             this.TxtContrasena.TabIndex = 3;
             this.TxtContrasena.Text = "Contraseña";
-            this.TxtContrasena.Click += new System.EventHandler(this.TxtContrasena_Click);
+            this.TxtContrasena.Enter += new System.EventHandler(this.TxtContrasena_Enter);
             // 
             // BtnIniciarSesion
             // 

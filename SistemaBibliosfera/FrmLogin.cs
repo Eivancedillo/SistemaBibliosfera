@@ -30,6 +30,7 @@ namespace SistemaBibliosfera
                 MessageBox.Show("¡Rellene todos los campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             if (Ml.Validar(TxtUsuario, TxtContrasena))
             {
                 IdAdministrador = int.Parse(Ml.ConseguirIdAdministrador(TxtUsuario.Text));
@@ -38,6 +39,7 @@ namespace SistemaBibliosfera
                 ia.Show();
                 this.Hide();
             }
+
             else
             {
                 MessageBox.Show("Error de credenciales..");
@@ -71,6 +73,15 @@ namespace SistemaBibliosfera
         private void TxtContrasena_Click(object sender, EventArgs e)
         {
             TxtContrasena.Clear();
+            TxtContrasena.PasswordChar = '*';
+        }
+
+        private void TxtContrasena_Enter(object sender, EventArgs e)
+        {
+            // Limpia el contenido del TextBox
+            TxtContrasena.Clear();
+
+            // Establece el carácter de máscara (PasswordChar)
             TxtContrasena.PasswordChar = '*';
         }
     }
