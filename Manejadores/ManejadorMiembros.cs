@@ -67,7 +67,7 @@ namespace Manejadores
                     bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Estado"].Value);
                     if (estado)
                     {
-                        tabla.Columns.Insert(6, Boton("Desasctivar", Color.Red));
+                        tabla.Columns.Insert(6, Boton("Desactivar", Color.Red));
                     }
                     else
                     {

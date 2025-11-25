@@ -158,7 +158,7 @@ namespace Manejadores
 
                 if (estado)
                 {
-                    tabla.Columns.Insert(posboton, Boton("Desasctivar", Color.Red));
+                    tabla.Columns.Insert(posboton, Boton("Desactivar", Color.Red));
                 }
                 else
                 {
