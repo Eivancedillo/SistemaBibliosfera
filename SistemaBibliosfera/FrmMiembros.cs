@@ -38,7 +38,7 @@ namespace SistemaBibliosfera
         {
             InitializeComponent();
             Mm = new ManejadorMiembros();
-
+            permisos = new ManejadorPermisos();
 
             CmbEstado.Items.Clear();
             CmbEstado.Items.Add("Activos");
