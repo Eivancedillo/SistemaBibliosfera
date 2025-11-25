@@ -147,18 +147,11 @@ namespace SistemaBibliosfera
         private void CmbAccesos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!cargado)
+            {
                 return;
-            ma.LlenarPermisos(int.Parse(CmbAccesos.SelectedValue.ToString()), FrmAdministradores.administradorr.IdAdministrador, CbVer, CbCrear, CbEditar, CbActivar);
+            }
 
-            // Si es Asistencias unicamente habilitar crear
-            if (CmbAccesos.Text.Equals("Asistencias"))
-            {
-                CbVer.Enabled = false; CbEditar.Enabled = false; CbActivar.Enabled = false;
-            }
-            else
-            {
-                CbVer.Enabled = true; CbEditar.Enabled = true; CbActivar.Enabled = true;
-            }
+            ma.LlenarPermisos(int.Parse(CmbAccesos.SelectedValue.ToString()), FrmAdministradores.administradorr.IdAdministrador, CbVer, CbCrear, CbEditar, CbActivar);
 
             // Si es Catalogo deshabilitar Crear
             if (CmbAccesos.Text.Equals("Catalogo"))
@@ -183,6 +176,16 @@ namespace SistemaBibliosfera
 
             // Si es Adquisiciones desabilitar Ver, Editar y Activar/Desactivar
             if (CmbAccesos.Text.Equals("Adquisiciones"))
+            {
+                CbVer.Enabled = false; CbEditar.Enabled = false; CbActivar.Enabled = false;
+            }
+            else
+            {
+                CbVer.Enabled = true; CbEditar.Enabled = true; CbActivar.Enabled = true;
+            }
+
+            // Si es Asistencias unicamente habilitar crear
+            if (CmbAccesos.Text.Equals("Asistencias"))
             {
                 CbVer.Enabled = false; CbEditar.Enabled = false; CbActivar.Enabled = false;
             }
