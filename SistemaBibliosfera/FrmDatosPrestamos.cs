@@ -68,10 +68,10 @@ namespace SistemaBibliosfera
                 return;
             }
 
-            // Verificar que la fecha de devolución prevista sea la fecha actual o posterior
-            if (DtpFechaDevolucion.Value.Date < DateTime.Now.Date)
+            // Verificar que la fecha de devolución prevista sea posterior a la fecha actual
+            if (DtpFechaDevolucion.Value.Date <= DateTime.Now.Date)
             {
-                MessageBox.Show("La fecha de devolución prevista no puede ser anterior a la fecha actual.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"La fecha de devolución prevista debe ser posterior a la fecha actual. ({DateTime.Now.Date})", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
