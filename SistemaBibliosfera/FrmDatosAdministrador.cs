@@ -31,11 +31,17 @@ namespace SistemaBibliosfera
                 if(FrmAdministradores.administradorr.IdAdministrador == 1)
                 {
                     BtnEditar.Enabled = false;
+
+                    // Ponerle un color mas apagado al boton
+                    BtnEditar.BackColor = Color.Gray;
                 }
 
                 if(FrmAdministradores.administradorr.IdAdministrador == FrmPrincipal.IdAdministrador)
                 {
                     BtnEditar.Enabled = false;
+
+                    // Ponerle un color mas apagado al boton
+                    BtnEditar.BackColor = Color.Gray;
                 }
             }
 
@@ -94,7 +100,7 @@ namespace SistemaBibliosfera
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             if (FrmAdministradores.administradorr.IdAdministrador == 0)
-                MessageBox.Show("Por favor, primero cree al bibliotecario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, primero cree y guarde al bibliotecario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 CmbAccesos.Enabled = true; CbVer.Enabled = true; CbEditar.Enabled = true; CbCrear.Enabled = true; CbActivar.Enabled = true; BtnEditar.Enabled = false;
