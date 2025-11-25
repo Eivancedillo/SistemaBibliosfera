@@ -361,5 +361,17 @@ namespace SistemaBibliosfera
                 botonActivoActual = null;
             }
         }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // mensaje para decirle si quiere cambiar o no
+            var rs = MessageBox.Show("¿Esta seguro se cerrar sesión?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                this.Close();
+                FrmLogin frm = new FrmLogin();
+                frm.ShowDialog();
+            }
+        }
     }
 }

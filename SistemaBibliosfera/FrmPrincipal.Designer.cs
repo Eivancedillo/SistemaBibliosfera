@@ -47,8 +47,10 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnAsistencia = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.BtnSalir = new System.Windows.Forms.ToolStripButton();
+            this.BtnCerrarSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.BtnSalir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,8 +86,10 @@
             this.toolStripSeparator7,
             this.BtnAsistencia,
             this.toolStripSeparator8,
+            this.BtnCerrarSesion,
+            this.toolStripSeparator9,
             this.BtnSalir,
-            this.toolStripSeparator9});
+            this.toolStripSeparator10});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -249,6 +253,24 @@
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(198, 6);
             // 
+            // BtnCerrarSesion
+            // 
+            this.BtnCerrarSesion.AutoSize = false;
+            this.BtnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.BtnCerrarSesion.Image = global::SistemaBibliosfera.Properties.Resources.Finalizar_Sesión;
+            this.BtnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCerrarSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(200, 40);
+            this.BtnCerrarSesion.Text = "Cerrar sesion";
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(198, 6);
+            // 
             // BtnSalir
             // 
             this.BtnSalir.AutoSize = false;
@@ -264,10 +286,10 @@
             this.BtnSalir.MouseEnter += new System.EventHandler(this.BtnSalir_MouseEnter);
             this.BtnSalir.MouseLeave += new System.EventHandler(this.BtnSalir_MouseLeave);
             // 
-            // toolStripSeparator9
+            // toolStripSeparator10
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(198, 6);
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(198, 6);
             // 
             // FrmPrincipal
             // 
@@ -317,5 +339,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton BtnCerrarSesion;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
     }
 }

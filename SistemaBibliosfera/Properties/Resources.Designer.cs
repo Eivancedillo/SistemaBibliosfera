@@ -143,6 +143,16 @@ namespace SistemaBibliosfera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Finalizar_Sesión {
+            get {
+                object obj = ResourceManager.GetObject("Finalizar_Sesión", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_1_en_círculo_c_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-1-en-círculo-c-30", resourceCulture);
@@ -486,6 +496,16 @@ namespace SistemaBibliosfera.Properties {
         internal static System.Drawing.Bitmap image_32 {
             get {
                 object obj = ResourceManager.GetObject("image 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgMiembros {
+            get {
+                object obj = ResourceManager.GetObject("ImgMiembros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

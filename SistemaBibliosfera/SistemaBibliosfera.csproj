@@ -423,5 +423,14 @@
   <ItemGroup>
     <None Include="Resources\icons8-añadir-60.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgMiembros.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgCerrarSesion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finalizar Sesión.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
