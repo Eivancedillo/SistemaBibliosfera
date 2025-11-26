@@ -73,7 +73,7 @@ namespace SistemaBibliosfera
                     ; break;
                 case 11:
                     {
-                        // Desactivar libro
+                        // Desactivar/ACtivar libro
                         if (!prestamo)
                         {
                             if (!permisos.ComprobarPermiso(1, 4, FrmPrincipal.IdAdministrador))
@@ -81,7 +81,13 @@ namespace SistemaBibliosfera
                                 MessageBox.Show("No tienes permiso para realizar esta acción.", "Permiso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
 
-                            Mc.DesactivarLibro(libro);
+                            if (CmbEstado.SelectedItem.ToString() == "Activos")
+                                Mc.DesactivarLibro(libro);
+
+                            else
+                                Mc.ActivarLibro(libro);
+
+                            DtgDatos.Columns.Clear();
                         }
 
                         // Seleccionar libro para préstamo

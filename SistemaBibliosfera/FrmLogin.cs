@@ -23,7 +23,7 @@ namespace SistemaBibliosfera
             Ml = new ManejadorLogin();
         }
 
-        private void BtnIniciarSesion_Click(object sender, EventArgs e)
+        private async void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtUsuario.Text) || string.IsNullOrWhiteSpace(TxtContrasena.Text))
             {
@@ -31,32 +31,46 @@ namespace SistemaBibliosfera
                 return;
             }
 
-            if (Ml.Validar(TxtUsuario, TxtContrasena))
+            // Verificar la conexion a la base de datos antes de proceder
+            try
             {
-                IdAdministrador = int.Parse(Ml.ConseguirIdAdministrador(TxtUsuario.Text));
-
-                FrmPrincipal ia = new FrmPrincipal(IdAdministrador);
-                ia.Show();
-                this.Hide();
-            }
-
-            else
-            {
-                MessageBox.Show("Error de credenciales..");
-                contador++;
-                if (contador >= 2)
+                if (Ml.Validar(TxtUsuario, TxtContrasena))
                 {
-                    MessageBox.Show("Sus credenciales se han bloqueado, espere 3 segundos");
-                    TxtUsuario.Enabled = false;
-                    TxtContrasena.Enabled = false;
-                    Thread.Sleep(3000);//dormir el hilo principal
-                    //despues de tipo habilitarlos
-                    MessageBox.Show("Ahora puede continuar..");
-                    TxtUsuario.Enabled = true;
-                    TxtContrasena.Enabled = true;
-                    contador = 0;
+                    IdAdministrador = int.Parse(Ml.ConseguirIdAdministrador(TxtUsuario.Text));
 
+                    FrmPrincipal ia = new FrmPrincipal(IdAdministrador);
+                    ia.Show();
+                    this.Hide();
                 }
+
+                else
+                {
+                    MessageBox.Show("Error de credenciales..");
+                    contador++;
+                    if (contador >= 2)
+                    {
+                        MessageBox.Show("Sus credenciales se han bloqueado, espere 3 segundos");
+                        TxtUsuario.Enabled = false;
+                        TxtContrasena.Enabled = false;
+                        await Task.Delay(3000); //dormir el hilo principal
+                                               //despues de tipo habilitarlos
+                        MessageBox.Show("Ahora puede continuar..");
+                        TxtUsuario.Enabled = true;
+                        TxtContrasena.Enabled = true;
+                        contador = 0;
+
+                    }
+                }
+            }
+            // Capturar excepciones específicas si usas SQL Server (o MySqlException si usas MySQL)
+            catch (System.Data.Common.DbException ex)
+            {
+                MessageBox.Show("Error de base de datos: " + ex.Message, "Error Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            // Captura general para otros errores (lógica, nulos, etc)
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

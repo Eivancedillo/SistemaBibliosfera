@@ -109,6 +109,15 @@ namespace Manejadores
             }
         }
 
+        public void ActivarLibro(Libro libro)
+        {
+            var rs = MessageBox.Show("¿Está seguro de activar este libro?", "Confirmar activación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                b.Comando($"call p_activar_libro({libro.IdLibro})");
+            }
+        }
+
         public void Mostrar(DataGridView tabla, TextBox Buscar, ComboBox estadocmb, ComboBox filtro, ComboBox Orden, bool prestamo = false)
         {
             tabla.Columns.Clear();

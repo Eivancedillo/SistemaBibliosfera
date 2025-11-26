@@ -323,6 +323,25 @@ namespace SistemaBibliosfera
             }
         }
 
+        private void BtnCerrarSesion_MouseEnter(object sender, EventArgs e)
+        {
+            Color colorHover = Color.FromArgb(205, 173, 143);
+            ToolStripButton botonFlotante = (ToolStripButton)sender;
+
+            botonFlotante.BackColor = colorHover;
+        }
+
+        private void BtnCerrarSesion_MouseLeave(object sender, EventArgs e)
+        {
+            Color colorNormal = Color.FromArgb(242, 242, 242);
+            ToolStripButton botonFlotante = (ToolStripButton)sender;
+
+            if (botonFlotante != botonActivoActual)
+            {
+                botonFlotante.BackColor = colorNormal;
+            }
+        }
+
         #endregion
 
         private void Boton(object senderBoton)

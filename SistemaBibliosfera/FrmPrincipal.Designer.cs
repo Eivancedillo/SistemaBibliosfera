@@ -265,6 +265,8 @@
             this.BtnCerrarSesion.Size = new System.Drawing.Size(200, 40);
             this.BtnCerrarSesion.Text = "Cerrar sesion";
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            this.BtnCerrarSesion.MouseEnter += new System.EventHandler(this.BtnCerrarSesion_MouseEnter);
+            this.BtnCerrarSesion.MouseLeave += new System.EventHandler(this.BtnCerrarSesion_MouseLeave);
             // 
             // toolStripSeparator9
             // 
@@ -305,6 +307,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPrincipal";
