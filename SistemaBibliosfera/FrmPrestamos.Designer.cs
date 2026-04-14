@@ -87,7 +87,7 @@
             this.DtgDatos.ReadOnly = true;
             this.DtgDatos.RowHeadersWidth = 51;
             this.DtgDatos.RowTemplate.Height = 24;
-            this.DtgDatos.Size = new System.Drawing.Size(1004, 285);
+            this.DtgDatos.Size = new System.Drawing.Size(1077, 285);
             this.DtgDatos.TabIndex = 26;
             this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
             this.DtgDatos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellEnter);
@@ -97,7 +97,7 @@
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrar.Location = new System.Drawing.Point(905, 398);
+            this.BtnCerrar.Location = new System.Drawing.Point(976, 402);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(111, 47);
             this.BtnCerrar.TabIndex = 32;
@@ -137,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1045, 461);
+            this.ClientSize = new System.Drawing.Size(1101, 461);
             this.Controls.Add(this.BtnAgregarr);
             this.Controls.Add(this.BtnBuscarr);
             this.Controls.Add(this.BtnCerrar);

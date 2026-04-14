@@ -90,12 +90,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DtgDatos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DtgDatos.Location = new System.Drawing.Point(14, 218);
+            this.DtgDatos.Location = new System.Drawing.Point(32, 218);
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(5);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.ReadOnly = true;
             this.DtgDatos.RowHeadersWidth = 51;
-            this.DtgDatos.Size = new System.Drawing.Size(1248, 231);
+            this.DtgDatos.Size = new System.Drawing.Size(1039, 231);
             this.DtgDatos.TabIndex = 31;
             this.DtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellClick);
             this.DtgDatos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatos_CellEnter);

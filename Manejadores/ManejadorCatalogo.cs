@@ -13,7 +13,7 @@ namespace Manejadores
 {
     public class ManejadorCatalogo
     {
-        Base b = new Base();
+        private Base b = new Base();
 
         public void LlenarEntidad(Libro libro, DataGridView tabla)
         {
@@ -136,31 +136,26 @@ namespace Manejadores
             }
             else if (filtro.Text.Equals("Autor"))
             {
-                // Usamos la vista de autores para filtrar
                 filtroSql = $"AND IdLibro IN (SELECT IdLibro FROM v_librosautores WHERE Autor LIKE '%{buscarTexto}%')";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Autores ASC" : "ORDER BY Autores DESC";
             }
             else if (filtro.Text.Equals("Categoria"))
             {
-                // Usamos la vista de categorías para filtrar
                 filtroSql = $"AND IdLibro IN (SELECT IdLibro FROM v_libroscategorias WHERE Categoria LIKE '%{buscarTexto}%')";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Categorias ASC" : "ORDER BY Categorias DESC";
             }
             else if (filtro.Text.Equals("Editorial"))
             {
-                // Filtrado por editorial
                 filtroSql = $"AND Editorial LIKE '%{buscarTexto}%'";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Editorial ASC" : "ORDER BY Editorial DESC";
             }
             else if (filtro.Text.Equals("Año"))
             {
-                // Filtrado por año
                 filtroSql = $"AND Año LIKE '%{buscarTexto}%'";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Año ASC" : "ORDER BY Año DESC";
             }
             else
             {
-                // Caso por defecto (sin filtro)
                 filtroSql = $"AND Titulo LIKE '%{buscarTexto}%'";
                 ordenSql = Orden.Text.Equals("Ascendente") ? "ORDER BY Titulo ASC" : "ORDER BY Titulo DESC";
             }
@@ -171,6 +166,35 @@ namespace Manejadores
             // Ejecutar
             DataTable dt = b.Consultar(consultaFinal, "v_catalogo").Tables[0];
             tabla.DataSource = dt;
+
+            // =========================================================================
+            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW
+            // =========================================================================
+            tabla.BackgroundColor = Color.White;
+            tabla.BorderStyle = BorderStyle.None;
+            tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tabla.GridColor = ColorTranslator.FromHtml("#E0D8C8");
+            tabla.RowHeadersVisible = false;
+            tabla.EnableHeadersVisualStyles = false;
+
+            // Estilo de los encabezados (Letra más grande)
+            tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#6B261F");
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            tabla.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold); // Subió a 12
+            tabla.ColumnHeadersHeight = 45; // Más altura para el texto
+
+            // Estilo de las filas (Letra más grande)
+            tabla.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular); // Subió a 11
+            tabla.RowTemplate.Height = 40; // Filas más altas para que respire el texto
+            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#D8C3A5");
+            tabla.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // Efecto Cebra
+            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F8F5F0");
+            // =========================================================================
+            // FIN REDISEÑO VISUAL
+            // =========================================================================
 
             if (tabla.Rows.Count > 0)
             {
@@ -197,7 +221,7 @@ namespace Manejadores
                     }
                 }
                 else
-                {   
+                {
                     tabla.Columns.Insert(11, Boton("Seleccionar", Color.White, ColorTranslator.FromHtml("#6B261F")));
                 }
             }
@@ -211,9 +235,16 @@ namespace Manejadores
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.Text = titulo;
             btn.UseColumnTextForButtonValue = true;
-            btn.FlatStyle = FlatStyle.Popup;
+
+            // Cambio de Popup a Flat para un estilo más limpio y moderno
+            btn.FlatStyle = FlatStyle.Flat;
             btn.DefaultCellStyle.BackColor = color;
             btn.DefaultCellStyle.ForeColor = fcolor;
+
+            // Para mantener el diseño plano incluso cuando la celda está seleccionada
+            btn.DefaultCellStyle.SelectionBackColor = color;
+            btn.DefaultCellStyle.SelectionForeColor = fcolor;
+
             return btn;
         }
     }
