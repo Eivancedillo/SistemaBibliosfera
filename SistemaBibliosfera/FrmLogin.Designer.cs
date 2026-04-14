@@ -49,7 +49,7 @@
             this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtUsuario.Location = new System.Drawing.Point(337, 245);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(389, 34);
+            this.TxtUsuario.Size = new System.Drawing.Size(389, 29);
             this.TxtUsuario.TabIndex = 2;
             this.TxtUsuario.Text = "Usuario";
             this.TxtUsuario.Click += new System.EventHandler(this.TxtUsuario_Click);
@@ -62,7 +62,8 @@
             this.TxtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.TxtContrasena.Location = new System.Drawing.Point(337, 339);
             this.TxtContrasena.Name = "TxtContrasena";
-            this.TxtContrasena.Size = new System.Drawing.Size(389, 34);
+            this.TxtContrasena.PasswordChar = '*';
+            this.TxtContrasena.Size = new System.Drawing.Size(389, 29);
             this.TxtContrasena.TabIndex = 3;
             this.TxtContrasena.Text = "Contraseña";
             this.TxtContrasena.Click += new System.EventHandler(this.TxtContrasena_Click);
@@ -132,7 +133,7 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
