@@ -67,12 +67,14 @@
             this.label1.Size = new System.Drawing.Size(182, 57);
             this.label1.TabIndex = 34;
             this.label1.Text = "Catálogo";
-//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // BtnCerrar
             // 
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
+            this.BtnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
@@ -260,7 +262,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(482, 50);
             this.panel2.TabIndex = 86;
-            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label10
             // 
@@ -330,7 +331,6 @@
             this.Name = "FrmCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCatalogo";
-            //this.Load += new System.EventHandler(this.FrmCatalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
