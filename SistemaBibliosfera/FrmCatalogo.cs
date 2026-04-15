@@ -136,26 +136,6 @@ namespace SistemaBibliosfera
             fila = e.RowIndex; columna = e.ColumnIndex;
         }
 
-        private void FrmCatalogo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
