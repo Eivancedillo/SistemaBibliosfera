@@ -35,11 +35,11 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.BtnCerrar = new System.Windows.Forms.Button();
-            this.BtnAgregarr = new System.Windows.Forms.Button();
-            this.BtnBuscarr = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnAgregarr = new System.Windows.Forms.Button();
+            this.BtnBuscarr = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +103,10 @@
             // BtnCerrar
             // 
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
+            this.BtnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
@@ -114,34 +117,6 @@
             this.BtnCerrar.Text = "Aceptar";
             this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnAgregarr
-            // 
-            this.BtnAgregarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
-            this.BtnAgregarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_añadir_60;
-            this.BtnAgregarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnAgregarr.FlatAppearance.BorderSize = 0;
-            this.BtnAgregarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarr.Location = new System.Drawing.Point(1016, 57);
-            this.BtnAgregarr.Name = "BtnAgregarr";
-            this.BtnAgregarr.Size = new System.Drawing.Size(42, 43);
-            this.BtnAgregarr.TabIndex = 78;
-            this.BtnAgregarr.UseVisualStyleBackColor = false;
-            this.BtnAgregarr.Click += new System.EventHandler(this.BtnAgregarr_Click);
-            // 
-            // BtnBuscarr
-            // 
-            this.BtnBuscarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
-            this.BtnBuscarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_buscar_60;
-            this.BtnBuscarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscarr.FlatAppearance.BorderSize = 0;
-            this.BtnBuscarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarr.Location = new System.Drawing.Point(969, 57);
-            this.BtnBuscarr.Name = "BtnBuscarr";
-            this.BtnBuscarr.Size = new System.Drawing.Size(42, 43);
-            this.BtnBuscarr.TabIndex = 77;
-            this.BtnBuscarr.UseVisualStyleBackColor = false;
-            this.BtnBuscarr.Click += new System.EventHandler(this.BtnBuscarr_Click);
             // 
             // label6
             // 
@@ -167,6 +142,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1027, 46);
             this.panel1.TabIndex = 94;
+            // 
+            // BtnAgregarr
+            // 
+            this.BtnAgregarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnAgregarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Añadir_60;
+            this.BtnAgregarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAgregarr.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarr.Location = new System.Drawing.Point(1016, 57);
+            this.BtnAgregarr.Name = "BtnAgregarr";
+            this.BtnAgregarr.Size = new System.Drawing.Size(42, 43);
+            this.BtnAgregarr.TabIndex = 78;
+            this.BtnAgregarr.UseVisualStyleBackColor = false;
+            this.BtnAgregarr.Click += new System.EventHandler(this.BtnAgregarr_Click);
+            // 
+            // BtnBuscarr
+            // 
+            this.BtnBuscarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnBuscarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Busqueda;
+            this.BtnBuscarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarr.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarr.Location = new System.Drawing.Point(969, 57);
+            this.BtnBuscarr.Name = "BtnBuscarr";
+            this.BtnBuscarr.Size = new System.Drawing.Size(42, 43);
+            this.BtnBuscarr.TabIndex = 77;
+            this.BtnBuscarr.UseVisualStyleBackColor = false;
+            this.BtnBuscarr.Click += new System.EventHandler(this.BtnBuscarr_Click);
             // 
             // FrmPrestamos
             // 

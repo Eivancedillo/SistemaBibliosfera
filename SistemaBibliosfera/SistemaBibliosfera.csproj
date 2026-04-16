@@ -432,5 +432,11 @@
   <ItemGroup>
     <None Include="Resources\Finalizar Sesión.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Añadir_60.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
