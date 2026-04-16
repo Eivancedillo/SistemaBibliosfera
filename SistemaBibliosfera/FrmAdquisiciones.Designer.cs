@@ -48,15 +48,18 @@
             this.TxtAnioPublicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnInsertarISBN = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TxtIsbn
             // 
+            this.TxtIsbn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtIsbn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIsbn.Location = new System.Drawing.Point(473, 113);
+            this.TxtIsbn.Location = new System.Drawing.Point(473, 108);
             this.TxtIsbn.Multiline = true;
             this.TxtIsbn.Name = "TxtIsbn";
-            this.TxtIsbn.Size = new System.Drawing.Size(182, 30);
+            this.TxtIsbn.Size = new System.Drawing.Size(182, 35);
             this.TxtIsbn.TabIndex = 42;
             this.TxtIsbn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtIsbn_KeyDown);
             // 
@@ -64,8 +67,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label9.Location = new System.Drawing.Point(469, 82);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.label9.Location = new System.Drawing.Point(469, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 28);
             this.label9.TabIndex = 41;
@@ -75,7 +78,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label7.Location = new System.Drawing.Point(469, 159);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 28);
@@ -84,13 +87,17 @@
             // 
             // BtnVerAutores
             // 
-            this.BtnVerAutores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
+            this.BtnVerAutores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnVerAutores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnVerAutores.FlatAppearance.BorderSize = 0;
+            this.BtnVerAutores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnVerAutores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnVerAutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerAutores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVerAutores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnVerAutores.Location = new System.Drawing.Point(290, 268);
             this.BtnVerAutores.Name = "BtnVerAutores";
-            this.BtnVerAutores.Size = new System.Drawing.Size(107, 30);
+            this.BtnVerAutores.Size = new System.Drawing.Size(107, 34);
             this.BtnVerAutores.TabIndex = 36;
             this.BtnVerAutores.Text = "Ver autor(es)";
             this.BtnVerAutores.UseVisualStyleBackColor = false;
@@ -98,13 +105,17 @@
             // 
             // BtnVerEditoriales
             // 
-            this.BtnVerEditoriales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
+            this.BtnVerEditoriales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnVerEditoriales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnVerEditoriales.FlatAppearance.BorderSize = 0;
+            this.BtnVerEditoriales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnVerEditoriales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnVerEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerEditoriales.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVerEditoriales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnVerEditoriales.Location = new System.Drawing.Point(289, 351);
             this.BtnVerEditoriales.Name = "BtnVerEditoriales";
-            this.BtnVerEditoriales.Size = new System.Drawing.Size(108, 30);
+            this.BtnVerEditoriales.Size = new System.Drawing.Size(107, 34);
             this.BtnVerEditoriales.TabIndex = 35;
             this.BtnVerEditoriales.Text = "Ver editoriales";
             this.BtnVerEditoriales.UseVisualStyleBackColor = false;
@@ -112,17 +123,18 @@
             // 
             // TxtAutor
             // 
+            this.TxtAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtAutor.Location = new System.Drawing.Point(16, 268);
             this.TxtAutor.Multiline = true;
             this.TxtAutor.Name = "TxtAutor";
-            this.TxtAutor.Size = new System.Drawing.Size(268, 30);
+            this.TxtAutor.Size = new System.Drawing.Size(268, 34);
             this.TxtAutor.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label6.Location = new System.Drawing.Point(12, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 28);
@@ -131,17 +143,18 @@
             // 
             // TxtEditorial
             // 
+            this.TxtEditorial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEditorial.Location = new System.Drawing.Point(16, 351);
             this.TxtEditorial.Multiline = true;
             this.TxtEditorial.Name = "TxtEditorial";
-            this.TxtEditorial.Size = new System.Drawing.Size(267, 30);
+            this.TxtEditorial.Size = new System.Drawing.Size(268, 34);
             this.TxtEditorial.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label5.Location = new System.Drawing.Point(13, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 28);
@@ -150,18 +163,19 @@
             // 
             // TxtTitulo
             // 
-            this.TxtTitulo.Location = new System.Drawing.Point(17, 113);
+            this.TxtTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtTitulo.Location = new System.Drawing.Point(18, 109);
             this.TxtTitulo.Multiline = true;
             this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(380, 30);
+            this.TxtTitulo.Size = new System.Drawing.Size(380, 34);
             this.TxtTitulo.TabIndex = 30;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label4.Location = new System.Drawing.Point(13, 82);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.label4.Location = new System.Drawing.Point(13, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 28);
             this.label4.TabIndex = 29;
@@ -169,13 +183,17 @@
             // 
             // BtnVerCategorias
             // 
-            this.BtnVerCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(221)))), ((int)(((byte)(208)))));
+            this.BtnVerCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnVerCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnVerCategorias.FlatAppearance.BorderSize = 0;
+            this.BtnVerCategorias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnVerCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnVerCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVerCategorias.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVerCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnVerCategorias.Location = new System.Drawing.Point(290, 190);
             this.BtnVerCategorias.Name = "BtnVerCategorias";
-            this.BtnVerCategorias.Size = new System.Drawing.Size(107, 31);
+            this.BtnVerCategorias.Size = new System.Drawing.Size(107, 34);
             this.BtnVerCategorias.TabIndex = 27;
             this.BtnVerCategorias.Text = "Ver categorías";
             this.BtnVerCategorias.UseVisualStyleBackColor = false;
@@ -183,17 +201,18 @@
             // 
             // TxtCategoria
             // 
+            this.TxtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCategoria.Location = new System.Drawing.Point(16, 190);
             this.TxtCategoria.Multiline = true;
             this.TxtCategoria.Name = "TxtCategoria";
-            this.TxtCategoria.Size = new System.Drawing.Size(268, 30);
+            this.TxtCategoria.Size = new System.Drawing.Size(268, 34);
             this.TxtCategoria.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label2.Location = new System.Drawing.Point(13, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 28);
@@ -202,10 +221,14 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Location = new System.Drawing.Point(460, 392);
+            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnGuardar.Location = new System.Drawing.Point(458, 391);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(111, 49);
             this.BtnGuardar.TabIndex = 24;
@@ -215,12 +238,16 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
+            this.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(589, 392);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnCancelar.Location = new System.Drawing.Point(584, 391);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(111, 49);
+            this.BtnCancelar.Size = new System.Drawing.Size(116, 49);
             this.BtnCancelar.TabIndex = 25;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -228,6 +255,7 @@
             // 
             // TxtAnioPublicacion
             // 
+            this.TxtAnioPublicacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtAnioPublicacion.Location = new System.Drawing.Point(473, 190);
             this.TxtAnioPublicacion.Name = "TxtAnioPublicacion";
             this.TxtAnioPublicacion.Size = new System.Drawing.Size(182, 34);
@@ -236,37 +264,54 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label3.Location = new System.Drawing.Point(11, 19);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label3.Location = new System.Drawing.Point(22, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 41);
+            this.label3.Size = new System.Drawing.Size(265, 50);
             this.label3.TabIndex = 72;
             this.label3.Text = "Agregar Libro";
             // 
             // BtnInsertarISBN
             // 
-            this.BtnInsertarISBN.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_añadir_60;
+            this.BtnInsertarISBN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnInsertarISBN.BackgroundImage")));
             this.BtnInsertarISBN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnInsertarISBN.FlatAppearance.BorderSize = 0;
             this.BtnInsertarISBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInsertarISBN.Location = new System.Drawing.Point(660, 108);
+            this.BtnInsertarISBN.Location = new System.Drawing.Point(660, 100);
             this.BtnInsertarISBN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BtnInsertarISBN.Name = "BtnInsertarISBN";
-            this.BtnInsertarISBN.Size = new System.Drawing.Size(40, 35);
+            this.BtnInsertarISBN.Size = new System.Drawing.Size(40, 48);
             this.BtnInsertarISBN.TabIndex = 73;
             this.BtnInsertarISBN.UseVisualStyleBackColor = true;
             this.BtnInsertarISBN.Click += new System.EventHandler(this.BtnInsertarISBN_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label1.Location = new System.Drawing.Point(-4, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(717, 20);
+            this.label1.TabIndex = 92;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.label11.Location = new System.Drawing.Point(1, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(712, 10);
+            this.label11.TabIndex = 94;
             // 
             // FrmAdquisiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.ClientSize = new System.Drawing.Size(712, 453);
-            this.Controls.Add(this.BtnInsertarISBN);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.BtnInsertarISBN);
             this.Controls.Add(this.TxtAnioPublicacion);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnCancelar);
@@ -284,6 +329,8 @@
             this.Controls.Add(this.BtnVerCategorias);
             this.Controls.Add(this.TxtCategoria);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -318,5 +365,7 @@
         private System.Windows.Forms.TextBox TxtAnioPublicacion;
 		private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnInsertarISBN;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
     }
 }
