@@ -102,7 +102,8 @@
             this.BtnBibliosfera.AutoSize = false;
             this.BtnBibliosfera.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.BtnBibliosfera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBibliosfera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.BtnBibliosfera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnBibliosfera.Image = ((System.Drawing.Image)(resources.GetObject("BtnBibliosfera.Image")));
             this.BtnBibliosfera.Name = "BtnBibliosfera";
             this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
             this.BtnBibliosfera.Text = "BiblioSfera";
@@ -110,6 +111,7 @@
             // 
             // toolStripSeparator1
             // 
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
             // 
@@ -117,8 +119,8 @@
             // 
             this.BtnDashboard.AutoSize = false;
             this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnDashboard.Image = global::SistemaBibliosfera.Properties.Resources.Clipboard;
+            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("BtnDashboard.Image")));
             this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnDashboard.Name = "BtnDashboard";
@@ -130,6 +132,7 @@
             // 
             // toolStripSeparator2
             // 
+            this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(198, 6);
             // 
@@ -137,8 +140,8 @@
             // 
             this.BtnCatalogo.AutoSize = false;
             this.BtnCatalogo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnCatalogo.Image = global::SistemaBibliosfera.Properties.Resources.icons8_cashbook_48;
+            this.BtnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("BtnCatalogo.Image")));
             this.BtnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCatalogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCatalogo.Name = "BtnCatalogo";
@@ -150,6 +153,7 @@
             // 
             // toolStripSeparator5
             // 
+            this.toolStripSeparator5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(198, 6);
             // 
@@ -157,8 +161,8 @@
             // 
             this.BtnPrestamos.AutoSize = false;
             this.BtnPrestamos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrestamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnPrestamos.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libros_64_21;
+            this.BtnPrestamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnPrestamos.Image = ((System.Drawing.Image)(resources.GetObject("BtnPrestamos.Image")));
             this.BtnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPrestamos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnPrestamos.Name = "BtnPrestamos";
@@ -170,6 +174,7 @@
             // 
             // toolStripSeparator3
             // 
+            this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(198, 6);
             // 
@@ -177,8 +182,8 @@
             // 
             this.BtnAdquisiciones.AutoSize = false;
             this.BtnAdquisiciones.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdquisiciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnAdquisiciones.Image = global::SistemaBibliosfera.Properties.Resources.icons8_libro_de_cuentos_641;
+            this.BtnAdquisiciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnAdquisiciones.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdquisiciones.Image")));
             this.BtnAdquisiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAdquisiciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdquisiciones.Name = "BtnAdquisiciones";
@@ -190,6 +195,7 @@
             // 
             // toolStripSeparator4
             // 
+            this.toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(198, 6);
             // 
@@ -197,8 +203,8 @@
             // 
             this.BtnBibliotecarios.AutoSize = false;
             this.BtnBibliotecarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBibliotecarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnBibliotecarios.Image = global::SistemaBibliosfera.Properties.Resources.icons8_llamada_de_conferencia_60_1;
+            this.BtnBibliotecarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnBibliotecarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnBibliotecarios.Image")));
             this.BtnBibliotecarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnBibliotecarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnBibliotecarios.Name = "BtnBibliotecarios";
@@ -210,6 +216,7 @@
             // 
             // toolStripSeparator6
             // 
+            this.toolStripSeparator6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(198, 6);
             // 
@@ -217,8 +224,8 @@
             // 
             this.BtnMiembros.AutoSize = false;
             this.BtnMiembros.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMiembros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnMiembros.Image = global::SistemaBibliosfera.Properties.Resources.icons8_administrador_64_1;
+            this.BtnMiembros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnMiembros.Image = ((System.Drawing.Image)(resources.GetObject("BtnMiembros.Image")));
             this.BtnMiembros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMiembros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnMiembros.Name = "BtnMiembros";
@@ -230,6 +237,7 @@
             // 
             // toolStripSeparator7
             // 
+            this.toolStripSeparator7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(198, 6);
             // 
@@ -237,8 +245,8 @@
             // 
             this.BtnAsistencia.AutoSize = false;
             this.BtnAsistencia.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAsistencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnAsistencia.Image = global::SistemaBibliosfera.Properties.Resources.icons8_asistencia_100_1;
+            this.BtnAsistencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsistencia.Image")));
             this.BtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAsistencia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsistencia.Name = "BtnAsistencia";
@@ -250,6 +258,7 @@
             // 
             // toolStripSeparator8
             // 
+            this.toolStripSeparator8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(198, 6);
             // 
@@ -257,8 +266,8 @@
             // 
             this.BtnCerrarSesion.AutoSize = false;
             this.BtnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnCerrarSesion.Image = global::SistemaBibliosfera.Properties.Resources.Finalizar_Sesión;
+            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
             this.BtnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCerrarSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
@@ -270,6 +279,7 @@
             // 
             // toolStripSeparator9
             // 
+            this.toolStripSeparator9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(198, 6);
             // 
@@ -277,8 +287,8 @@
             // 
             this.BtnSalir.AutoSize = false;
             this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnSalir.Image = global::SistemaBibliosfera.Properties.Resources.icons8_eliminar_30;
+            this.BtnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnSalir.Name = "BtnSalir";

@@ -158,7 +158,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.ImgMiembros;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(18, 5);
             this.pictureBox1.Name = "pictureBox1";

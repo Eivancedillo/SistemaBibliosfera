@@ -127,6 +127,7 @@
             // 
             this.LblTotalLibros.AutoSize = true;
             this.LblTotalLibros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalLibros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblTotalLibros.Location = new System.Drawing.Point(15, 38);
             this.LblTotalLibros.Name = "LblTotalLibros";
             this.LblTotalLibros.Size = new System.Drawing.Size(45, 28);
@@ -135,7 +136,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.LblTotalLibros);
             this.groupBox1.Location = new System.Drawing.Point(45, 80);
@@ -148,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label5.Location = new System.Drawing.Point(12, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 28);
@@ -157,7 +158,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.LblTotalMiembros);
             this.groupBox2.Location = new System.Drawing.Point(363, 78);
@@ -169,7 +170,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label6.Location = new System.Drawing.Point(16, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 21);
@@ -180,6 +181,7 @@
             // 
             this.LblTotalMiembros.AutoSize = true;
             this.LblTotalMiembros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalMiembros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblTotalMiembros.Location = new System.Drawing.Point(16, 40);
             this.LblTotalMiembros.Name = "LblTotalMiembros";
             this.LblTotalMiembros.Size = new System.Drawing.Size(45, 28);
@@ -188,7 +190,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.LblPrestamosActivos);
             this.groupBox3.Location = new System.Drawing.Point(681, 80);
@@ -200,7 +202,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label11.Location = new System.Drawing.Point(19, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(146, 21);
@@ -211,6 +213,7 @@
             // 
             this.LblPrestamosActivos.AutoSize = true;
             this.LblPrestamosActivos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrestamosActivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblPrestamosActivos.Location = new System.Drawing.Point(19, 38);
             this.LblPrestamosActivos.Name = "LblPrestamosActivos";
             this.LblPrestamosActivos.Size = new System.Drawing.Size(45, 28);
@@ -220,9 +223,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.label1.Location = new System.Drawing.Point(44, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 28);
@@ -231,7 +234,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox4.Controls.Add(this.pictureBox11);
             this.groupBox4.Controls.Add(this.panelAlertaReparacion);
             this.groupBox4.Controls.Add(this.label8);
@@ -255,7 +258,9 @@
             // 
             // panelAlertaReparacion
             // 
+            this.panelAlertaReparacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.panelAlertaReparacion.Controls.Add(this.lblAlertaReparacion);
+            this.panelAlertaReparacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.panelAlertaReparacion.Location = new System.Drawing.Point(11, 127);
             this.panelAlertaReparacion.Name = "panelAlertaReparacion";
             this.panelAlertaReparacion.Size = new System.Drawing.Size(856, 60);
@@ -264,6 +269,7 @@
             // lblAlertaReparacion
             // 
             this.lblAlertaReparacion.AutoSize = true;
+            this.lblAlertaReparacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.lblAlertaReparacion.Location = new System.Drawing.Point(3, 18);
             this.lblAlertaReparacion.Name = "lblAlertaReparacion";
             this.lblAlertaReparacion.Size = new System.Drawing.Size(45, 28);
@@ -273,7 +279,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Peru;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label8.Location = new System.Drawing.Point(42, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 33);
@@ -282,7 +288,9 @@
             // 
             // panelAlertaVencimiento
             // 
+            this.panelAlertaVencimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.panelAlertaVencimiento.Controls.Add(this.lblAlertaVencimiento);
+            this.panelAlertaVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.panelAlertaVencimiento.Location = new System.Drawing.Point(11, 39);
             this.panelAlertaVencimiento.Name = "panelAlertaVencimiento";
             this.panelAlertaVencimiento.Size = new System.Drawing.Size(856, 63);
@@ -291,6 +299,7 @@
             // lblAlertaVencimiento
             // 
             this.lblAlertaVencimiento.AutoSize = true;
+            this.lblAlertaVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.lblAlertaVencimiento.Location = new System.Drawing.Point(3, 18);
             this.lblAlertaVencimiento.Name = "lblAlertaVencimiento";
             this.lblAlertaVencimiento.Size = new System.Drawing.Size(45, 28);
@@ -299,7 +308,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox5.Controls.Add(this.pictureBox12);
             this.groupBox5.Controls.Add(this.pictureBox2);
             this.groupBox5.Controls.Add(this.pictureBox5);
@@ -383,7 +392,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label10.Location = new System.Drawing.Point(37, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(282, 28);
@@ -401,7 +410,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.panel2.Controls.Add(this.groupBox8);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -410,7 +419,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.White;
+            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Controls.Add(this.LblCategoriaMasPopular);
             this.groupBox8.ForeColor = System.Drawing.Color.Peru;
@@ -424,7 +433,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Peru;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.label9.Location = new System.Drawing.Point(21, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(217, 28);
@@ -446,6 +455,7 @@
             // 
             this.LblCatTop5.AutoSize = true;
             this.LblCatTop5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCatTop5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblCatTop5.Location = new System.Drawing.Point(99, 231);
             this.LblCatTop5.Name = "LblCatTop5";
             this.LblCatTop5.Size = new System.Drawing.Size(39, 28);
@@ -456,6 +466,7 @@
             // 
             this.LblCatTop4.AutoSize = true;
             this.LblCatTop4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCatTop4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblCatTop4.Location = new System.Drawing.Point(99, 184);
             this.LblCatTop4.Name = "LblCatTop4";
             this.LblCatTop4.Size = new System.Drawing.Size(39, 28);
@@ -466,6 +477,7 @@
             // 
             this.LblCatTop3.AutoSize = true;
             this.LblCatTop3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCatTop3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblCatTop3.Location = new System.Drawing.Point(99, 136);
             this.LblCatTop3.Name = "LblCatTop3";
             this.LblCatTop3.Size = new System.Drawing.Size(39, 28);
@@ -476,6 +488,7 @@
             // 
             this.LblCatTop2.AutoSize = true;
             this.LblCatTop2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCatTop2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblCatTop2.Location = new System.Drawing.Point(99, 87);
             this.LblCatTop2.Name = "LblCatTop2";
             this.LblCatTop2.Size = new System.Drawing.Size(39, 28);
@@ -486,6 +499,7 @@
             // 
             this.LblCatTop1.AutoSize = true;
             this.LblCatTop1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCatTop1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblCatTop1.Location = new System.Drawing.Point(99, 42);
             this.LblCatTop1.Name = "LblCatTop1";
             this.LblCatTop1.Size = new System.Drawing.Size(39, 28);
@@ -494,7 +508,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.LblPrestamosHoy);
             this.groupBox6.Location = new System.Drawing.Point(6, 3);
@@ -507,7 +521,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label2.Location = new System.Drawing.Point(42, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 28);
@@ -527,7 +541,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.LblAsistenciasHoy);
             this.groupBox7.Location = new System.Drawing.Point(7, 7);
@@ -540,7 +554,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label3.Location = new System.Drawing.Point(42, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 28);
@@ -560,7 +574,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.groupBox9.Controls.Add(this.label4);
             this.groupBox9.Controls.Add(this.LblDevolucionesHoy);
             this.groupBox9.Location = new System.Drawing.Point(6, 3);
@@ -572,9 +586,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label4.Location = new System.Drawing.Point(33, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 28);
@@ -584,7 +598,7 @@
             // LblDevolucionesHoy
             // 
             this.LblDevolucionesHoy.AutoSize = true;
-            this.LblDevolucionesHoy.BackColor = System.Drawing.SystemColors.Control;
+            this.LblDevolucionesHoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.LblDevolucionesHoy.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDevolucionesHoy.ForeColor = System.Drawing.Color.SaddleBrown;
             this.LblDevolucionesHoy.Location = new System.Drawing.Point(77, 36);
@@ -597,7 +611,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label7.Location = new System.Drawing.Point(74, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 41);
@@ -606,7 +620,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(30, 69);
             this.button1.Name = "button1";
@@ -616,7 +630,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(350, 69);
             this.button2.Name = "button2";
@@ -626,7 +640,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(671, 69);
             this.button3.Name = "button3";
@@ -636,7 +650,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(30, 169);
@@ -647,7 +661,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -659,7 +673,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Location = new System.Drawing.Point(30, 410);
             this.panel1.Name = "panel1";
@@ -668,7 +682,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.panel4.Controls.Add(this.groupBox6);
             this.panel4.Location = new System.Drawing.Point(737, 410);
             this.panel4.Name = "panel4";
@@ -677,7 +691,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.panel5.Controls.Add(this.groupBox7);
             this.panel5.Location = new System.Drawing.Point(737, 509);
             this.panel5.Name = "panel5";
@@ -686,7 +700,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.panel6.Controls.Add(this.groupBox9);
             this.panel6.Location = new System.Drawing.Point(738, 617);
             this.panel6.Name = "panel6";
@@ -695,7 +709,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.LblBibliotecario);
             this.panel7.Controls.Add(this.label1);
@@ -706,8 +720,8 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
-            this.pictureBox7.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Usuario;
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(3, 7);
             this.pictureBox7.Name = "pictureBox7";
@@ -717,9 +731,9 @@
             // 
             // LblBibliotecario
             // 
-            this.LblBibliotecario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.LblBibliotecario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.LblBibliotecario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBibliotecario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.LblBibliotecario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.LblBibliotecario.Location = new System.Drawing.Point(123, 10);
             this.LblBibliotecario.Name = "LblBibliotecario";
             this.LblBibliotecario.Size = new System.Drawing.Size(171, 20);
@@ -728,19 +742,19 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox9.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_profile_64;
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(570, 89);
+            this.pictureBox9.Location = new System.Drawing.Point(577, 93);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(63, 60);
+            this.pictureBox9.Size = new System.Drawing.Size(53, 50);
             this.pictureBox9.TabIndex = 22;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox10.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_reloj_64;
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(899, 89);
             this.pictureBox10.Name = "pictureBox10";
@@ -750,8 +764,8 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox8.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Libros1;
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(251, 89);
             this.pictureBox8.Name = "pictureBox8";
@@ -761,21 +775,21 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.dashboard1;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 22);
+            this.pictureBox6.Location = new System.Drawing.Point(30, 21);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox6.Size = new System.Drawing.Size(38, 35);
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.button6.Location = new System.Drawing.Point(861, 721);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(95, 32);
@@ -789,7 +803,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.ClientSize = new System.Drawing.Size(994, 764);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox9);

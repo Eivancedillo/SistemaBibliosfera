@@ -92,5 +92,15 @@ namespace SistemaBibliosfera
             // Establece el carácter de máscara (PasswordChar)
             TxtContrasena.PasswordChar = '*';
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
