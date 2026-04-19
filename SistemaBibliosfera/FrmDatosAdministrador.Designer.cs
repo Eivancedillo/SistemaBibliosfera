@@ -52,11 +52,11 @@
             // 
             // BtnEditar
             // 
-            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.BtnEditar.FlatAppearance.BorderSize = 0;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.BtnEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnEditar.Location = new System.Drawing.Point(333, 232);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(83, 33);
@@ -70,7 +70,7 @@
             this.CbActivar.AutoSize = true;
             this.CbActivar.Enabled = false;
             this.CbActivar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CbActivar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.CbActivar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CbActivar.Location = new System.Drawing.Point(687, 233);
             this.CbActivar.Name = "CbActivar";
             this.CbActivar.Size = new System.Drawing.Size(193, 32);
@@ -84,7 +84,7 @@
             this.CbEditar.AutoSize = true;
             this.CbEditar.Enabled = false;
             this.CbEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CbEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.CbEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CbEditar.Location = new System.Drawing.Point(597, 233);
             this.CbEditar.Name = "CbEditar";
             this.CbEditar.Size = new System.Drawing.Size(85, 32);
@@ -98,7 +98,7 @@
             this.CbCrear.AutoSize = true;
             this.CbCrear.Enabled = false;
             this.CbCrear.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CbCrear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.CbCrear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CbCrear.Location = new System.Drawing.Point(508, 233);
             this.CbCrear.Name = "CbCrear";
             this.CbCrear.Size = new System.Drawing.Size(80, 32);
@@ -112,7 +112,7 @@
             this.CbVer.AutoSize = true;
             this.CbVer.Enabled = false;
             this.CbVer.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CbVer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.CbVer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CbVer.Location = new System.Drawing.Point(437, 233);
             this.CbVer.Name = "CbVer";
             this.CbVer.Size = new System.Drawing.Size(62, 32);
@@ -125,7 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label4.Location = new System.Drawing.Point(432, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 28);
@@ -148,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label2.Location = new System.Drawing.Point(43, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 28);
@@ -157,11 +157,11 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnCancelar.Location = new System.Drawing.Point(760, 303);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(111, 49);
@@ -172,11 +172,11 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.BtnGuardar.Location = new System.Drawing.Point(643, 303);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(111, 49);
@@ -197,7 +197,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label3.Location = new System.Drawing.Point(432, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 28);
@@ -236,7 +236,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label7.Location = new System.Drawing.Point(95, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(657, 56);
@@ -248,7 +248,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label6.Location = new System.Drawing.Point(95, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(392, 37);
@@ -260,7 +260,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.label1.Location = new System.Drawing.Point(43, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 28);
@@ -273,6 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.ClientSize = new System.Drawing.Size(883, 364);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);

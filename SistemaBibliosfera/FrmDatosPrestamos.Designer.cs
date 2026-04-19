@@ -44,41 +44,50 @@
             this.label6 = new System.Windows.Forms.Label();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.BtnBuscarrNumControl = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnBuscarrLibro = new System.Windows.Forms.Button();
+            this.BtnBuscarrNumControl = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(14, 71);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label1.Location = new System.Drawing.Point(25, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 28);
+            this.label1.Size = new System.Drawing.Size(113, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Num. Control";
             // 
             // TxtNumControl
             // 
-            this.TxtNumControl.Location = new System.Drawing.Point(18, 102);
+            this.TxtNumControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.TxtNumControl.Location = new System.Drawing.Point(29, 127);
+            this.TxtNumControl.Multiline = true;
             this.TxtNumControl.Name = "TxtNumControl";
-            this.TxtNumControl.Size = new System.Drawing.Size(281, 34);
+            this.TxtNumControl.Size = new System.Drawing.Size(281, 33);
             this.TxtNumControl.TabIndex = 1;
             // 
             // TxtLibro
             // 
-            this.TxtLibro.Location = new System.Drawing.Point(18, 170);
+            this.TxtLibro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.TxtLibro.Location = new System.Drawing.Point(29, 210);
+            this.TxtLibro.Multiline = true;
             this.TxtLibro.Name = "TxtLibro";
-            this.TxtLibro.Size = new System.Drawing.Size(281, 34);
+            this.TxtLibro.Size = new System.Drawing.Size(281, 33);
             this.TxtLibro.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(14, 139);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label2.Location = new System.Drawing.Point(25, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 28);
+            this.label2.Size = new System.Drawing.Size(49, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Libro";
             // 
@@ -87,18 +96,19 @@
             this.DtpFechaDevolucion.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.DtpFechaDevolucion.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.DtpFechaDevolucion.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.DtpFechaDevolucion.Location = new System.Drawing.Point(18, 321);
+            this.DtpFechaDevolucion.Location = new System.Drawing.Point(32, 368);
             this.DtpFechaDevolucion.Name = "DtpFechaDevolucion";
-            this.DtpFechaDevolucion.Size = new System.Drawing.Size(511, 34);
+            this.DtpFechaDevolucion.Size = new System.Drawing.Size(511, 29);
             this.DtpFechaDevolucion.TabIndex = 8;
             // 
             // BtnAceptar
             // 
-            this.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnAceptar.FlatAppearance.BorderSize = 0;
             this.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.BtnAceptar.Location = new System.Drawing.Point(327, 382);
+            this.BtnAceptar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnAceptar.Location = new System.Drawing.Point(341, 429);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(143, 43);
             this.BtnAceptar.TabIndex = 9;
@@ -108,11 +118,12 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.BtnCancelar.FlatAppearance.BorderSize = 0;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.BtnCancelar.Location = new System.Drawing.Point(489, 382);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnCancelar.Location = new System.Drawing.Point(503, 429);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(143, 43);
             this.BtnCancelar.TabIndex = 10;
@@ -122,114 +133,167 @@
             // 
             // TxtEjemplar
             // 
-            this.TxtEjemplar.Location = new System.Drawing.Point(359, 170);
+            this.TxtEjemplar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.TxtEjemplar.Location = new System.Drawing.Point(370, 210);
+            this.TxtEjemplar.Multiline = true;
             this.TxtEjemplar.Name = "TxtEjemplar";
-            this.TxtEjemplar.Size = new System.Drawing.Size(108, 34);
+            this.TxtEjemplar.Size = new System.Drawing.Size(108, 33);
             this.TxtEjemplar.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label3.Location = new System.Drawing.Point(355, 139);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label3.Location = new System.Drawing.Point(366, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 28);
+            this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 11;
             this.label3.Text = "Ejemplar";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label4.Location = new System.Drawing.Point(14, 290);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label4.Location = new System.Drawing.Point(28, 337);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 28);
+            this.label4.Size = new System.Drawing.Size(232, 21);
             this.label4.TabIndex = 13;
             this.label4.Text = "Fecha de devolución prevista";
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(359, 102);
+            this.TxtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.TxtNombre.Location = new System.Drawing.Point(370, 127);
+            this.TxtNombre.Multiline = true;
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(234, 34);
+            this.TxtNombre.Size = new System.Drawing.Size(234, 33);
             this.TxtNombre.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label5.Location = new System.Drawing.Point(355, 71);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label5.Location = new System.Drawing.Point(366, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 28);
+            this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 14;
             this.label5.Text = "Nombre";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label6.Location = new System.Drawing.Point(14, 207);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label6.Location = new System.Drawing.Point(28, 254);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 28);
+            this.label6.Size = new System.Drawing.Size(61, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "Estado";
             // 
             // CmbEstado
             // 
             this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CmbEstado.FormattingEnabled = true;
-            this.CmbEstado.Location = new System.Drawing.Point(18, 238);
+            this.CmbEstado.Location = new System.Drawing.Point(32, 285);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(178, 36);
+            this.CmbEstado.Size = new System.Drawing.Size(178, 29);
             this.CmbEstado.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
-            this.label7.Location = new System.Drawing.Point(12, 9);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.label7.Location = new System.Drawing.Point(88, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(273, 41);
+            this.label7.Size = new System.Drawing.Size(222, 32);
             this.label7.TabIndex = 32;
             this.label7.Text = "Agregar Préstamo";
             // 
-            // BtnBuscarrNumControl
+            // textBox2
             // 
-            this.BtnBuscarrNumControl.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_buscar_60;
-            this.BtnBuscarrNumControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscarrNumControl.FlatAppearance.BorderSize = 0;
-            this.BtnBuscarrNumControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarrNumControl.Location = new System.Drawing.Point(599, 100);
-            this.BtnBuscarrNumControl.Name = "BtnBuscarrNumControl";
-            this.BtnBuscarrNumControl.Size = new System.Drawing.Size(33, 36);
-            this.BtnBuscarrNumControl.TabIndex = 45;
-            this.BtnBuscarrNumControl.UseVisualStyleBackColor = true;
-            this.BtnBuscarrNumControl.Click += new System.EventHandler(this.BtnBuscarrNumControl_Click);
+            this.textBox2.BackColor = System.Drawing.Color.CadetBlue;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(12, 78);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(643, 5);
+            this.textBox2.TabIndex = 49;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(12, 67);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(643, 5);
+            this.textBox1.TabIndex = 48;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label8.Location = new System.Drawing.Point(90, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(509, 21);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Completa la información para agregar un nuevo miembro a la bibloteca.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._Prestamo_s;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 50);
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
             // 
             // BtnBuscarrLibro
             // 
-            this.BtnBuscarrLibro.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_buscar_60;
+            this.BtnBuscarrLibro.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscarrLibro.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Busqueda;
             this.BtnBuscarrLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscarrLibro.FlatAppearance.BorderSize = 0;
             this.BtnBuscarrLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarrLibro.Location = new System.Drawing.Point(473, 170);
+            this.BtnBuscarrLibro.Location = new System.Drawing.Point(484, 205);
             this.BtnBuscarrLibro.Name = "BtnBuscarrLibro";
-            this.BtnBuscarrLibro.Size = new System.Drawing.Size(33, 36);
+            this.BtnBuscarrLibro.Size = new System.Drawing.Size(45, 45);
             this.BtnBuscarrLibro.TabIndex = 46;
-            this.BtnBuscarrLibro.UseVisualStyleBackColor = true;
+            this.BtnBuscarrLibro.UseVisualStyleBackColor = false;
             this.BtnBuscarrLibro.Click += new System.EventHandler(this.BtnBuscarrLibro_Click);
+            // 
+            // BtnBuscarrNumControl
+            // 
+            this.BtnBuscarrNumControl.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscarrNumControl.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Busqueda;
+            this.BtnBuscarrNumControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarrNumControl.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarrNumControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarrNumControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnBuscarrNumControl.Location = new System.Drawing.Point(610, 120);
+            this.BtnBuscarrNumControl.Name = "BtnBuscarrNumControl";
+            this.BtnBuscarrNumControl.Size = new System.Drawing.Size(45, 45);
+            this.BtnBuscarrNumControl.TabIndex = 45;
+            this.BtnBuscarrNumControl.UseVisualStyleBackColor = false;
+            this.BtnBuscarrNumControl.Click += new System.EventHandler(this.BtnBuscarrNumControl_Click);
             // 
             // FrmDatosPrestamos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(645, 437);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.ClientSize = new System.Drawing.Size(667, 484);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnBuscarrLibro);
             this.Controls.Add(this.BtnBuscarrNumControl);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.CmbEstado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtNombre);
@@ -252,6 +316,7 @@
             this.Name = "FrmDatosPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDatosPrestamos";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +341,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnBuscarrNumControl;
         private System.Windows.Forms.Button BtnBuscarrLibro;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

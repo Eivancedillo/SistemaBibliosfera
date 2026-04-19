@@ -43,9 +43,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label1.Location = new System.Drawing.Point(16, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 28);
+            this.label1.Size = new System.Drawing.Size(121, 21);
             this.label1.TabIndex = 31;
             this.label1.Text = "Ejemplares de:";
             // 
@@ -53,23 +54,25 @@
             // 
             this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEstado.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.CmbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.CmbEstado.FormattingEnabled = true;
             this.CmbEstado.Location = new System.Drawing.Point(300, 52);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(134, 36);
+            this.CmbEstado.Size = new System.Drawing.Size(134, 29);
             this.CmbEstado.TabIndex = 30;
             // 
             // TxtBuscar
             // 
+            this.TxtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.TxtBuscar.Location = new System.Drawing.Point(16, 52);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(277, 34);
+            this.TxtBuscar.Size = new System.Drawing.Size(277, 29);
             this.TxtBuscar.TabIndex = 27;
             // 
             // DtgDatos
             // 
             this.DtgDatos.AllowUserToAddRows = false;
-            this.DtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.DtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(16, 101);
             this.DtgDatos.Name = "DtgDatos";
@@ -84,20 +87,23 @@
             // LblEjemplar
             // 
             this.LblEjemplar.AutoSize = true;
+            this.LblEjemplar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblEjemplar.Location = new System.Drawing.Point(171, 17);
             this.LblEjemplar.Name = "LblEjemplar";
-            this.LblEjemplar.Size = new System.Drawing.Size(45, 28);
+            this.LblEjemplar.Size = new System.Drawing.Size(37, 21);
             this.LblEjemplar.TabIndex = 32;
             this.LblEjemplar.Text = "xxx";
             // 
             // BtnAceptar
             // 
-            this.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(150)))), ((int)(((byte)(102)))));
+            this.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnAceptar.FlatAppearance.BorderSize = 0;
             this.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAceptar.Location = new System.Drawing.Point(408, 339);
+            this.BtnAceptar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnAceptar.Location = new System.Drawing.Point(395, 339);
             this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(111, 43);
+            this.BtnAceptar.Size = new System.Drawing.Size(124, 43);
             this.BtnAceptar.TabIndex = 33;
             this.BtnAceptar.Text = "Guardar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
@@ -105,37 +111,37 @@
             // 
             // BtnAgregarr
             // 
-            this.BtnAgregarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_añadir_60;
+            this.BtnAgregarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Añadir_60;
             this.BtnAgregarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnAgregarr.FlatAppearance.BorderSize = 0;
             this.BtnAgregarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarr.Location = new System.Drawing.Point(479, 50);
+            this.BtnAgregarr.Location = new System.Drawing.Point(488, 45);
             this.BtnAgregarr.Name = "BtnAgregarr";
-            this.BtnAgregarr.Size = new System.Drawing.Size(40, 35);
+            this.BtnAgregarr.Size = new System.Drawing.Size(40, 40);
             this.BtnAgregarr.TabIndex = 81;
             this.BtnAgregarr.UseVisualStyleBackColor = true;
             this.BtnAgregarr.Click += new System.EventHandler(this.BtnAgregarr_Click);
             // 
             // BtnBuscarr
             // 
-            this.BtnBuscarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_buscar_60;
+            this.BtnBuscarr.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Busqueda;
             this.BtnBuscarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscarr.FlatAppearance.BorderSize = 0;
             this.BtnBuscarr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarr.Location = new System.Drawing.Point(440, 50);
+            this.BtnBuscarr.Location = new System.Drawing.Point(440, 45);
             this.BtnBuscarr.Name = "BtnBuscarr";
-            this.BtnBuscarr.Size = new System.Drawing.Size(33, 36);
+            this.BtnBuscarr.Size = new System.Drawing.Size(42, 42);
             this.BtnBuscarr.TabIndex = 80;
             this.BtnBuscarr.UseVisualStyleBackColor = true;
             this.BtnBuscarr.Click += new System.EventHandler(this.BtnBuscarr_Click);
             // 
             // FrmEjemplares
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(533, 394);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.ClientSize = new System.Drawing.Size(532, 394);
             this.Controls.Add(this.BtnAgregarr);
             this.Controls.Add(this.BtnBuscarr);
             this.Controls.Add(this.BtnAceptar);
@@ -145,7 +151,7 @@
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.DtgDatos);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(56)))), ((int)(((byte)(47)))));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
