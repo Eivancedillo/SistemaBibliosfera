@@ -53,34 +53,32 @@ namespace Manejadores
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
 
             // =========================================================================
-            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW
+            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW (PALETA BIBLIOSFERA)
             // =========================================================================
-            tabla.BackgroundColor = Color.White;
+            tabla.BackgroundColor = ColorTranslator.FromHtml("#F7F4D5"); // Beige
             tabla.BorderStyle = BorderStyle.None;
             tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            tabla.GridColor = ColorTranslator.FromHtml("#E0D8C8");
+            tabla.GridColor = ColorTranslator.FromHtml("#105666"); // Midnight green claro
             tabla.RowHeadersVisible = false;
             tabla.EnableHeadersVisualStyles = false;
 
             // Estilo de los encabezados
             tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#6B261F");
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#105666");
             tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             tabla.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             tabla.ColumnHeadersHeight = 45;
 
             // Estilo de las filas
+            tabla.DefaultCellStyle.BackColor = Color.White;
+            tabla.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#0A3323");
             tabla.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             tabla.RowTemplate.Height = 40;
-            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#D8C3A5");
-            tabla.DefaultCellStyle.SelectionForeColor = Color.Black;
+            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#839958"); 
+            tabla.DefaultCellStyle.SelectionForeColor = Color.White;
 
             // Efecto Cebra
-            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F8F5F0");
-            // =========================================================================
-            // FIN REDISEÑO VISUAL
-            // =========================================================================
-
+            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FEFDF7"); 
             tabla.Columns["IdEjemplar"].Visible = false;
             tabla.Columns["IdLibro"].Visible = false;
             tabla.Columns["Activo"].Visible = false;
@@ -91,22 +89,22 @@ namespace Manejadores
             {
                 if (!prestamo)
                 {
-                    // Paleta de colores nueva
-                    tabla.Columns.Insert(5, Boton("Editar", ColorTranslator.FromHtml("#5C7457"))); // Verde olivo
+                    // Paleta de colores nueva para botones
+                    tabla.Columns.Insert(5, Boton("Editar", ColorTranslator.FromHtml("#105666")));
 
                     bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
                     if (estado)
                     {
-                        tabla.Columns.Insert(6, Boton("Desactivar", ColorTranslator.FromHtml("#9C4A3D"))); // Rojo terracota
+                        tabla.Columns.Insert(6, Boton("Desactivar", ColorTranslator.FromHtml("#D3968C")));
                     }
                     else
                     {
-                        tabla.Columns.Insert(6, Boton("Activar", ColorTranslator.FromHtml("#4A6572"))); // Azul acero
+                        tabla.Columns.Insert(6, Boton("Activar", ColorTranslator.FromHtml("#839958"))); 
                     }
                 }
                 else
                 {
-                    tabla.Columns.Insert(6, Boton("Seleccionar", ColorTranslator.FromHtml("#B68D40"))); // Dorado opaco
+                    tabla.Columns.Insert(6, Boton("Seleccionar", ColorTranslator.FromHtml("#839958"))); 
                 }
             }
 
