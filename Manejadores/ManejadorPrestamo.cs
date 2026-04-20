@@ -131,33 +131,35 @@ namespace Manejadores
             tabla.DataSource = b.Consultar(query, datos).Tables[0];
 
             // =========================================================================
-            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW
+            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW (PALETA BIBLIOSFERA)
             // =========================================================================
-            tabla.BackgroundColor = Color.White;
+            tabla.BackgroundColor = ColorTranslator.FromHtml("#F7F4D5"); // Beige para el fondo
             tabla.BorderStyle = BorderStyle.None;
             tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            tabla.GridColor = ColorTranslator.FromHtml("#E0D8C8");
+            tabla.GridColor = ColorTranslator.FromHtml("#105666"); // Midnight green claro para las líneas
             tabla.RowHeadersVisible = false;
             tabla.EnableHeadersVisualStyles = false;
 
-            // Estilo de los encabezados
+            // Estilo de los encabezados (Color Rosy brown / Rosa como lo pediste)
             tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#6B261F");
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#D3968C"); // Rosy brown
             tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             tabla.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             tabla.ColumnHeadersHeight = 45;
 
             // Estilo de las filas
+            tabla.DefaultCellStyle.BackColor = Color.White;
+            tabla.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#0A3323"); // Dark green para el texto
             tabla.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             tabla.RowTemplate.Height = 40;
-            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#D8C3A5");
-            tabla.DefaultCellStyle.SelectionForeColor = Color.Black;
+            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#839958"); // Moss green al seleccionar
+            tabla.DefaultCellStyle.SelectionForeColor = Color.White;
 
             // Efecto Cebra
-            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F8F5F0");
-            // =========================================================================
-            // FIN REDISEÑO VISUAL
-            // =========================================================================
+            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FEFDF7"); // Beige súper claro
+                                                                                                   // =========================================================================
+                                                                                                   // FIN REDISEÑO VISUAL
+                                                                                                   // =========================================================================
 
             tabla.Columns["IdPrestamo"].Visible = false;
             tabla.Columns["IdEjemplar"].Visible = false;
@@ -173,6 +175,7 @@ namespace Manejadores
                 if (estado.Equals("Activo"))
                 {
                     // Colores elegantes de la nueva paleta
+
                     tabla.Columns.Insert(conteo, Boton("Editar", ColorTranslator.FromHtml("#5C7457"))); // Verde olivo
                     conteo++;
                     tabla.Columns.Insert(conteo, Boton("Cancelar", ColorTranslator.FromHtml("#9C4A3D"))); // Rojo terracota
@@ -181,7 +184,7 @@ namespace Manejadores
                 }
                 else if (estado.Equals("Adeudo"))
                 {
-                    tabla.Columns.Insert(conteo, Boton("Pagar", ColorTranslator.FromHtml("#B68D40"))); // Dorado opaco
+                    tabla.Columns.Insert(conteo, Boton("Pagar", ColorTranslator.FromHtml("#839958"))); // Moss green (acción positiva)
                 }
             }
 

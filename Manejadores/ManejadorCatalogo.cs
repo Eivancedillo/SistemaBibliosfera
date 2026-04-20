@@ -168,33 +168,35 @@ namespace Manejadores
             tabla.DataSource = dt;
 
             // =========================================================================
-            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW
+            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW (PALETA BIBLIOSFERA)
             // =========================================================================
-            tabla.BackgroundColor = Color.White;
+            tabla.BackgroundColor = ColorTranslator.FromHtml("#F7F4D5"); // Beige para el fondo
             tabla.BorderStyle = BorderStyle.None;
             tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            tabla.GridColor = ColorTranslator.FromHtml("#E0D8C8");
+            tabla.GridColor = ColorTranslator.FromHtml("#105666"); // Midnight green (líneas sutiles)
             tabla.RowHeadersVisible = false;
             tabla.EnableHeadersVisualStyles = false;
 
             // Estilo de los encabezados (Letra más grande)
             tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#6B261F");
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#105666"); // Midnight green
             tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            tabla.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold); // Subió a 12
-            tabla.ColumnHeadersHeight = 45; // Más altura para el texto
+            tabla.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            tabla.ColumnHeadersHeight = 45;
 
             // Estilo de las filas (Letra más grande)
-            tabla.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular); // Subió a 11
-            tabla.RowTemplate.Height = 40; // Filas más altas para que respire el texto
-            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#D8C3A5");
-            tabla.DefaultCellStyle.SelectionForeColor = Color.Black;
+            tabla.DefaultCellStyle.BackColor = Color.White;
+            tabla.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#0A3323"); // Dark green para el texto
+            tabla.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            tabla.RowTemplate.Height = 40;
+            tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#839958"); // Moss green
+            tabla.DefaultCellStyle.SelectionForeColor = Color.White;
 
             // Efecto Cebra
-            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F8F5F0");
-            // =========================================================================
-            // FIN REDISEÑO VISUAL
-            // =========================================================================
+            tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FEFDF7"); // Beige súper claro
+                                                                                                   // =========================================================================
+                                                                                                   // FIN REDISEÑO VISUAL
+                                                                                                   // =========================================================================
 
             if (tabla.Rows.Count > 0)
             {
@@ -209,41 +211,54 @@ namespace Manejadores
             {
                 if (!prestamo)
                 {
-                    tabla.Columns.Insert(10, Boton("Editar", Color.White, ColorTranslator.FromHtml("#6B261F")));
+                    // Botones Sólidos como en el resto del sistema
+                    tabla.Columns.Insert(10, Boton("Editar", ColorTranslator.FromHtml("#105666"))); // Midnight green (Azul oscuro)
 
                     if (estadocmb.Text.Equals("Activos"))
                     {
-                        tabla.Columns.Insert(11, Boton("Desactivar", Color.White, ColorTranslator.FromHtml("#6B261F")));
+                        tabla.Columns.Insert(11, Boton("Desactivar", ColorTranslator.FromHtml("#D3968C"))); // Rosy brown (Rosa oscuro)
                     }
                     else
                     {
-                        tabla.Columns.Insert(11, Boton("Activar", Color.White, ColorTranslator.FromHtml("#6B261F")));
+                        tabla.Columns.Insert(11, Boton("Activar", ColorTranslator.FromHtml("#839958"))); // Moss green (Verde musgo)
                     }
                 }
                 else
                 {
-                    tabla.Columns.Insert(11, Boton("Seleccionar", Color.White, ColorTranslator.FromHtml("#6B261F")));
+                    tabla.Columns.Insert(11, Boton("Seleccionar", ColorTranslator.FromHtml("#839958"))); // Moss green
                 }
             }
 
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
+
+            // TRUCO PARA EVITAR QUE EL EFECTO CEBRA SOBREESCRIBA LOS BOTONES
+            foreach (DataGridViewRow row in tabla.Rows)
+            {
+                for (int i = 0; i < tabla.Columns.Count; i++)
+                {
+                    if (tabla.Columns[i] is DataGridViewButtonColumn)
+                    {
+                        row.Cells[i].Style.BackColor = tabla.Columns[i].DefaultCellStyle.BackColor;
+                        row.Cells[i].Style.ForeColor = Color.White; // Restauramos a letra blanca
+                        row.Cells[i].Style.SelectionBackColor = tabla.Columns[i].DefaultCellStyle.BackColor;
+                    }
+                }
+            }
         }
 
-        public static DataGridViewButtonColumn Boton(string titulo, Color color, Color fcolor)
+        public static DataGridViewButtonColumn Boton(string titulo, Color color)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.Name = titulo;
             btn.Text = titulo;
             btn.UseColumnTextForButtonValue = true;
-
-            // Cambio de Popup a Flat para un estilo más limpio y moderno
             btn.FlatStyle = FlatStyle.Flat;
-            btn.DefaultCellStyle.BackColor = color;
-            btn.DefaultCellStyle.ForeColor = fcolor;
 
-            // Para mantener el diseño plano incluso cuando la celda está seleccionada
+            btn.DefaultCellStyle.BackColor = color;
+            btn.DefaultCellStyle.ForeColor = Color.White;
             btn.DefaultCellStyle.SelectionBackColor = color;
-            btn.DefaultCellStyle.SelectionForeColor = fcolor;
+            btn.DefaultCellStyle.SelectionForeColor = Color.White;
 
             return btn;
         }
