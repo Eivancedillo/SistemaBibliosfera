@@ -113,18 +113,18 @@ namespace Manejadores
             b.Comando("START TRANSACTION", true);
         }
 
-        public void Mostrar(string consulta, DataGridView tabla, string datos, bool prestamo = false)
+        public void Mostrar(string consulta, DataGridView tabla, string datos)
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consultar(consulta, datos).Tables[0];
 
             // =========================================================================
-            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW (PALETA BIBLIOSFERA)
+            // INICIO REDISEÑO VISUAL DEL DATAGRIDVIEW
             // =========================================================================
-            tabla.BackgroundColor = ColorTranslator.FromHtml("#F7F4D5"); // Beige
+            tabla.BackgroundColor = Color.White;
             tabla.BorderStyle = BorderStyle.None;
             tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            tabla.GridColor = ColorTranslator.FromHtml("#105666"); // Midnight green claro
+            tabla.GridColor = ColorTranslator.FromHtml("#F7F4D5");
             tabla.RowHeadersVisible = false;
             tabla.EnableHeadersVisualStyles = false;
 
@@ -136,8 +136,6 @@ namespace Manejadores
             tabla.ColumnHeadersHeight = 45;
 
             // Estilo de las filas
-            tabla.DefaultCellStyle.BackColor = Color.White;
-            tabla.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#0A3323");
             tabla.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             tabla.RowTemplate.Height = 40;
             tabla.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#839958");
@@ -145,32 +143,29 @@ namespace Manejadores
 
             // Efecto Cebra
             tabla.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FEFDF7");
-            tabla.Columns["IdEjemplar"].Visible = false;
-            tabla.Columns["IdLibro"].Visible = false;
-            tabla.Columns["Activo"].Visible = false;
+            // =========================================================================
+            // FIN REDISEÑO VISUAL
+            // =========================================================================
+
+            tabla.Columns["IdAdministrador"].Visible = false;
+            tabla.Columns["Password"].Visible = false;
             tabla.Columns["created_at"].Visible = false;
             tabla.Columns["updated_at"].Visible = false;
+            tabla.Columns["Activo"].Visible = false;
+
+            // Colores elegantes de la nueva paleta
+            tabla.Columns.Insert(2, Boton("Editar", ColorTranslator.FromHtml("#105666"))); 
 
             if (tabla.Rows.Count > 0)
             {
-                if (!prestamo)
+                bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
+                if (estado)
                 {
-                    // Paleta de colores nueva para botones
-                    tabla.Columns.Insert(5, Boton("Editar", ColorTranslator.FromHtml("#105666")));
-
-                    bool estado = Convert.ToBoolean(tabla.Rows[0].Cells["Activo"].Value);
-                    if (estado)
-                    {
-                        tabla.Columns.Insert(6, Boton("Desactivar", ColorTranslator.FromHtml("#D3968C")));
-                    }
-                    else
-                    {
-                        tabla.Columns.Insert(6, Boton("Activar", ColorTranslator.FromHtml("#839958")));
-                    }
+                    tabla.Columns.Insert(3, Boton("Desactivar", ColorTranslator.FromHtml("#D3968C"))); // Rojo terracota
                 }
                 else
                 {
-                    tabla.Columns.Insert(6, Boton("Seleccionar", ColorTranslator.FromHtml("#839958")));
+                    tabla.Columns.Insert(3, Boton("Activar", ColorTranslator.FromHtml("#839958"))); // Azul acero
                 }
             }
 
