@@ -127,14 +127,17 @@
   <data name="Usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Guardar_s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guardar_s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-libro-de-cuentos-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-libro-de-cuentos-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Improvement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Improvement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-buscar-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-buscar-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Clipboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clipboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +151,9 @@
   <data name="icons8-cancelar-32 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-cancelar-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Añadir_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Añadir_60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Brake Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Brake Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,17 +163,26 @@
   <data name="icons8-2-en-círculo-c-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-2-en-círculo-c-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Libros1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Libros1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="+Prestamo_s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\+Prestamo_s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-llamada-de-conferencia-60 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-llamada-de-conferencia-60 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-cashbook-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-cashbook-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,14 +211,17 @@
   <data name="icons8-3-en-círculo-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-3-en-círculo-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-buscar-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-buscar-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-eliminar-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-eliminar-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgMiembros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgMiembros.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,10 +259,10 @@
   <data name="estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Añadir_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Añadir_60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Guardar_s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guardar_s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

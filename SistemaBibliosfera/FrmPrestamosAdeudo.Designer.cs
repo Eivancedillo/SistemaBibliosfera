@@ -49,7 +49,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label1.Location = new System.Drawing.Point(13, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.Size = new System.Drawing.Size(73, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Libro";
             // 
@@ -59,7 +59,7 @@
             this.TxtLibro.Location = new System.Drawing.Point(18, 89);
             this.TxtLibro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtLibro.Name = "TxtLibro";
-            this.TxtLibro.Size = new System.Drawing.Size(323, 32);
+            this.TxtLibro.Size = new System.Drawing.Size(323, 39);
             this.TxtLibro.TabIndex = 1;
             // 
             // TxtMonto
@@ -68,7 +68,7 @@
             this.TxtMonto.Location = new System.Drawing.Point(364, 175);
             this.TxtMonto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.Size = new System.Drawing.Size(159, 32);
+            this.TxtMonto.Size = new System.Drawing.Size(159, 39);
             this.TxtMonto.TabIndex = 3;
             // 
             // label2
@@ -77,7 +77,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label2.Location = new System.Drawing.Point(360, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 25);
+            this.label2.Size = new System.Drawing.Size(184, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Monto a pagar";
             // 
@@ -87,7 +87,7 @@
             this.TxtFecha.Location = new System.Drawing.Point(16, 175);
             this.TxtFecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtFecha.Name = "TxtFecha";
-            this.TxtFecha.Size = new System.Drawing.Size(323, 32);
+            this.TxtFecha.Size = new System.Drawing.Size(323, 39);
             this.TxtFecha.TabIndex = 5;
             // 
             // label3
@@ -96,7 +96,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label3.Location = new System.Drawing.Point(11, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 25);
+            this.label3.Size = new System.Drawing.Size(176, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha prevista";
             // 
@@ -107,7 +107,7 @@
             this.BtnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPagar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.BtnPagar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
-            this.BtnPagar.Location = new System.Drawing.Point(207, 239);
+            this.BtnPagar.Location = new System.Drawing.Point(240, 239);
             this.BtnPagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPagar.Name = "BtnPagar";
             this.BtnPagar.Size = new System.Drawing.Size(134, 45);
@@ -123,10 +123,10 @@
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
-            this.BtnCancelar.Location = new System.Drawing.Point(400, 239);
+            this.BtnCancelar.Location = new System.Drawing.Point(380, 239);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(123, 45);
+            this.BtnCancelar.Size = new System.Drawing.Size(143, 45);
             this.BtnCancelar.TabIndex = 7;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@
             this.TxtCodigo.Location = new System.Drawing.Point(365, 89);
             this.TxtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(158, 32);
+            this.TxtCodigo.Size = new System.Drawing.Size(158, 39);
             this.TxtCodigo.TabIndex = 9;
             // 
             // label4
@@ -147,7 +147,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.label4.Location = new System.Drawing.Point(360, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.Size = new System.Drawing.Size(114, 32);
             this.label4.TabIndex = 8;
             this.label4.Text = "Ejemplar";
             // 
@@ -158,13 +158,13 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label5.Location = new System.Drawing.Point(10, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 32);
+            this.label5.Size = new System.Drawing.Size(239, 41);
             this.label5.TabIndex = 32;
             this.label5.Text = "Pagar préstamo";
             // 
             // FrmPrestamosAdeudo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));

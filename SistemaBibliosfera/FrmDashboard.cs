@@ -13,13 +13,14 @@ namespace SistemaBibliosfera
 {
     public partial class FrmDashboard : Form
     {
-        ManejadorDashboard Md;
+        private ManejadorDashboard Md;
+
         public FrmDashboard()
         {
             InitializeComponent();
 
             Md = new ManejadorDashboard();
-            
+
             // Mostrar administrador usado
             Md.ConsultarNombreAdministrador(FrmPrincipal.IdAdministrador, LblBibliotecario);
 

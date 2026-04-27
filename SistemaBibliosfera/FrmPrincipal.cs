@@ -14,8 +14,8 @@ namespace SistemaBibliosfera
     public partial class FrmPrincipal : Form
     {
         public static int IdAdministrador = 0;
-        ManejadorPrestamo mp;
-        ManejadorPermisos permisos;
+        private ManejadorPrestamo mp;
+        private ManejadorPermisos permisos;
         private ToolStripButton botonActivoActual = null;
 
         public FrmPrincipal(int IdAdministradortraido)
@@ -32,7 +32,6 @@ namespace SistemaBibliosfera
             });
 
             IdAdministrador = IdAdministradortraido;
-            
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -51,11 +50,11 @@ namespace SistemaBibliosfera
             if (mdiClient != null)
             {
                 mdiClient.BackColor = Color.White;
-
             }
         }
 
         #region Click de botones de navegación
+
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             Boton(sender);
@@ -73,7 +72,7 @@ namespace SistemaBibliosfera
 
         private void BtnCatalogo_Click(object sender, EventArgs e)
         {
-            if(permisos.ComprobarAcceso(1, IdAdministrador))
+            if (permisos.ComprobarAcceso(1, IdAdministrador))
             {
                 Boton(sender);
                 FrmCatalogo catalogo = new FrmCatalogo();
@@ -89,7 +88,7 @@ namespace SistemaBibliosfera
 
         private void BtnPrestamos_Click(object sender, EventArgs e)
         {
-            if(permisos.ComprobarAcceso(2, IdAdministrador))
+            if (permisos.ComprobarAcceso(2, IdAdministrador))
             {
                 Boton(sender);
                 FrmPrestamos prestamos = new FrmPrestamos();
@@ -121,7 +120,7 @@ namespace SistemaBibliosfera
 
         private void BtnBibliotecarios_Click(object sender, EventArgs e)
         {
-            if(permisos.ComprobarAcceso(4, IdAdministrador))
+            if (permisos.ComprobarAcceso(4, IdAdministrador))
             {
                 Boton(sender);
                 FrmMiembros miembros = new FrmMiembros();
@@ -137,7 +136,7 @@ namespace SistemaBibliosfera
 
         private void BtnMiembros_Click(object sender, EventArgs e)
         {
-            if(permisos.ComprobarAcceso(5, IdAdministrador))
+            if (permisos.ComprobarAcceso(5, IdAdministrador))
             {
                 Boton(sender);
                 FrmAdministradores administradores = new FrmAdministradores();
@@ -153,7 +152,7 @@ namespace SistemaBibliosfera
 
         private void BtnAsistencia_Click(object sender, EventArgs e)
         {
-            if(permisos.ComprobarAcceso(6, IdAdministrador))
+            if (permisos.ComprobarAcceso(6, IdAdministrador))
             {
                 Boton(sender);
                 FrmAsistencias asistencias = new FrmAsistencias();
@@ -166,13 +165,14 @@ namespace SistemaBibliosfera
                 MessageBox.Show("No tienes permiso para acceder a esta sección.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
+
+        #endregion Click de botones de navegación
 
         #region Efectos de hover en botones
 
         private void BtnSalir_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(255, 80, 130, 141);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -191,8 +191,8 @@ namespace SistemaBibliosfera
 
         private void BtnDashboard_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
-            ToolStripButton botonFlotante = (ToolStripButton) sender;
+            Color colorHover = Color.FromArgb(131, 153, 88);
+            ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
         }
@@ -210,11 +210,10 @@ namespace SistemaBibliosfera
 
         private void BtnCatalogo_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
-
         }
 
         private void BtnCatalogo_MouseLeave(object sender, EventArgs e)
@@ -230,7 +229,7 @@ namespace SistemaBibliosfera
 
         private void BtnPrestamos_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -249,7 +248,7 @@ namespace SistemaBibliosfera
 
         private void BtnAdquisiciones_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -268,7 +267,7 @@ namespace SistemaBibliosfera
 
         private void BtnBibliotecarios_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -287,7 +286,7 @@ namespace SistemaBibliosfera
 
         private void BtnMiembros_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -306,7 +305,7 @@ namespace SistemaBibliosfera
 
         private void BtnAsistencia_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -325,7 +324,7 @@ namespace SistemaBibliosfera
 
         private void BtnCerrarSesion_MouseEnter(object sender, EventArgs e)
         {
-            Color colorHover = Color.FromArgb(205, 173, 143);
+            Color colorHover = Color.FromArgb(131, 153, 88);
             ToolStripButton botonFlotante = (ToolStripButton)sender;
 
             botonFlotante.BackColor = colorHover;
@@ -342,7 +341,7 @@ namespace SistemaBibliosfera
             }
         }
 
-        #endregion
+        #endregion Efectos de hover en botones
 
         private void Boton(object senderBoton)
         {
@@ -374,8 +373,8 @@ namespace SistemaBibliosfera
 
                 botonActivoActual.BackColor = colorNormal;
 
-                // Es importante establecer botonActivoActual a null para que 
-                // la lógica de MouseLeave funcione correctamente y para indicar 
+                // Es importante establecer botonActivoActual a null para que
+                // la lógica de MouseLeave funcione correctamente y para indicar
                 // que no hay ningún formulario/botón activo.
                 botonActivoActual = null;
             }

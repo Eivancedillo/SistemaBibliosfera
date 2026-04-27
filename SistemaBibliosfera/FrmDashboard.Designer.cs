@@ -40,19 +40,12 @@
             this.LblPrestamosActivos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panelAlertaReparacion = new System.Windows.Forms.Panel();
             this.lblAlertaReparacion = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panelAlertaVencimiento = new System.Windows.Forms.Panel();
             this.lblAlertaVencimiento = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -84,27 +77,27 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.LblBibliotecario = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelAlertaReparacion.SuspendLayout();
             this.panelAlertaVencimiento.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -116,11 +109,18 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblTotalLibros
@@ -246,21 +246,11 @@
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Brake_Warning;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox11.TabIndex = 23;
-            this.pictureBox11.TabStop = false;
-            // 
             // panelAlertaReparacion
             // 
-            this.panelAlertaReparacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.panelAlertaReparacion.BackColor = System.Drawing.Color.LightYellow;
             this.panelAlertaReparacion.Controls.Add(this.lblAlertaReparacion);
-            this.panelAlertaReparacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
+            this.panelAlertaReparacion.ForeColor = System.Drawing.Color.OliveDrab;
             this.panelAlertaReparacion.Location = new System.Drawing.Point(11, 127);
             this.panelAlertaReparacion.Name = "panelAlertaReparacion";
             this.panelAlertaReparacion.Size = new System.Drawing.Size(856, 60);
@@ -288,7 +278,7 @@
             // 
             // panelAlertaVencimiento
             // 
-            this.panelAlertaVencimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
+            this.panelAlertaVencimiento.BackColor = System.Drawing.Color.LightPink;
             this.panelAlertaVencimiento.Controls.Add(this.lblAlertaVencimiento);
             this.panelAlertaVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
             this.panelAlertaVencimiento.Location = new System.Drawing.Point(11, 39);
@@ -328,66 +318,6 @@
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Improvement;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(6, -14);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(28, 47);
-            this.pictureBox12.TabIndex = 24;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_2_en_círculo_c_30;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 87);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_5_en_círculo_30;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 231);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_4_en_círculo_30;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 186);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_3_en_círculo_30;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 136);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.icons8_1_en_círculo_c_30;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -401,7 +331,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.panel3.BackColor = System.Drawing.Color.OliveDrab;
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(326, 84);
             this.panel3.Name = "panel3";
@@ -410,7 +340,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.panel2.BackColor = System.Drawing.Color.OliveDrab;
             this.panel2.Controls.Add(this.groupBox8);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -419,10 +349,10 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.groupBox8.BackColor = System.Drawing.Color.OliveDrab;
             this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Controls.Add(this.LblCategoriaMasPopular);
-            this.groupBox8.ForeColor = System.Drawing.Color.Peru;
+            this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.groupBox8.Location = new System.Drawing.Point(10, 12);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(216, 117);
@@ -433,7 +363,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.label9.Location = new System.Drawing.Point(21, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(217, 28);
@@ -456,7 +386,7 @@
             this.LblCatTop5.AutoSize = true;
             this.LblCatTop5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCatTop5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.LblCatTop5.Location = new System.Drawing.Point(99, 231);
+            this.LblCatTop5.Location = new System.Drawing.Point(99, 228);
             this.LblCatTop5.Name = "LblCatTop5";
             this.LblCatTop5.Size = new System.Drawing.Size(39, 28);
             this.LblCatTop5.TabIndex = 8;
@@ -467,7 +397,7 @@
             this.LblCatTop4.AutoSize = true;
             this.LblCatTop4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCatTop4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.LblCatTop4.Location = new System.Drawing.Point(99, 184);
+            this.LblCatTop4.Location = new System.Drawing.Point(99, 183);
             this.LblCatTop4.Name = "LblCatTop4";
             this.LblCatTop4.Size = new System.Drawing.Size(39, 28);
             this.LblCatTop4.TabIndex = 7;
@@ -478,7 +408,7 @@
             this.LblCatTop3.AutoSize = true;
             this.LblCatTop3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCatTop3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.LblCatTop3.Location = new System.Drawing.Point(99, 136);
+            this.LblCatTop3.Location = new System.Drawing.Point(99, 133);
             this.LblCatTop3.Name = "LblCatTop3";
             this.LblCatTop3.Size = new System.Drawing.Size(39, 28);
             this.LblCatTop3.TabIndex = 6;
@@ -489,7 +419,7 @@
             this.LblCatTop2.AutoSize = true;
             this.LblCatTop2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCatTop2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.LblCatTop2.Location = new System.Drawing.Point(99, 87);
+            this.LblCatTop2.Location = new System.Drawing.Point(99, 84);
             this.LblCatTop2.Name = "LblCatTop2";
             this.LblCatTop2.Size = new System.Drawing.Size(39, 28);
             this.LblCatTop2.TabIndex = 5;
@@ -500,7 +430,7 @@
             this.LblCatTop1.AutoSize = true;
             this.LblCatTop1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCatTop1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.LblCatTop1.Location = new System.Drawing.Point(99, 42);
+            this.LblCatTop1.Location = new System.Drawing.Point(99, 39);
             this.LblCatTop1.Name = "LblCatTop1";
             this.LblCatTop1.Size = new System.Drawing.Size(39, 28);
             this.LblCatTop1.TabIndex = 1;
@@ -532,7 +462,7 @@
             // 
             this.LblPrestamosHoy.AutoSize = true;
             this.LblPrestamosHoy.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrestamosHoy.ForeColor = System.Drawing.Color.Peru;
+            this.LblPrestamosHoy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblPrestamosHoy.Location = new System.Drawing.Point(77, 31);
             this.LblPrestamosHoy.Name = "LblPrestamosHoy";
             this.LblPrestamosHoy.Size = new System.Drawing.Size(65, 37);
@@ -565,7 +495,7 @@
             // 
             this.LblAsistenciasHoy.AutoSize = true;
             this.LblAsistenciasHoy.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAsistenciasHoy.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LblAsistenciasHoy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblAsistenciasHoy.Location = new System.Drawing.Point(77, 37);
             this.LblAsistenciasHoy.Name = "LblAsistenciasHoy";
             this.LblAsistenciasHoy.Size = new System.Drawing.Size(65, 37);
@@ -600,7 +530,7 @@
             this.LblDevolucionesHoy.AutoSize = true;
             this.LblDevolucionesHoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.LblDevolucionesHoy.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDevolucionesHoy.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.LblDevolucionesHoy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
             this.LblDevolucionesHoy.Location = new System.Drawing.Point(77, 36);
             this.LblDevolucionesHoy.Name = "LblDevolucionesHoy";
             this.LblDevolucionesHoy.Size = new System.Drawing.Size(65, 37);
@@ -650,7 +580,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.button4.BackColor = System.Drawing.Color.OliveDrab;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(30, 169);
@@ -718,27 +648,31 @@
             this.panel7.Size = new System.Drawing.Size(288, 42);
             this.panel7.TabIndex = 17;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(38, 32);
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
             // LblBibliotecario
             // 
             this.LblBibliotecario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
             this.LblBibliotecario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBibliotecario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
-            this.LblBibliotecario.Location = new System.Drawing.Point(123, 10);
+            this.LblBibliotecario.Location = new System.Drawing.Point(139, 10);
             this.LblBibliotecario.Name = "LblBibliotecario";
-            this.LblBibliotecario.Size = new System.Drawing.Size(171, 20);
+            this.LblBibliotecario.Size = new System.Drawing.Size(149, 32);
             this.LblBibliotecario.TabIndex = 4;
             this.LblBibliotecario.Text = "xxx";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.button6.Location = new System.Drawing.Point(861, 721);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(95, 32);
+            this.button6.TabIndex = 25;
+            this.button6.Text = "Cerrar";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox9
             // 
@@ -783,20 +717,86 @@
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             // 
-            // button6
+            // pictureBox7
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
-            this.button6.Location = new System.Drawing.Point(861, 721);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 32);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Cerrar";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Brake_Warning;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox11.TabIndex = 23;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = global::SistemaBibliosfera.Properties.Resources.Improvement;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(6, -14);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(28, 47);
+            this.pictureBox12.TabIndex = 24;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._2_circulo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(30, 87);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._5_circulo;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(30, 231);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._4_circulo;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(30, 186);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._3_circulo;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(30, 136);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SistemaBibliosfera.Properties.Resources._1_circulo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmDashboard
             // 
@@ -839,19 +839,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelAlertaReparacion.ResumeLayout(false);
             this.panelAlertaReparacion.PerformLayout();
             this.panelAlertaVencimiento.ResumeLayout(false);
             this.panelAlertaVencimiento.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -868,11 +861,18 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

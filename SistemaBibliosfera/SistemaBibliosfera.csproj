@@ -444,5 +444,23 @@
   <ItemGroup>
     <None Include="Resources\Guardar_s.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_circulo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

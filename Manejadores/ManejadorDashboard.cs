@@ -15,7 +15,7 @@ namespace Manejadores
 {
     public class ManejadorDashboard
     {
-        Base b = new Base();
+        private Base b = new Base();
 
         public void ConsultarNombreAdministrador(int IdAdministrador, Label lbl)
         {
@@ -154,7 +154,7 @@ namespace Manejadores
             {
                 // Visualmente dirá: "3 préstamos ya vencidos" (El 3 lo pone MostrarAlerta)
                 mensaje = "préstamo(s) vencido(s)";
-                colorAlerta = Color.IndianRed;
+                colorAlerta = Color.LightPink;
             }
             // CASO 3: Solo Por Vencer
             else
