@@ -346,7 +346,7 @@ namespace SistemaBibliosfera
         private void Boton(object senderBoton)
         {
             Color colorSeleccionado = Color.FromArgb(131, 153, 88);
-            Color colorTool = Color.FromArgb(247, 244, 213);
+            Color colorTool = Color.FromArgb(242, 242, 242);
 
             foreach (ToolStripItem item in toolStrip1.Items)
             {

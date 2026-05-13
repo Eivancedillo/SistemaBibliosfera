@@ -32,25 +32,17 @@
             this.LblBiblioSfera = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnBibliosfera = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnDashboard = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnCatalogo = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnPrestamos = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnAdquisiciones = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnBibliotecarios = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnMiembros = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnAsistencia = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnCerrarSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,25 +63,17 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnBibliosfera,
-            this.toolStripSeparator1,
-            this.BtnDashboard,
             this.toolStripSeparator2,
+            this.BtnDashboard,
             this.BtnCatalogo,
-            this.toolStripSeparator5,
             this.BtnPrestamos,
-            this.toolStripSeparator3,
             this.BtnAdquisiciones,
-            this.toolStripSeparator4,
             this.BtnBibliotecarios,
-            this.toolStripSeparator6,
             this.BtnMiembros,
-            this.toolStripSeparator7,
             this.BtnAsistencia,
-            this.toolStripSeparator8,
             this.BtnCerrarSesion,
             this.toolStripSeparator9,
-            this.BtnSalir,
-            this.toolStripSeparator10});
+            this.BtnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -108,12 +92,6 @@
             this.BtnBibliosfera.Size = new System.Drawing.Size(200, 60);
             this.BtnBibliosfera.Text = "BiblioSfera";
             this.BtnBibliosfera.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
             // 
             // BtnDashboard
             // 
@@ -151,12 +129,6 @@
             this.BtnCatalogo.MouseEnter += new System.EventHandler(this.BtnCatalogo_MouseEnter);
             this.BtnCatalogo.MouseLeave += new System.EventHandler(this.BtnCatalogo_MouseLeave);
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(198, 6);
-            // 
             // BtnPrestamos
             // 
             this.BtnPrestamos.AutoSize = false;
@@ -171,12 +143,6 @@
             this.BtnPrestamos.Click += new System.EventHandler(this.BtnPrestamos_Click);
             this.BtnPrestamos.MouseEnter += new System.EventHandler(this.BtnPrestamos_MouseEnter);
             this.BtnPrestamos.MouseLeave += new System.EventHandler(this.BtnPrestamos_MouseLeave);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(198, 6);
             // 
             // BtnAdquisiciones
             // 
@@ -193,12 +159,6 @@
             this.BtnAdquisiciones.MouseEnter += new System.EventHandler(this.BtnAdquisiciones_MouseEnter);
             this.BtnAdquisiciones.MouseLeave += new System.EventHandler(this.BtnAdquisiciones_MouseLeave);
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(198, 6);
-            // 
             // BtnBibliotecarios
             // 
             this.BtnBibliotecarios.AutoSize = false;
@@ -213,12 +173,6 @@
             this.BtnBibliotecarios.Click += new System.EventHandler(this.BtnBibliotecarios_Click);
             this.BtnBibliotecarios.MouseEnter += new System.EventHandler(this.BtnBibliotecarios_MouseEnter);
             this.BtnBibliotecarios.MouseLeave += new System.EventHandler(this.BtnBibliotecarios_MouseLeave);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(198, 6);
             // 
             // BtnMiembros
             // 
@@ -235,12 +189,6 @@
             this.BtnMiembros.MouseEnter += new System.EventHandler(this.BtnMiembros_MouseEnter);
             this.BtnMiembros.MouseLeave += new System.EventHandler(this.BtnMiembros_MouseLeave);
             // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(198, 6);
-            // 
             // BtnAsistencia
             // 
             this.BtnAsistencia.AutoSize = false;
@@ -255,12 +203,6 @@
             this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
             this.BtnAsistencia.MouseEnter += new System.EventHandler(this.BtnAsistencia_MouseEnter);
             this.BtnAsistencia.MouseLeave += new System.EventHandler(this.BtnAsistencia_MouseLeave);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(198, 6);
             // 
             // BtnCerrarSesion
             // 
@@ -297,11 +239,6 @@
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             this.BtnSalir.MouseEnter += new System.EventHandler(this.BtnSalir_MouseEnter);
             this.BtnSalir.MouseLeave += new System.EventHandler(this.BtnSalir_MouseLeave);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(198, 6);
             // 
             // FrmPrincipal
             // 
@@ -342,17 +279,9 @@
         private System.Windows.Forms.ToolStripButton BtnAsistencia;
         private System.Windows.Forms.ToolStripButton BtnSalir;
         private System.Windows.Forms.ToolStripLabel BtnBibliosfera;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton BtnDashboard;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripButton BtnCerrarSesion;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
     }
 }
